@@ -9,30 +9,39 @@
 /* Common CSS */
 .container{
   width: 393px;
-  position: relative;
+  /* width: 100%; */
+  height: 750px;
+  /* height: 100vh; */
 }
 
 
 
 /* Splash CSS */
 .container .splash{
-  height: 750px;
-  /* height: 100vh; */
+  height: 100vh;
 }
 .splash-inner{
   /* width: 100%; */
   height: inherit;
   background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
-  position: absolute;
-  text-align: center;
+  /* position: absolute; */ 
+  padding-top: 20px;
+}
+
+.splash-inner img{
+  margin: auto;
+  display: block;
 }
 
 .splash-inner p{
   color: var(--primary-white);
   font-size: 14px;
   font-family: var(--primary-kr);
+  /* display: block; */
+
 }
 
 .splash-inner p{
   margin: 38px 0 50px 0;
+  text-align: center;
 }
