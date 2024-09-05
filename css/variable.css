@@ -1,0 +1,32 @@
+
+
+
+
+/* Font Family CDN */
+
+/* 눈누 나눔스퀘어 */
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+:root{
+    /* Font Family */
+    --primary-kr: 'NanumSquareRound';
+
+    /* Basic Color */
+    --charater-color : #A7C0FF;
+    --mint-color : #00E2CC;
+
+    /* Text Color */
+    --bar-text: #000D42;
+    --bar-sub: #C1C1C1;
+    --primary-white: #fff;
+    --sub-text: #00E2CC;
+    
+}

@@ -1,0 +1,38 @@
+/* Import Local CSS */
+@import url('/css/variable.css');
+@import url('/css/reset.css');
+
+
+
+
+
+/* Common CSS */
+.container{
+  width: 393px;
+  position: relative;
+}
+
+
+
+/* Splash CSS */
+.container .splash{
+  height: 750px;
+  /* height: 100vh; */
+}
+.splash-inner{
+  /* width: 100%; */
+  height: inherit;
+  background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
+  position: absolute;
+  text-align: center;
+}
+
+.splash-inner p{
+  color: var(--primary-white);
+  font-size: 14px;
+  font-family: var(--primary-kr);
+}
+
+.splash-inner p{
+  margin: 38px 0 50px 0;
+}
