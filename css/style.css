@@ -46,6 +46,7 @@
 .splash-inner p{
   margin: 38px 0 50px 0;
   text-align: center;
+<<<<<<< HEAD
 }
 
 
@@ -250,4 +251,6 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
+=======
+>>>>>>> 22571d31125ce96e7365f06668971d15c488ccac
 }
