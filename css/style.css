@@ -6,33 +6,248 @@
 
 
 
-/* Common CSS */
+/* ########## Common CSS ########## */
 .container{
   width: 393px;
-  position: relative;
+  /* width: 100%; */
+  height: 750px;
+  /* height: 100vh; */
 }
 
 
 
-/* Splash CSS */
+
+
+/* ########## Splash CSS ########## */
 .container .splash{
-  height: 750px;
-  /* height: 100vh; */
+  height: 100vh;
 }
 .splash-inner{
   /* width: 100%; */
   height: inherit;
   background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
-  position: absolute;
-  text-align: center;
+  /* position: absolute; */ 
+  padding-top: 20px;
+}
+
+.splash-inner img{
+  margin: auto;
+  display: block;
 }
 
 .splash-inner p{
   color: var(--primary-white);
   font-size: 14px;
   font-family: var(--primary-kr);
+  /* display: block; */
+
 }
 
 .splash-inner p{
   margin: 38px 0 50px 0;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+/* ########## header CSS ########## */
+.main-header{
+  height: 70px;
+  /* border: 1px solid #000; */
+  display: flex;
+  text-align: center;
+  padding-left: 28px;
+  padding-right: 28px;
+  align-items: center;  /* 수직 정렬 */
+  background-color: #fff;
+} 
+
+.bnt-menu{
+  /* border: 1px solid #000; */
+  background-color: transparent;
+  border: none;
+  color: var(--icon-color);
+  flex: 1;
+}
+
+.main-header .logo{
+  flex: 5;
+  /* border: 1px solid #000; */
+  margin: 0;
+  font-family: var(--primary-kr);
+}
+.user-arlarm{
+  flex: 0.7;
+  /* border: 1px solid #000; */
+}
+
+.user-arlarm span{
+  position: relative;
+}
+.user-arlarm span em{
+  position: absolute;
+  background-color: var(--mint-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  right: -4px;
+  top: -2px;
+}
+
+.icon-menu{}
+.user-manage{
+  flex: 0.7;
+  /* border: 1px solid #000; */
+}
+.icon-manage{}
+
+
+
+
+
+
+
+
+
+/* ######### Gnb CSS ######### */
+.gnb {
+  /* border: 1px solid #000; */
+  height: 86px;
+  display: flex;
+  justify-content: space-between;
+  width: 393px;
+  background-color: #fff;
+  padding-left: 65px;
+  padding-right: 65px;
+  padding-top: 18px;
+}
+
+.gnb a {
+  text-align: center;
+}
+
+.gnb a .bi {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ########## Main content CSS ############ */
+.gnb-bar-main img  {
+  color: #1F3AA1;
+}
+
+.container {
+  height: 700px;
+}
+.main-inner {
+  height: inherit;
+  background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
+}
+.main-content {
+  padding: 28px;
+}
+
+.my-point{
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.own-poin{
+  width: 128px;
+}
+.own-title {
+    width: 128px;
+    height: 24px;
+    background-color: var(--mint-color);
+    border-radius: 5px 5px 0 0;
+    color: var(--bar-text);
+    font-family: var(--primary-kr);
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    align-items: center;  /* 수직 중앙 */
+    justify-content: center;
+}
+.own-box {
+  margin: 0;
+  width: 128px;
+  height: 76px;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  opacity: 0.85;
+}
+
+.own-box .own-pearl,
+.own-box .own-leaf{
+  height: 38px;
+  display: flex;
+  align-items: center;  /* 수직정렬 */
+  justify-content: center;  /* 수평중앙 */
+  gap: 5px;
+}
+.own-box .own-pearl img,
+.own-box .own-leaf img {
+  width: 27px;
+  height: 25px;
+}
+.own-box .own-pearl p,
+.own-box .own-leaf p {
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  color: var(--bar-text);
+}
+
+
+
+
+
+
+
+/* ######## 중앙 ########## */
+.main-mycharacter{
+  margin-top: 25%;
+  position: relative;
+  overflow: visible;
+}
+.main-mycharacter .bubble{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-10%, -120%);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  max-width: 180px;
+  color: #fff;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  text-align: center;
+  padding: 5px;
+}
+
+.main-mycharacter .mycharacter {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.main-mycharacter .character-back {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
