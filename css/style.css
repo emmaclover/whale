@@ -8,10 +8,22 @@
 
 /* ########## Common CSS ########## */
 .container{
-  width: 393px;
-  /* width: 100%; */
-  height: 750px;
-  /* height: 100vh; */
+  /* width: 393px; */
+  width: 100%;
+  /* height: 750px; */
+  height: 100vh;
+  
+}
+
+        /* Basic Button */
+.btn-basic{
+  width: 100%;
+  height: 44px;
+  background-color: var(--mint-color);
+  border-radius: 5px;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  font-weight: bold;
 }
 
 
@@ -19,39 +31,22 @@
 
 
 /* ########## Splash CSS ########## */
-.container .splash{
-  height: 100vh;
-}
-.splash-inner{
-  /* width: 100%; */
-  height: inherit;
+.preloading{
+  padding: 20px;
   background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
-  /* position: absolute; */ 
-  padding-top: 20px;
+  height: inherit;
 }
 
-.splash-inner img{
-  margin: auto;
-  display: block;
+.preloading-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.splash-inner p{
-  color: var(--primary-white);
-  font-size: 14px;
-  font-family: var(--primary-kr);
-  /* display: block; */
-
+.preloading-inner p {
+  color: white;
 }
-
-.splash-inner p{
-  margin: 38px 0 50px 0;
-  text-align: center;
-<<<<<<< HEAD
-}
-
-
-
-
 
 
 
@@ -121,7 +116,10 @@
   height: 86px;
   display: flex;
   justify-content: space-between;
-  width: 393px;
+
+  /* width: 393px; */
+  width: 100%;
+
   background-color: #fff;
   padding-left: 65px;
   padding-right: 65px;
@@ -142,115 +140,468 @@
 
 
 
-
-
-
-
-
-
-/* ########## Main content CSS ############ */
-.gnb-bar-main img  {
-  color: #1F3AA1;
-}
-
-.container {
+/* ############# Home html CSS ############### */
+.home {}
+.home-inner {
   height: 700px;
-}
-.main-inner {
-  height: inherit;
   background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
 }
-.main-content {
+
+.main-content{
   padding: 28px;
 }
 
-.my-point{
+.mypoint {
+  width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-between;
-  
-}
-.own-poin{
-  width: 128px;
-}
-.own-title {
-    width: 128px;
-    height: 24px;
-    background-color: var(--mint-color);
-    border-radius: 5px 5px 0 0;
-    color: var(--bar-text);
-    font-family: var(--primary-kr);
-    font-size: 16px;
-    margin: 0;
-    display: flex;
-    align-items: center;  /* 수직 중앙 */
-    justify-content: center;
-}
-.own-box {
-  margin: 0;
-  width: 128px;
-  height: 76px;
-  background-color: #fff;
-  border-radius: 0 0 5px 5px;
-  opacity: 0.85;
 }
 
-.own-box .own-pearl,
-.own-box .own-leaf{
-  height: 38px;
-  display: flex;
-  align-items: center;  /* 수직정렬 */
-  justify-content: center;  /* 수평중앙 */
-  gap: 5px;
+.mypoint .own-point {
+  border: 1px solid #000;
+  width: 128px;
 }
-.own-box .own-pearl img,
-.own-box .own-leaf img {
-  width: 27px;
-  height: 25px;
-}
-.own-box .own-pearl p,
-.own-box .own-leaf p {
+
+.own-title {
+  width: 100%;
+  height: 24px;
+  background-color: var(--mint-color);
+  border-radius: 5px 5px 0 0;
   font-family: var(--primary-kr);
   font-size: 16px;
-  color: var(--bar-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.own-pearl,
+.own-leaf{
+  width: 100%;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255, 0.85);
+  gap: 12px;
+}
+
+.own-pearl img,
+.own-leaf img{
+  width: 26px;
+}
+
+.own-leaf {
+  border-radius: 0 0 5px 5px;
+}
+
+.own-pearl p,
+.own-leaf p{
+  font-family: var(--primary-kr);
+  font-size: 16px;
 }
 
 
-
-
-
-
-
-/* ######## 중앙 ########## */
-.main-mycharacter{
-  margin-top: 25%;
+.save-point{
   position: relative;
-  overflow: visible;
 }
-.main-mycharacter .bubble{
+
+.save-point img{
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(-10%, -120%);
-  border: 1px solid #fff;
-  border-radius: 5px;
-  max-width: 180px;
-  color: #fff;
-  font-family: var(--primary-kr);
-  font-size: 14px;
-  text-align: center;
-  padding: 5px;
+  cursor: pointer;
 }
 
-.main-mycharacter .mycharacter {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
+
+
+
+/* 메인 캐릭터 */
+.main-character {
+  height: 362px;
+  border: 1px solid #000;
 }
-.main-mycharacter .character-back {
+
+
+
+
+
+
+
+
+.main-point {
+  height: 92px;
+  border: 1px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #################### Simple Login ################### */
+.simple-login{
+  /* height: 750px;  */
+  height: inherit;
+  border: 1px solid #eb5f5f;
+}
+.simple-login-inner{
+  height: inherit;
+  background: url('/images/character-login.svg') no-repeat  top -30px left;
+  position: relative;
+  padding: 22px;
+}
+
+.login-img{
+  /* 잠보기 얼굴 */
+  height: 360px;
+  position: relative;
+  margin: auto;
+}
+.coin-img{
+  /* 잠보기 옆 코인 */
+  width: 52px;
+  height: 40px;
+  background: url('/images/login-coin.svg') no-repeat;
+  background-size: cover;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
-=======
->>>>>>> 22571d31125ce96e7365f06668971d15c488ccac
+  right: 0;
+  bottom: 160px;
+}
+
+.login-coment{
+  width: 145px;
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+}
+.login-coment p{
+  font-family: var(--primary-kr);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+.btn-login{
+
+}
+
+.signin{
+  display: block;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  height: 44px;
+  border-radius: 5px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-email{
+  background-color: var(--mint-color);
+  color: #231815;
+}
+
+.btn-kakao{
+  background-color: #FEE500;
+  color: #191919;
+  position: relative;
+}
+
+.btn-kakao img {
+  width: 18px;
+  position: absolute;
+  left: 16px;
+}
+
+.btn-kakao p{
+
+}
+
+.btn-apple{
+  background-color: #000;
+  color: white;
+  position: relative;
+}
+
+.btn-apple img{
+  width: 18px;
+  position: absolute;
+  left: 16px;
+}
+
+
+
+
+
+.join-member{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  color: #606060;
+}
+
+
+.simple-login-inner > p{
+  text-align: center;
+  font-family: var(--primary-kr);
+  color: var(--bar-text);
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############# Email Login ############## */
+
+.email-login{
+  height: 750px;   /* 작업 완료 후 수정하기 */
+  /* border: 1px solid #eb5f5f; */
+}
+.email-login-inner{
+  height: inherit;
+  background: url('/images/character-login.svg') no-repeat  top -30px left;
+  /* position: relative; */
+  padding: 22px;
+}
+
+
+.login-field{
+  
+}
+
+
+.login-email,
+.login-password{
+  display: block;
+  width: 100%;
+  height: 44px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  margin-bottom: 14px ;
+  padding-left: 16px;
+}
+
+.login-email::placeholder,
+.login-password::placeholder{
+  font-family: var(--primary-kr);
+  color: var(--light-gray);
+  font-size: 16px;
+}
+
+
+
+.email-login-inner > p{
+  text-align: center;
+  font-family: var(--primary-kr);
+  color: var(--bar-text);
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+
+.login-button{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############ Personal Infomation Survey html CSS ############### */
+
+.personal-survey{
+  /* 작업완료후 수정 */
+  height: 750px;  
+  padding: 42px;
+}
+.personal-survey-inner{
+  height: inherit;
+
+}
+
+.name-survey {
+  width: 100%;
+
+}
+.survey {
+  display: flex;
+  gap: 12px;
+}
+
+.survey img {
+  width: 40px;
+  height: 40px;
+  
+}
+.survey p {
+  width: 100%;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  /* padding: 0 12px; */
+  line-height: 1.6em;
+}
+.answer {
+  margin-top: 12px;
+}
+.answer input {
+  width: 100%;
+  height: 38px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding-left: 12px;
+}
+
+.answer input::placeholder {
+  color: var(--light-gray);
+}
+
+
+
+
+.gender-survey {
+  margin-top: 38px;
+}
+
+
+.gender-radio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+  margin-top: 12px;
+}
+
+.gender-radio label{
+  display: flex;
+  align-items: center;
+  
+}
+.gender-radio label input {
+  width: 14px;
+}
+
+.gender-radio label input:checked{
+  color: #000;
+}
+
+.gender-radio label p{
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  margin-left: 6px;
+
+}
+
+
+
+
+.birth-survey {
+  margin-top: 38px;
+}
+
+
+
+
+.job-survey {
+  margin-top: 38px;
+}
+
+.name-underline {
+  border-bottom: 1px solid #000;
+}
+
+
+.job-down select{
+  width: 100%;
+  height: 38px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 0 12px;
+  margin-top: 12px;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  cursor: pointer;
+
+  -webkit-appearance: none; /* 크롬 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none;  /* 화살표 없애기 */
+
+  background: url('/images/icon-chevron-down.svg') no-repeat right 12px center;
+}
+
+
+
+.sleep-survey {
+  margin-top: 38px;
+
+}
+
+.answer-time input{
+  width: 100%;
+  height: 38px;
+  padding: 12px;
+  margin-top: 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+}
+
+
+
+
+.wakeup-survey {
+  margin-top: 38px;
+}
+
+
+.sit-survey{
+  margin-top: 38px;
+}
+
+
+.enter-btn {
+  margin: 46px 0;
 }
