@@ -6,13 +6,15 @@
 
 
 
+
+
+
 /* ########## Common CSS ########## */
 .container{
-  /* width: 393px; */
-  width: 100%;
-  /* height: 750px; */
-  height: 100vh;
-  
+  width: 393px;
+  /* width: 100%; */
+  height: 750px;
+  /* height: 100vh; */
 }
 
         /* Basic Button */
@@ -34,7 +36,10 @@
 .preloading{
   padding: 20px;
   background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
-  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: inherit; */
 }
 
 .preloading-inner{
@@ -42,8 +47,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 
+.preloading-inner img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+}
 .preloading-inner p {
   color: white;
 }
@@ -112,7 +124,10 @@
 
 /* ######### Gnb CSS ######### */
 .gnb {
-  /* border: 1px solid #000; */
+  /* border: 1px solid #000;
+  position: fixed;
+  width: 100%; */
+  bottom: 0;
   height: 86px;
   display: flex;
   justify-content: space-between;
@@ -141,9 +156,10 @@
 
 
 /* ############# Home html CSS ############### */
-.home {}
+.home {
+}
 .home-inner {
-  height: 700px;
+  /* height: 680px; */
   background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
 }
 
@@ -153,7 +169,6 @@
 
 .mypoint {
   width: 100%;
-  height: 100px;
   display: flex;
   justify-content: space-between;
 }
@@ -165,7 +180,7 @@
 
 .own-title {
   width: 100%;
-  height: 24px;
+  padding: 2px 0;
   background-color: var(--mint-color);
   border-radius: 5px 5px 0 0;
   font-family: var(--primary-kr);
@@ -178,7 +193,7 @@
 .own-pearl,
 .own-leaf{
   width: 100%;
-  height: 38px;
+  padding: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,7 +203,7 @@
 
 .own-pearl img,
 .own-leaf img{
-  width: 26px;
+  width: 20%;
 }
 
 .own-leaf {
@@ -218,20 +233,109 @@
 
 /* 메인 캐릭터 */
 .main-character {
+  /* height: inherit; */
   height: 362px;
-  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.main-character img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 22%;
+}
+
+.main-character p{
+  position: absolute;
+  color: white;
+  width: 184px;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  top: 2%;
+  right: 10%;
+  font-family: var(--primary-kr);
+  font-size: 14px;
 }
 
 
 
 
-
-
-
-
+/* 내 포인트 영역 */
 .main-point {
-  height: 92px;
-  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.able-point{
+  width: 90px;
+  /* background-color: #000; */
+  color: white;
+}
+
+.able-point-title {
+  padding: 2px 0;
+  font-size: 14px;
+  text-align: center;
+  background-color: rgb(225, 225, 225, 0.1);
+  border-radius: 5px 5px 0 0 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mint-color);
+}
+
+
+.able-pearl , .able-leaf{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+  gap: 10px;
+}
+
+.pearl, .leaf{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+/* 오늘하루 포인트 */
+
+.today-point {
+  width: 178px;
+
+}
+
+.today-title{
+  padding: 2px 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(225, 225, 225, 0.1);
+  font-family: var(--primary-kr);
+  color: var(--mint-color);
+  font-size: 14px;
+  border-radius: 5px 5px 0 0;
+}
+
+.today-pearl, .today-leaf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+
+.today-pearl p, .today-leaf p{
+  margin-left: 10px;
 }
 
 
@@ -269,18 +373,16 @@
 .login-img{
   /* 잠보기 얼굴 */
   height: 360px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   position: relative;
   margin: auto;
 }
 .coin-img{
   /* 잠보기 옆 코인 */
-  width: 52px;
-  height: 40px;
-  background: url('/images/login-coin.svg') no-repeat;
-  background-size: cover;
   position: absolute;
   right: 0;
-  bottom: 160px;
 }
 
 .login-coment{
@@ -446,28 +548,190 @@
 
 
 
+/* ############### Singup html CSS ##################### */
+.signup{
+}
+
+.signup-inner{
+  padding: 42px;
+}
+
+.signup-title{
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #d9d9d9;
+}
 
 
+
+.signup-agree {
+
+  margin-top: 46px;
+
+}
+
+.agree-title {
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.agree-term {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  font-family: var(--primary-kr);
+}
+
+.agree-term input {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+
+.phone-certification{
+  text-align: center;
+  padding-bottom: 46px;
+  border-bottom: 1px solid #d9d9d9;
+
+}
+
+.phone-check-btn{
+  margin-top: 24px;
+  width: 154px;
+  cursor: pointer;
+}
+
+.signup-field {
+  margin-top: 46px;
+}
+
+.signup-basic-field {
+  display: flex;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+}
+
+.name-field, .birth-field {
+  display: flex;
+  flex: 1;
+  gap: 6px;
+}
+
+.user-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+
+/* 이메일 */
+.signup-email-field {
+  margin-top: 24px;
+}
+
+.email-field{
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+
+
+.user-id{
+  width: 30%;
+  height: 38px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.email-field p{
+  width: 5%;
+  font-family: var(--primary-kr);
+}
+
+.user-email{
+  width: 35%;
+  height: 38px;
+  border-radius: 5px;
+  color: var(--light-gray);
+
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 0 12px;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  cursor: pointer;
+
+  -webkit-appearance: none; /* 크롬 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none;  /* 화살표 없애기 */
+
+  background: url('/images/icon-chevron-down.svg') no-repeat right 12px center;
+
+}
+
+.email-field button{
+  width: 30%;
+  height: 38px;
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.signup-password {
+  margin-top: 24px;
+}
+
+.password-field-title {
+  margin-bottom: 12px;
+}
+
+.user-password {
+  width: 100%;
+  height: 38px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding-left: 12px;
+  font-family: var(--primary-kr);
+}
+
+
+.password-check{
+  margin-top: 12px;
+}
+
+
+.signup-btn{
+  margin-top: 46px;
+  cursor: pointer;
+}
 
 
 
 
 /* ############ Personal Infomation Survey html CSS ############### */
-
 .personal-survey{
-  /* 작업완료후 수정 */
-  height: 750px;  
-  padding: 42px;
+  
 }
-.personal-survey-inner{
-  height: inherit;
 
+.personal-survey-inner{
+  padding: 38px;
 }
 
 .name-survey {
   width: 100%;
 
 }
+
 .survey {
   display: flex;
   gap: 12px;
@@ -475,9 +739,9 @@
 
 .survey img {
   width: 40px;
-  height: 40px;
   
 }
+
 .survey p {
   width: 100%;
   font-family: var(--primary-kr);
@@ -485,15 +749,16 @@
   /* padding: 0 12px; */
   line-height: 1.6em;
 }
+
 .answer {
   margin-top: 12px;
 }
+
 .answer input {
   width: 100%;
-  height: 38px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
-  padding-left: 12px;
+  padding: 12px 12px;
 }
 
 .answer input::placeholder {
@@ -519,8 +784,8 @@
 .gender-radio label{
   display: flex;
   align-items: center;
-  
 }
+
 .gender-radio label input {
   width: 14px;
 }
@@ -537,13 +802,9 @@
 }
 
 
-
-
 .birth-survey {
   margin-top: 38px;
 }
-
-
 
 
 .job-survey {
@@ -557,7 +818,6 @@
 
 .job-down select{
   width: 100%;
-  height: 38px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
   padding: 0 12px;
@@ -571,6 +831,8 @@
   appearance: none;  /* 화살표 없애기 */
 
   background: url('/images/icon-chevron-down.svg') no-repeat right 12px center;
+
+  padding: 12px;
 }
 
 
@@ -582,7 +844,6 @@
 
 .answer-time input{
   width: 100%;
-  height: 38px;
   padding: 12px;
   margin-top: 12px;
   border: 1px solid var(--light-gray);
@@ -610,8 +871,35 @@
 
 /* select 인풋 */
 .time-select{
-  width: 100px;
-  height: 38px;
+  width: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 0 12px;
+  margin-top: 12px;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  cursor: pointer;
+
+  -webkit-appearance: none; /* 크롬 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none;  /* 화살표 없애기 */
+
+  background: url('/images/icon-chevron-down.svg') no-repeat right 12px center;
+
+  padding: 12px;
 }
 
 
+
+
+
+
+
+
+
+/* media */
+/* @media(min-width: 600px){
+  .container{
+    max-width: 600px;
+  }
+} */

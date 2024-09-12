@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Custom CSS & JS -->
+    <script src="/js/custom.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <div class="container signup">
+    <div class="signup-inner">
+      <!-- 회원가입 타이틀 -->
+      <div class="signup-title">
+        <h1>회원가입</h1>
+      </div>
+      <!-- 이용약관 체크 -->
+      <div class="signup-agree">
+        <div class="agree-title"><p>이용약관에 동의해 주세요.</p></div>
+        <div class="agree-term">
+          <label>
+            <input type="checkbox" class="select-All select-item"><em></em>전체약관에 동의(선택 포함)
+          </label>
+          <label>
+            <input type="checkbox" class="select-item"><em></em>이용약관 동의(필수)
+          </label>
+          <label>
+            <input type="checkbox" class="select-item"><em></em>개인정보 수집 및 이용에 대한 동의(필수)
+          </label>
+          <label>
+            <input type="checkbox" class="select-item"><em></em>마케팅 정보 수신 동의(선택)
+          </label>
+        </div>
+        <div class="phone-certification">
+          <button class="btn-basic phone-check-btn">휴대폰 본인인증</button>
+        </div>
+      </div>
+
+      <!-- 회원가입 폼 -->
+      <div class="signup-field">
+        <div class="signup-basic-field">
+          <div class="name-field">
+            <p class="user-title">이름</p>
+            <p class="user-name">정고래</p>
+          </div>
+          <div class="birth-field">
+            <p class="user-title">생년</p>
+            <p class="user-birth">1995</p>
+          </div>
+        </div>
+        
+        <div class="signup-email-field">
+          <div class="email-field-title user-title"><p>이메일</p></div>
+          <div class="email-field">
+            <input type="text" class="user-id" placeholder="이메일">
+            <p>@</p>
+            <select name="" id="" class="user-email">
+              <option value="">선택</option>
+              <option value="">naver.com</option>
+              <option value="">gmail.com</option>
+              <option value="">daum.net</option>
+              <option value="">kakao.com</option>
+              <option value="">yahoo.com</option>
+              <option value="">직접입력</option>
+            </select>
+            <button>중복확인</button>
+          </div>
+        </div>
+
+        <div class="signup-password">
+          <div class="password-field-title user-title"><p>비밀번호</p></div>
+          <input type="password" class="user-password" placeholder="8~32자리 영문 대소문자, 숫자, 특수문자 조합">
+          <input type="password" class="user-password password-check" placeholder="비밀번호 확인">
+        </div>
+
+        <button class="btn-basic signup-btn">가입하기</button>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+</html>
