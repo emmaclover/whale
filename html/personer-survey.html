@@ -129,7 +129,7 @@
           </div>
           <div class="answer-time sleep-down">
             <select name="" id="time-select" class="time-select">
-
+                <option value="">시간선택</option>
             </select>
           </div>
         </div>
@@ -142,6 +142,26 @@
       </div>
 
     </div>
+
+
+
+
+
+
+    <!-- 시간 30분단위 쪼개기 -->
+    <script>
+      const select = document.getElementById('time-select');
+      
+      for (let hour = 0; hour < 24; hour++) {
+        for (let minute = 0; minute < 60; minute += 30) {
+          const value = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+          const option = document.createElement('option');
+          option.value = value;
+          option.textContent = value;
+          select.appendChild(option);
+        }
+      }
+    </script>
 
 </body>
 </html>

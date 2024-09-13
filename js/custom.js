@@ -4,4 +4,11 @@ $(function(){
 
   // GNB Include Load
   $('.gnb-main').load('/include/gnb.html')
+
+  $('.select-All').c
+
+
+
+
+
 })
