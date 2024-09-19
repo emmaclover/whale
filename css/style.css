@@ -415,6 +415,7 @@
   font-size: 14px;
   font-weight: bold;
   padding-right: 6px;
+  font-family: var(--primary-kr);
 }
 
 .email-field{
@@ -467,10 +468,51 @@
 }
 
 
-.password-field input{
-  padding: 8px 12px;
+.password-field p{
+  
 }
 
+.password-field input{
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  font-family: var(--primary-kr);
+}
+
+.password-field input::placeholder{
+  color: var(--light-gray);
+}
+
+
+
+.signin-term{
+  margin-top: 42px;
+}
+
+.signin-term p{
+  margin-bottom: 12px;
+}
+.agree-term {
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+
+.agree-term label {
+  display: flex;
+}
+
+.agree-term label p{
+  padding-left: 10px;
+  margin: 0;
+}
 
 
 
