@@ -15,6 +15,7 @@
   /* width: 100%; */
   height: 750px;
   /* height: 100vh; */
+  position: relative;
 }
 
         /* Basic Button */
@@ -74,6 +75,9 @@
   padding-right: 28px;
   align-items: center;  /* 수직 정렬 */
   background-color: #fff;
+  /* border: 1px solid #000; */
+  /* position: fixed; */
+  /* width: 100%; */
 } 
 
 .bnt-menu{
@@ -128,6 +132,7 @@
   /* border: 1px solid #000;
   position: fixed;
   width: 100%; */
+  /* position: absolute; */
   bottom: 0;
   /* height: 86px; */
   display: flex;
@@ -347,6 +352,98 @@
 
 
 
+/* ############## Login Html CSS ############## */
+.login{
+  background: url('/images/character-login.svg') no-repeat 0 -20%;
+}
+
+.login-inner{
+  padding: 40px;
+}
+
+
+.login-header{
+  margin-top: 50%;
+  position: relative;
+  border: 1px solid transparent;
+}
+.point-img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1px;
+}
+.point-coment{
+  position: absolute;
+  top: 50px;
+  right: 0;
+  font-size: 24px;
+  font-family: var(--primary-kr);
+  width: 155px;
+  font-weight: bold;
+  line-height: 1.6em;
+  text-align: center;
+}
+
+
+.login-section{
+  margin-top: 170px;
+}
+
+.login-field input{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  margin-top: 12px;
+}
+
+.login-field input::placeholder{
+  color: var(--light-gray);
+  font-family: var(--primary-kr);
+  font-size: 16px;
+}
+
+
+.login-second-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0;
+  font-family: var(--primary-kr);
+  font-size: 11px;
+  color: #606060;
+}
+
+.login-second-field a:nth-child(2){
+  border-left: 1px solid var(--light-gray);
+  border-right: 1px solid var(--light-gray);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.login-btn-field{
+  margin-top: 24px;
+}
+.kakao-login{
+  background: url('/images//logo-kakao.svg') no-repeat 20px center;
+  background-color: #FEE500;
+}
+
+.apple-login{
+  background: url('/images/logo-apple.svg') no-repeat 20px center;
+  background-color: #000;
+  color: white;
+  margin-top: 12px;
+}
+
+.login-inner > p {
+  text-align: center;
+  padding: 20px;
+  font-size: 11px;
+  font-family: var(--primary-kr);
+}
 
 
 
@@ -356,9 +453,7 @@
 
 
 
-
-
-/* #################### Simple Login ################### */
+/* #################### Signup Html CSS ################### */
 
 
 .signup-inner{
@@ -716,7 +811,6 @@
 }
 
 .conversion-inner{
-  border: 1px solid #000;
   display: flex;
   justify-content: center;
   padding: 28px;
@@ -786,34 +880,50 @@
   border-radius: 5px;
 }
 
-.point-title{
-
-  text-align: center;
-  font-size: 16px;
-  font-family: var(--primary-kr);
-}
-
-.point-conversion {
+.point-box {
+  padding: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 12px;
+  flex-direction: column;
 }
+
+.point-title{
+  text-align: center;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+}
+
+.point-conversion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .point-conversion input{
+  width: 100%;
   padding: 10px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
-
 }
+.point-conversion input::placeholder{
+  color: var(--light-gray);
+  font-family: var(--primary-kr);
+}
+
 .point-conversion p {
-  padding-left: 4px;
   font-family: var(--primary-kr);
-
+  margin-left: 12px;
 }
-.point-box {
+
+.use-point{
   display: flex;
-  font-family: var(--primary-kr);
   font-size: 11px;
+  margin-top: 8px;
+}
+
+.use-point p {
+  flex: 1;
+  font-family: var(--primary-kr);
+  padding-left: 2px;
 }
 
 
