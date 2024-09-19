@@ -11,10 +11,10 @@
 
 /* ########## Common CSS ########## */
 .container{
-  width: 393px;
-  /* width: 100%; */
-  height: 750px;
-  /* height: 100vh; */
+  /* width: 393px; */
+  width: 100%;
+  /* height: 750px; */
+  height: 100vh;
   position: relative;
 }
 
@@ -359,11 +359,12 @@
 
 .login-inner{
   padding: 40px;
+  border: 1px solid #000;
 }
 
 
 .login-header{
-  margin-top: 50%;
+  margin-top: 35%;
   position: relative;
   border: 1px solid transparent;
 }
