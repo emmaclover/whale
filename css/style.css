@@ -359,7 +359,6 @@
 
 .login-inner{
   padding: 40px;
-  border: 1px solid #000;
 }
 
 
@@ -1000,6 +999,31 @@
 .conversion-cp-content p:nth-child(1){
   font-weight: bold;
 }
+
+
+
+/* ############ Conversion Out Html CSS ############ */
+.conversion-field {
+  position: relative;
+}
+.conversion-account {
+  text-align: right;
+  font-size: 11px;
+  text-decoration: underline;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #4d4d4d;
+}
+
+
+.out-bnt{
+  background-color: var(--light-gray);
+}
+
+
+
+
 
 
 
