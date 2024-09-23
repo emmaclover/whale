@@ -1,6 +1,6 @@
 /* Import Local CSS */
-@import url('/css/variable.css');
-@import url('/css/reset.css');
+@import url('../css/variable.css');
+@import url('../css/reset.css');
 
 
 
@@ -541,12 +541,12 @@
   margin-top: 24px;
 }
 .kakao-login{
-  background: url('/images//logo-kakao.svg') no-repeat 20px center;
+  background: url('../images//logo-kakao.svg') no-repeat 20px center;
   background-color: #FEE500;
 }
 
 .apple-login{
-  background: url('/images/logo-apple.svg') no-repeat 20px center;
+  background: url('../images/logo-apple.svg') no-repeat 20px center;
   background-color: #000;
   color: white;
   margin-top: 12px;
@@ -662,7 +662,7 @@
   -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
   appearance: none;  /* 화살표 없애기 */
 
-  background: url('/images/icon-chevron-down.svg') no-repeat right 12px center;
+  background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
 }
 
 
@@ -854,7 +854,7 @@
   -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
   appearance: none;  /* 화살표 없애기 */
 
-  background: url('/images/icon-chevron-down.svg') no-repeat right 12px center;
+  background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
 
   padding: 12px;
 }
@@ -908,7 +908,7 @@
   -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
   appearance: none;  /* 화살표 없애기 */
 
-  background: url('/images/icon-chevron-down.svg') no-repeat right 12px center;
+  background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
 
   padding: 12px;
 }
