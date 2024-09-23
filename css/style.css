@@ -1,0 +1,1149 @@
+/* Import Local CSS */
+@import url('../css/variable.css');
+@import url('../css/reset.css');
+
+
+
+
+
+
+
+
+/* ########## Common CSS ########## */
+.container{
+  /* border: 1px solid #000; */
+  /* width: 393px; */
+  width: 100%;
+  /* height: 750px; */
+  height: 100vh;
+  position: relative;
+}
+
+        /* Basic Button */
+.btn-basic{
+  width: 100%;
+  height: 44px;
+  background-color: var(--mint-color);
+  border-radius: 5px;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+
+
+/* ########## Splash CSS ########## */
+.preloading{
+  padding: 20px;
+  background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: inherit; */
+}
+
+.preloading-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.preloading-inner img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+}
+.preloading-inner p {
+  color: white;
+}
+
+
+
+
+/* ########## header CSS ########## */
+.main-header{
+  /* position: fixed; */
+  display: flex;
+  text-align: center;
+  height: 70px;
+  /* width: 393px; */
+  align-items: center;  /* 수직 정렬 */
+  background-color: transparent;
+  width: 100%;
+  z-index: 1000;
+
+  /* padding-top: 27px;
+  padding-bottom: 22px;
+  padding-left: 28px;
+  padding-right: 28px; */
+} 
+
+.bnt-menu{
+  /* border: 1px solid #000; */
+  /* background-color: transparent; */
+  border: none;
+  color: var(--icon-color);
+  flex: 1;
+}
+
+.main-header .logo{
+  flex: 5;
+  /* border: 1px solid #000; */
+  margin: 0;
+  font-family: var(--primary-kr);
+  color: white;
+  font-size: 16px;
+}
+
+.user-arlarm{
+  flex: 1;
+  /* border: 1px solid #000; */
+}
+
+.user-arlarm span{
+  position: relative;
+}
+
+.user-arlarm span em{
+  position: absolute;
+  background-color: var(--mint-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  right: -4px;
+  top: -2px;
+}
+
+/* .user-manage{
+  flex: 0.7;
+} */
+
+.icon-manage{}
+
+
+
+
+/* ######### Gnb CSS ######### */
+.gnb {
+  /* position: fixed; */
+  width: 100%;
+  bottom: 0;
+  /* height: 86px; */
+  display: flex;
+  justify-content: space-between;
+
+  /* width: 393px; */
+  width: 100%;
+  background-color: #fff;
+  padding: 18px 65px;
+  height: 86px;
+  /* padding-top: 18px;
+  padding-bottom: 46px; */
+  z-index: 1000;
+}
+
+.gnb a {
+  text-align: center;
+}
+
+.gnb a .bi {}
+
+
+
+
+
+
+
+
+
+/* ############# Home html CSS ############### */
+.home {
+
+}
+
+.home-inner {
+  /* padding-top: 70px;
+  padding-bottom: 86px; */
+
+  /* height: 680px; */
+  position: relative;
+  background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
+}
+
+.main-content{
+  padding: 28px;
+}
+
+.mypoint {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.mypoint .own-point {
+  width: 128px;
+}
+
+.own-title {
+  width: 100%;
+  padding: 2px 0;
+  background-color: var(--mint-color);
+  border-radius: 5px 5px 0 0;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.own-pearl,
+.own-leaf{
+  width: 100%;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255, 0.85);
+  gap: 12px;
+}
+
+.own-pearl img,
+.own-leaf img{
+  width: 20%;
+}
+
+.own-leaf {
+  border-radius: 0 0 5px 5px;
+}
+
+.own-pearl p,
+.own-leaf p{
+  font-family: var(--primary-kr);
+  font-size: 16px;
+}
+
+
+.save-point{
+  position: relative;
+}
+
+.save-point img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+
+
+
+/* 메인 캐릭터 */
+.main-character {
+  /* height: inherit; */
+  height: 362px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.main-character img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 22%;
+}
+
+.main-character p{
+  position: absolute;
+  color: white;
+  width: 184px;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  top: 2%;
+  right: 10%;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+}
+
+.bubble-home p::after{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  right:55%;
+  width: 10px;
+  height: 10px; 
+  background: #112575;
+  border-right:1px solid #CAD5E0;
+  border-bottom:1px solid #CAD5E0;
+  -moz-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+}
+
+
+
+/* 내 포인트 영역 */
+.main-point {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.able-point{
+  width: 90px;
+  /* background-color: #000; */
+  color: white;
+}
+
+.able-point-title {
+  padding: 2px 0;
+  font-size: 14px;
+  text-align: center;
+  background-color: rgb(225, 225, 225, 0.1);
+  border-radius: 5px 5px 0 0 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mint-color);
+}
+
+
+.able-pearl , .able-leaf{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+  gap: 10px;
+}
+
+.pearl, .leaf{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+/* 오늘하루 포인트 */
+
+.today-point {
+  width: 178px;
+
+}
+
+.today-title{
+  padding: 2px 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(225, 225, 225, 0.1);
+  font-family: var(--primary-kr);
+  color: var(--mint-color);
+  font-size: 14px;
+  border-radius: 5px 5px 0 0;
+}
+
+.today-pearl, .today-leaf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+
+.today-pearl p, .today-leaf p{
+  margin-left: 10px;
+}
+
+
+/* ########################## 팝업 */
+.hold-popup-inner{
+  display: none;
+  position: absolute;
+  z-index: 900;
+  padding-top: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hold-popup {
+  background: rgb(0, 13, 66, 0.7);
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pop-hold{
+  background-color: white;
+  width: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.hold-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  /* border: 1px solid #000; */
+  position: relative;
+}
+
+.hold-title {
+  font-family: var(--primary-kr);
+  color: var(--bar-text);
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--light-gray);
+  text-align: center;
+}
+
+.popx{
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  /* transform: translate(-30%, 0px); */
+}
+
+.hold-mid{
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
+  margin-top: 16px;
+}
+
+.hold-pearl, .hold-leaf{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.pearl-hold,.leaf-hold{
+  margin-left: 6px;
+  font-family: var(--primary-kr);
+}
+
+.pearl-hold p:nth-child(1),.leaf-hold p:nth-child(1){
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 4px;
+}
+
+
+.bnt-hold{
+  padding: 26px 42px;
+}
+
+.gotochange{
+  margin-top: 24px;
+}
+
+/* ############## Login Html CSS ############## */
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-part{
+  background: url('../images/character-login.svg') no-repeat 0 -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-inner{
+  padding: 40px;
+}
+
+.login-header{
+  margin-top: 35%;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.point-img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1px;
+}
+
+.point-coment{
+  position: absolute;
+  top: 50px;
+  right: 0;
+  font-size: 24px;
+  font-family: var(--primary-kr);
+  width: 155px;
+  font-weight: bold;
+  line-height: 1.6em;
+  text-align: center;
+}
+
+.login-section{
+  margin-top: 170px;
+}
+
+.login-field input{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  margin-top: 12px;
+}
+
+.login-field input::placeholder{
+  color: var(--light-gray);
+  font-family: var(--primary-kr);
+  font-size: 16px;
+}
+
+
+.login-second-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0;
+  font-family: var(--primary-kr);
+  font-size: 11px;
+  color: #606060;
+}
+
+.login-second-field a:nth-child(2){
+  border-left: 1px solid var(--light-gray);
+  border-right: 1px solid var(--light-gray);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.login-btn-field{
+  margin-top: 24px;
+}
+.kakao-login{
+  background: url('../images//logo-kakao.svg') no-repeat 20px center;
+  background-color: #FEE500;
+}
+
+.apple-login{
+  background: url('../images/logo-apple.svg') no-repeat 20px center;
+  background-color: #000;
+  color: white;
+  margin-top: 12px;
+}
+
+.login-inner > p {
+  text-align: center;
+  padding: 20px;
+  font-size: 11px;
+  font-family: var(--primary-kr);
+}
+
+
+
+
+
+
+
+
+
+/* #################### Signup Html CSS ################### */
+
+
+.signup-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+}
+
+
+.signup-title{
+  width: 100%;
+  padding-bottom: 12px;
+  text-align: center;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--line-gray);
+}
+
+.phone-check-box{
+  width: 100%;
+  border-bottom: 1px solid var(--line-gray);
+  text-align: center;
+  padding: 24px 0;
+}
+
+
+.signup-phone-btn{
+  width: 154px;
+}
+
+
+.signup-content{
+  margin-top: 42px;
+}
+
+.auto-field{
+  display: flex;
+  font-size: 14px;
+}
+.name-field{
+  flex: 1;
+  display: flex;
+}
+.birth-field{
+  flex: 1;
+  display: flex;
+  
+}
+
+.field-bold{
+  font-size: 14px;
+  font-weight: bold;
+  padding-right: 6px;
+  font-family: var(--primary-kr);
+}
+
+.email-field{
+  margin: 24px 0;
+}
+
+.email-box{
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.signup-id{
+  width: 35%;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 8px 6px;
+  font-family: var(--primary-kr);
+  color: var(--light-gray);
+}
+.email-box p{
+  width: 5%;
+}
+.signup-email{
+  width: 35%;
+  font-family: var(--primary-kr);
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 8px 6px;
+  color: var(--light-gray);
+
+  /* 드롭다운 버튼 커스텀 */
+  -webkit-appearance: none; /* 크롬 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none;  /* 화살표 없애기 */
+
+  background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
+}
+
+
+
+.email-check{
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  background-color: var(--light-gray);
+  padding: 8px 6px;
+  border-radius: 5px;
+  width: 25%;
+}
+
+
+.password-field p{
+  
+}
+
+.password-field input{
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  font-family: var(--primary-kr);
+}
+
+.password-field input::placeholder{
+  color: var(--light-gray);
+}
+
+
+
+.signin-term{
+  margin-top: 42px;
+}
+
+.signin-term p{
+  margin-bottom: 12px;
+}
+.agree-term {
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+
+.agree-term label {
+  display: flex;
+}
+
+.agree-term label p{
+  padding-left: 10px;
+  margin: 0;
+}
+
+.signup-btn{
+  margin-top: 42px;
+}
+
+
+
+
+
+
+
+
+/* ############ Personal Infomation Survey html CSS ############### */
+.personal-survey{
+  
+}
+
+.personal-survey-inner{
+  padding: 38px;
+}
+
+.name-survey {
+  width: 100%;
+
+}
+
+.survey {
+  display: flex;
+  gap: 12px;
+}
+
+.survey img {
+  width: 40px;
+  
+}
+
+.survey p {
+  width: 100%;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  /* padding: 0 12px; */
+  line-height: 1.6em;
+}
+
+.boldi{
+  font-weight: bold;
+  color: #438BFF;
+
+
+
+
+}
+.answer {
+  margin-top: 12px;
+}
+
+.answer input {
+  width: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 12px 12px;
+}
+
+.answer input::placeholder {
+  color: var(--light-gray);
+}
+
+
+
+
+.gender-survey {
+  margin-top: 38px;
+}
+
+
+.gender-radio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+  margin-top: 12px;
+}
+
+.gender-radio label{
+  display: flex;
+  align-items: center;
+}
+
+.gender-radio label input {
+  width: 14px;
+}
+
+.gender-radio label input:checked{
+  color: #000;
+}
+
+.gender-radio label p{
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  margin-left: 6px;
+
+}
+
+
+.birth-survey {
+  margin-top: 38px;
+}
+
+
+.job-survey {
+  margin-top: 38px;
+}
+
+.name-underline {
+  border-bottom: 1px solid #000;
+}
+
+
+.job-down select{
+  width: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 0 12px;
+  margin-top: 12px;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  cursor: pointer;
+
+  -webkit-appearance: none; /* 크롬 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none;  /* 화살표 없애기 */
+
+  background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
+
+  padding: 12px;
+}
+
+
+
+.sleep-survey {
+  margin-top: 38px;
+
+}
+
+.answer-time input{
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+}
+
+
+
+
+.wakeup-survey {
+  margin-top: 38px;
+}
+
+
+.sit-survey{
+  margin-top: 38px;
+}
+
+
+.enter-btn {
+  margin: 46px 0;
+}
+
+
+
+/* select 인풋 */
+.time-select{
+  width: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 0 12px;
+  margin-top: 12px;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  cursor: pointer;
+
+  -webkit-appearance: none; /* 크롬 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none;  /* 화살표 없애기 */
+
+  background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
+
+  padding: 12px;
+}
+
+
+
+
+
+
+
+/* ############### Conversion html CSS ################## */
+.conversion{
+  background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
+}
+
+.conversion-inner{
+  display: flex;
+  justify-content: center;
+}
+
+.conversion-content{
+  width: 100%;
+  padding: 28px;
+}
+
+.conversion-title{
+  color: white;
+  border-bottom: 1px solid rgb(0, 13, 66, 0.7);
+  padding: 12px 0;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  /* font-weight: bold; */
+}
+
+.conversion-point{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 36px;
+}
+
+.conversion-coment{
+  /* border: 1px solid #b4c93c; */
+}
+
+.coment-character {
+  display: flex;
+  justify-content: center;
+}
+
+.coment-character img{
+  margin-top: 12px;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* 아래에 미세하게 여백생김 방지 */
+  display: block;
+}
+
+
+/* 테두리만 있는 말풍선 */
+
+
+.bubble-conversion{
+  background: transparent;
+  border: 1px solid #CAD5E0;
+  border-radius: 5px;
+  padding: 4px;
+  position: relative;
+  /* min-width: 280px; */
+  text-align: center;
+}
+
+
+.bubble-conversion::after{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  right:40%;
+  width: 10px;
+  height: 10px; 
+  background: #112575;
+  border-right:1px solid #CAD5E0;
+  border-bottom:1px solid #CAD5E0;
+  -moz-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+}
+
+.bubble-conversion p{
+  /* border: 1px solid white; */
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  color: white;
+  font-family: var(--primary-kr);
+  max-width: 230px;
+  min-height: 60px;
+}
+
+.point-font-color{
+  color: var(--mint-color);
+}
+
+.conversion-field{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 36px 40px;
+  border-radius: 5px;
+  min-height: 230px;
+}
+
+.point-box {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.point-title{
+  text-align: center;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+}
+
+.point-conversion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.point-conversion input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+}
+
+.point-conversion input::placeholder{
+  color: var(--light-gray);
+  font-family: var(--primary-kr);
+}
+
+.point-conversion p {
+  font-family: var(--primary-kr);
+  margin-left: 12px;
+}
+
+.use-point{
+  display: flex;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.use-point p {
+  flex: 1;
+  font-family: var(--primary-kr);
+
+  padding-left: 2px;
+}
+
+.point-btn{
+  margin-top: 4px;
+}
+
+
+
+
+
+
+/* ####################### conversion Out Cp Html CSS ###################### */
+.conversion-cp-inner{
+
+}
+
+.out-cp-coment p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* ############# Conversion CP Html CSS ################ */
+.conversion-cp-content{
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.conversion-cp-content p{
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  margin-left: 6px;
+}
+
+
+.conversion-cp-content p:nth-child(1){
+  font-weight: bold;
+}
+
+
+
+/* ############ Conversion Out Html CSS ############ */
+.conversion-field {
+  position: relative;
+}
+.conversion-account {
+  text-align: right;
+  font-size: 11px;
+  text-decoration: underline;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #4d4d4d;
+}
+
+
+.out-bnt{
+  background-color: var(--light-gray);
+}
+
+
+
+
+
+
+
+/* media */
+/* @media(min-width: 600px){
+  .container{
+    max-width: 600px;
+  }
+} */

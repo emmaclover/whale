@@ -1,0 +1,32 @@
+
+
+/* 공통 리셋 스타일 */
+*{
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin-top: 0;
+}
+
+
+button{
+  border: none;
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+
+
+h1{
+  font-size: 16px;
+  font-weight: bold;
+}
