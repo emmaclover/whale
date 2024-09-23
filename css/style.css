@@ -11,10 +11,11 @@
 
 /* ########## Common CSS ########## */
 .container{
-  width: 393px;
-  /* width: 100%; */
-  height: 750px;
-  /* height: 100vh; */
+  /* border: 1px solid #000; */
+  /* width: 393px; */
+  width: 100%;
+  /* height: 750px; */
+  height: 100vh;
   position: relative;
 }
 
@@ -66,23 +67,25 @@
 
 /* ########## header CSS ########## */
 .main-header{
-  /* border: 1px solid #000; */
+  /* position: fixed; */
   display: flex;
   text-align: center;
-  padding-top: 27px;
+  height: 70px;
+  /* width: 393px; */
+  align-items: center;  /* 수직 정렬 */
+  background-color: transparent;
+  width: 100%;
+  z-index: 1000;
+
+  /* padding-top: 27px;
   padding-bottom: 22px;
   padding-left: 28px;
-  padding-right: 28px;
-  align-items: center;  /* 수직 정렬 */
-  background-color: #fff;
-  /* border: 1px solid #000; */
-  /* position: fixed; */
-  /* width: 100%; */
+  padding-right: 28px; */
 } 
 
 .bnt-menu{
   /* border: 1px solid #000; */
-  background-color: transparent;
+  /* background-color: transparent; */
   border: none;
   color: var(--icon-color);
   flex: 1;
@@ -93,10 +96,12 @@
   /* border: 1px solid #000; */
   margin: 0;
   font-family: var(--primary-kr);
+  color: white;
+  font-size: 16px;
 }
 
 .user-arlarm{
-  flex: 0.7;
+  flex: 1;
   /* border: 1px solid #000; */
 }
 
@@ -114,11 +119,9 @@
   top: -2px;
 }
 
-.icon-menu{}
-.user-manage{
+/* .user-manage{
   flex: 0.7;
-  /* border: 1px solid #000; */
-}
+} */
 
 .icon-manage{}
 
@@ -127,10 +130,8 @@
 
 /* ######### Gnb CSS ######### */
 .gnb {
-  /* border: 1px solid #000;
-  position: fixed;
-  width: 100%; */
-  position: absolute;
+  /* position: fixed; */
+  width: 100%;
   bottom: 0;
   /* height: 86px; */
   display: flex;
@@ -138,11 +139,12 @@
 
   /* width: 393px; */
   width: 100%;
-
   background-color: #fff;
-  padding: 0 65px;
-  padding-top: 18px;
-  padding-bottom: 46px;
+  padding: 18px 65px;
+  height: 86px;
+  /* padding-top: 18px;
+  padding-bottom: 46px; */
+  z-index: 1000;
 }
 
 .gnb a {
@@ -165,7 +167,11 @@
 }
 
 .home-inner {
+  /* padding-top: 70px;
+  padding-bottom: 86px; */
+
   /* height: 680px; */
+  position: relative;
   background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
 }
 
@@ -177,10 +183,10 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .mypoint .own-point {
-  border: 1px solid #000;
   width: 128px;
 }
 
@@ -244,6 +250,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  
 }
 
 .main-character img{
@@ -267,6 +274,20 @@
   font-size: 14px;
 }
 
+.bubble-home p::after{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  right:55%;
+  width: 10px;
+  height: 10px; 
+  background: #112575;
+  border-right:1px solid #CAD5E0;
+  border-bottom:1px solid #CAD5E0;
+  -moz-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+}
 
 
 
@@ -345,34 +366,128 @@
 }
 
 
+/* ########################## 팝업 */
+.hold-popup-inner{
+  display: none;
+  position: absolute;
+  z-index: 900;
+  padding-top: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hold-popup {
+  background: rgb(0, 13, 66, 0.7);
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pop-hold{
+  background-color: white;
+  width: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.hold-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  /* border: 1px solid #000; */
+  position: relative;
+}
+
+.hold-title {
+  font-family: var(--primary-kr);
+  color: var(--bar-text);
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--light-gray);
+  text-align: center;
+}
+
+.popx{
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  /* transform: translate(-30%, 0px); */
+}
+
+.hold-mid{
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
+  margin-top: 16px;
+}
+
+.hold-pearl, .hold-leaf{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.pearl-hold,.leaf-hold{
+  margin-left: 6px;
+  font-family: var(--primary-kr);
+}
+
+.pearl-hold p:nth-child(1),.leaf-hold p:nth-child(1){
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 4px;
+}
 
 
+.bnt-hold{
+  padding: 26px 42px;
+}
 
-
-
-
+.gotochange{
+  margin-top: 24px;
+}
 
 /* ############## Login Html CSS ############## */
 .login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-part{
   background: url('../images/character-login.svg') no-repeat 0 -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-inner{
   padding: 40px;
 }
 
-
 .login-header{
   margin-top: 35%;
   position: relative;
   border: 1px solid transparent;
 }
+
 .point-img{
   position: absolute;
   top: 0;
   right: 0;
   padding: 1px;
 }
+
 .point-coment{
   position: absolute;
   top: 50px;
@@ -384,7 +499,6 @@
   line-height: 1.6em;
   text-align: center;
 }
-
 
 .login-section{
   margin-top: 170px;
@@ -876,7 +990,7 @@
   display: block;
   position: absolute;
   bottom: -7px;
-  right:55%;
+  right:40%;
   width: 10px;
   height: 10px; 
   background: #112575;
