@@ -8,6 +8,9 @@ $(function(){
   // Hold-Pop Include Load
   $('.hold-pop-include').load('../include/hold-pop.html')
 
+  // Point-Pop Include Load
+  $('.point-pop-include').load('../include/point-pop.html')
+
 
    // Signin Field
   $('.all-term').on('change', function() {
@@ -41,5 +44,9 @@ $(function(){
 
 
   });
+
+
+
+
 
 })
