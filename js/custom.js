@@ -5,11 +5,10 @@ $(function(){
   // GNB Include Load
   $('.gnb-main').load('../include/gnb.html')
 
-  // Hold-Pop Include Load
-  $('.hold-pop-include').load('../include/hold-pop.html')
 
   // Point-Pop Include Load
-  $('.point-pop-include').load('../include/point-pop.html')
+  // $('.po').load('../include/pop.html')
+
 
 
    // Signin Field
@@ -46,6 +45,19 @@ $(function(){
   });
 
 
+  // ## Home 화면 포인트 보유 팝업
+  $('.po').load('../include/pop.html', function(){
+
+    // 모달 오픈
+    $('.save-point').click(function(){
+      $('.point-popup-inner').show();
+    });
+
+     // 모달 닫기
+    $('.point-popx').click(function(){
+      $('.point-popup-inner').hide();
+    })
+  })
 
 
 
