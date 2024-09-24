@@ -1,14 +1,26 @@
 $(function(){
   // Header Include Load
-  $('.header-include').load('../include/header.html')
+  // $('.header-include').load('../include/header.html')
+
+  $('.header-include').load('../include/header.html', function() {
+    // header.html 로드 완료 후 실행될 코드
+    var currentPage = window.location.pathname; // 현재 페이지 경로 가져오기
+
+    // 페이지 경로에 따라 h2.logo의 텍스트 변경
+    if (currentPage.endsWith("home.html")) {
+      $(".header-include .logo").text("잠보기의 하루");
+    } else if (currentPage.endsWith("conversion.html")) {
+      $(".header-include .logo").text("포인트 전환");
+    } else if (currentPage.endsWith("contact.html")) {
+      $(".header-include .logo").text("Contact Page Logo");
+    } else {
+      $(".header-include .logo").text("잠보기의 하루");
+    }
+  });
+
 
   // GNB Include Load
   $('.gnb-main').load('../include/gnb.html')
-
-
-  // Point-Pop Include Load
-  // $('.po').load('../include/pop.html')
-
 
 
    // Signin Field
