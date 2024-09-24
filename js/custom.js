@@ -23,11 +23,6 @@ $(function(){
   $('.gnb-main').load('../include/gnb.html')
 
 
-  // Point-Pop Include Load
-  // $('.po').load('../include/pop.html')
-
-
-
    // Signin Field
   $('.all-term').on('change', function() {
     // all-ter 모두 체크 선택 and 해제
