@@ -12,11 +12,12 @@
 /* ########## Common CSS ########## */
 .container{
   /* border: 1px solid #000; */
-  /* width: 393px; */
-  width: 100%;
-  /* height: 750px; */
-  height: 100vh;
+  width: 393px;
+  /* width: 100%; */
+  height: 750px;
+  /* height: 100vh; */
   position: relative;
+  /* border: 1px solid #000; */
 }
 
         /* Basic Button */
@@ -68,12 +69,14 @@
 /* ########## header CSS ########## */
 .main-header{
   /* position: fixed; */
+  position: absolute;
+  
   display: flex;
   text-align: center;
   height: 70px;
-  /* width: 393px; */
   align-items: center;  /* 수직 정렬 */
   background-color: transparent;
+  top: 0;
   width: 100%;
   z-index: 1000;
 
@@ -131,6 +134,8 @@
 /* ######### Gnb CSS ######### */
 .gnb {
   /* position: fixed; */
+  position: absolute;   /* 변경해야됨  */
+
   width: 100%;
   bottom: 0;
   /* height: 86px; */
@@ -163,14 +168,23 @@
 
 /* ############# Home html CSS ############### */
 .home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+}
 
+.home-part{
+  /* display: flex;
+  justify-content: center; */
+  width: 100%;
+  height: 100%;
 }
 
 .home-inner {
-  /* padding-top: 70px;
-  padding-bottom: 86px; */
-
-  /* height: 680px; */
+  padding-top: 70px;
+  padding-bottom: 86px;
+  /* height: 100%; */
   position: relative;
   background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
 }
@@ -466,9 +480,10 @@
 
 .login-part{
   background: url('../images/character-login.svg') no-repeat 0 -20%;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  /* border: 1px solid #000; */
 }
 
 .login-inner{
