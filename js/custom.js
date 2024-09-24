@@ -10,7 +10,7 @@ $(function(){
     if (currentPage.endsWith("home.html")) {
       $(".header-include .logo").text("잠보기의 하루");
     } else if (currentPage.endsWith("conversion.html")) {
-      $(".header-include .logo").text("교환소");
+      $(".header-include .logo").text("포인트 전환");
     } else if (currentPage.endsWith("contact.html")) {
       $(".header-include .logo").text("Contact Page Logo");
     } else {
