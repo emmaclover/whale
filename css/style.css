@@ -84,7 +84,6 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-
   /* padding-top: 27px;
   padding-bottom: 22px;
   padding-left: 28px;
@@ -194,8 +193,18 @@
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
 }
 
+.home-line{
+  width: 100%;
+  padding: 0 28px;
+}
+
+.header-line{
+  border-bottom: 1px solid rgb(0, 13, 66, 0.7);
+}
+
 .main-content{
   padding: 28px;
+  position: relative;
 }
 
 .mypoint {
@@ -476,6 +485,84 @@
   margin-top: 24px;
 }
 
+
+/* ################################## 포인트 팝업 */
+.point-popup-inner{
+  display: none;
+  position: absolute;
+  z-index: 800;
+  padding-top: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.point-popup{
+  background: rgb(0, 13, 66, 0.7);
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pop-point{
+  background-color: white;
+  width: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 12px;
+}
+.point-popup-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  position: relative;
+
+}
+.point-popup-title{
+  font-family: var(--primary-kr);
+  color: var(--bar-text);
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--light-gray);
+  text-align: center;
+
+}
+
+.point-popx{
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.point-popup-mid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 65px 0;
+}
+
+.point-pop-comen{
+  margin-left: 6px;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+}
+
+.point-pop-comen p:nth-child(1){
+  font-weight: bold;
+}
+
+
+
+
+
+
+
 /* ############## Login Html CSS ############## */
 .login{
   display: flex;
@@ -580,6 +667,66 @@
 
 
 
+
+
+/* ################# Find Id Html CSS #################### */
+.find-id {}
+.find-id-inner {
+  padding: 42px;
+}
+
+.find-id-title{
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.find-id-name{
+  margin-top: 40px;
+  font-size: 16px;
+  font-family: var(--primary-kr);
+  font-weight: bold;
+}
+
+.find-id-phone{
+  margin-top: 30px;
+  font-size: 16px;
+  font-family: var(--primary-kr);
+  font-weight: bold;
+}
+
+
+.find-id-name input,
+.find-id-phone input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 1px solid #D9D9D9;
+  margin-top: 16px;
+}
+
+.find-id-name input::placeholder,
+.find-id-phone input::placeholder{
+  color: #D9D9D9;
+  font-size: 15px;
+}
+
+.find-id-btn{
+  margin-top: 42px;
+}
+
+
+
+
+
+/* ############ Change Password Html CSS ############### */
+.change-pwd-name input{
+  background-color: #F3F3F3;
+}
 
 
 
