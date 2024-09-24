@@ -571,9 +571,8 @@
 }
 
 .login-part{
-  background: url('../images/character-login.svg') no-repeat 0 10%;
+  background: url('../images/character-login.svg') no-repeat 0 -30%;
   width: 100%;
-  border: 1px solid #000;
 }
 
 .login-inner{
