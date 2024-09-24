@@ -17,7 +17,12 @@
   height: 750px;
   /* height: 100vh; */
   position: relative;
-  /* border: 1px solid #000; */
+  /* border: 1px solid #000;
+  
+  
+  
+  
+  */
 }
 
         /* Basic Button */
@@ -75,7 +80,7 @@
   text-align: center;
   height: 70px;
   align-items: center;  /* 수직 정렬 */
-  background-color: transparent;
+  background-color: #15309B;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -186,7 +191,7 @@
   padding-bottom: 86px;
   /* height: 100%; */
   position: relative;
-  background-image: linear-gradient(to right bottom, #1F3AA1, #000C3F);
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
 }
 
 .main-content{
@@ -479,11 +484,9 @@
 }
 
 .login-part{
-  background: url('../images/character-login.svg') no-repeat 0 -20%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* border: 1px solid #000; */
+  background: url('../images/character-login.svg') no-repeat 0 10%;
+  width: 100%;
+  border: 1px solid #000;
 }
 
 .login-inner{
