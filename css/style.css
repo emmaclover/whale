@@ -175,7 +175,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100%; */
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
 }
 
 .home-part{
@@ -183,16 +184,14 @@
   justify-content: center; */
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  
 }
 
 .home-inner {
-  padding-top: 70px;
-  padding-bottom: 100px;
-  /* height: 100%; */
+  padding: 70px 0;
+  /* padding-bottom: 100px; */
   position: relative;
-  background-image: linear-gradient(to bottom, #1633A2, #000E48);
-
+  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
 }
 
 .home-line{
