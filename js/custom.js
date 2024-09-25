@@ -43,6 +43,8 @@ $(function(){
 
 
 
+
+
   // ## home 화면 보유 팝업
   $('.hold-pop-include').load('../include/hold-pop.html', function() {
     
@@ -81,5 +83,13 @@ $(function(){
 
 
   // ### 거래소 진주, 산호 얻기
+  $('.btn-get-pearl').click(function(){
+    $('.exchange-topearl').show();
+    $('.exchange-toleaf').hide();
+  })
 
+  $('.btn-get-leaf').click(function(){
+    $('.exchange-toleaf').show();
+    $('.exchange-topearl').hide();
+  })
 })
