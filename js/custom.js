@@ -11,8 +11,10 @@ $(function(){
       $(".header-include .logo").text("잠보기의 하루");
     } else if (currentPage.endsWith("conversion.html")) {
       $(".header-include .logo").text("포인트 전환");
-    } else if (currentPage.endsWith("contact.html")) {
-      $(".header-include .logo").text("Contact Page Logo");
+    } else if (currentPage.endsWith("conversion-cp.html")) {
+      $(".header-include .logo").text("포인트 전환");
+    } else if (currentPage.endsWith("exchange.html")){
+      $(".header-include .logo").text("거래소");
     } else {
       $(".header-include .logo").text("잠보기의 하루");
     }
@@ -39,6 +41,8 @@ $(function(){
   });
 
 
+
+
   // ## home 화면 보유 팝업
   $('.hold-pop-include').load('../include/hold-pop.html', function() {
     
@@ -57,6 +61,8 @@ $(function(){
   });
 
 
+
+
   // ## Home 화면 포인트 보유 팝업
   $('.po').load('../include/pop.html', function(){
 
@@ -72,5 +78,8 @@ $(function(){
   })
 
 
+
+
+  // ### 거래소 진주, 산호 얻기
 
 })
