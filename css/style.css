@@ -176,7 +176,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: inherit; */
+
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
 }
 
