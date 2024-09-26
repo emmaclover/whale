@@ -92,4 +92,36 @@ $(function(){
     $('.exchange-toleaf').show();
     $('.exchange-topearl').hide();
   })
+
+
+
+  // ### 거래소 교환하기 팝업
+  $('.change-popup-include').load('../include/exchange-pop.html', function(){
+
+    // 모달 오픈
+    $('.btn-toleaf').click(function(){
+      $('.ch-pop-inner').show();
+    })
+
+    $('.btn-topearl').click(function(){
+      $('.ch-pop-inner').show();
+    })
+
+    // 모달 닫기
+    $('.ch-popx').click(function(){
+      $('.ch-pop-inner').hide();
+    })
+
+    $('.ch-popx').click(function(){
+      $('.ch-pop-inner').hide();
+    })
+
+    $('.btn-cancel').click(function(){
+      $('.ch-pop-inner').hide();
+    })
+  })
+
+
+
+
 })
