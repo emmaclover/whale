@@ -1123,6 +1123,7 @@
   text-align: center;
   justify-content: center;
   padding: 20px 20px 0px 20px;
+  border: 1px solid #000;
 }
 
 .conversion-have-box{
@@ -1691,13 +1692,120 @@
   gap: 28px;
 }
 
-.btn-chack{
-  
+
+
+
+
+/* ################## 아이템 샵 ################# */
+.item-shop{
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+}
+
+.item-shop-inner{
+  border: 1px solid #000;
+  margin-top: 70px;
+  padding: 27px;
 }
 
 
 
+.item-shop-title{
+  /* border: 1px solid #000; */
+  color: white;
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  font-weight: lighter;
+  display: flex;
+  align-items: center;
+  padding-bottom: 24px;
+}
 
+.item-shop-title a:nth-child(1){
+  padding-right: 6px;
+}
+
+.title-line{
+  width: 4px;
+  height: 12px;
+  border-left: 1px solid rgb(225, 225, 225, 0.3);
+}
+
+.item-shop-title a:nth-child(3){
+  color: rgb(225, 225, 225, 0.3);
+  padding: 2px;
+  
+}
+
+.item-shop-have-box{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.item-shop-have-all{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mint-color);
+  padding: 6px 15px;
+  border-radius: 5px;
+
+  font-size: 12px;
+  color: var(--var-text);
+
+}
+
+.item-shop-have-all p:nth-child(1){
+  font-weight: bold;
+  padding: 0px 3px;
+  border-left: 1px solid rgb(0, 0, 0, 0.3);
+  border-right: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+.item-shop-have-all p:nth-child(2),
+.item-shop-have-all p:nth-child(4){
+  font-weight: bold;
+  padding-left: 8px;
+}
+
+.item-shop-have-all p:nth-child(3),
+.item-shop-have-all p:nth-child(5){
+  padding-left: 2px;
+}
+
+
+
+.shop-items{
+  border: 1px solid #000;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.shop-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+}
+.shop-item-img{
+  background-color: white;
+  width: 78px;
+  height: 78px;
+  border-radius: 20px;
+  border: 2px solid #c1c1c1;
+}
+
+.shop-item-name{
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 6px;
+}
 
 
 
