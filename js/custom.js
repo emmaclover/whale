@@ -6,7 +6,7 @@ $(function(){
     // header.html 로드 완료 후 실행될 코드
     var currentPage = window.location.pathname; // 현재 페이지 경로 가져오기
 
-    // 페이지 경로에 따라 h2.logo의 텍스트 변경
+    // 페이지 경로에 헤더 타이틀 변경
     if (currentPage.endsWith("home.html")) {
       $(".header-include .logo").text("잠보기의 하루");
     } else if (currentPage.endsWith("conversion.html")) {
@@ -121,6 +121,15 @@ $(function(){
     })
   })
 
+
+
+
+  // ## Item-shop 아이템 꾸리기
+  var $item = $('.shop-item').first();
+  for(var i = 2; i <= 10; i++){
+    var newItem =$item.clone();
+    $('.shop-items').append(newItem)
+  }
 
 
 
