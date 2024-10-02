@@ -80,6 +80,41 @@ $(function(){
   })
 
 
+  // ## 아이템 상세 팝업
+  $('.item-detail-include').load('../include/item-detail-pop.html', function(){
+    $('.shop-item-img').click(function(){
+      $('.item-detail-inner').show();
+    })
+
+    $('.detail-pop-x').click(function(){
+      $('.item-detail-inner').hide();
+    })
+
+    $('.item-shop-cancel').click(function(){
+      $('.item-detail-inner').hide();
+    })
+
+    $('.item-shop-success').click(function(){
+      $('.shop-cp-inner').show();
+      $('.item-detail-inner').hide();
+    })
+
+    $('.keep-shop-btn').click(function(){
+      $('.shop-cp-inner').hide();
+    })
+
+    $('.my-shop-btn').click(function(){
+      alert('내 아이템 화면 작업중');
+    })
+  });
+
+
+  // ## 아이템 구매 완료 팝업
+  // $('.shop-cp-include').load('../include/shop-pay-pop.html', function(){
+    
+  // })
+
+
 
 
   // ### 거래소 진주, 산호 얻기

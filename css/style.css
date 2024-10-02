@@ -17,12 +17,7 @@
   /* height: 750px; */
   height: 100vh;
   position: relative;
-  /* border: 1px solid #000;
-  
-  
-  
-  
-  */
+  /* border: 1px solid #000; */
 }
 
         /* Basic Button */
@@ -183,24 +178,22 @@
 
 /* ############# Home html CSS ############### */
 .home {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: inherit;
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
 }
 
 .home-part{
   width: 100%;
-  /* height: 100%; */
-  
 }
 
 .home-inner {
   padding: 70px 0;
   /* padding-bottom: 100px; */
   position: relative;
-  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
+
 }
 
 .home-line{
@@ -240,6 +233,8 @@
   justify-content: center;
   align-items: center;
 }
+
+
 
 .own-pearl,
 .own-leaf{
@@ -751,7 +746,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 40px;
+  padding: 50px 40px;
 }
 
 
@@ -1098,7 +1093,8 @@
 /* ############### Conversion html CSS ################## */
 .conversion{
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
-  height: inherit;
+  /* border: 1px solid #000; */
+  /* height: inherit; */
   /* padding-bottom: 80px; */
 }
 
@@ -1115,7 +1111,6 @@
   width: 100%;
   padding: 70px 28px 80px 28px;
   height: 100%;
-
 }
 
 .conversion-have-all{
@@ -1699,11 +1694,14 @@
 /* ################## 아이템 샵 ################# */
 .item-shop{
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  height: inherit;
 }
 
 .item-shop-inner{
   margin-top: 70px;
   padding: 27px;
+  padding-bottom: 100px;
+  position: relative;
 }
 
 
@@ -1810,9 +1808,187 @@
 
 
 
+
+
+/* ################# 아이템 상세 팝업 ################# */
+.item-detail-inner{
+  display: none;
+  background-color: rgb(0, 13, 66, 0.7);
+  position: absolute;
+  z-index: 900;
+  padding-top: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.detail-pop{
+  /* background: rgb(0, 13, 66, 0.7); */
+  width: 100%;
+  /* height: inherit; */
+  padding: 0 20px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.detail-pop-inner{
+  background-color: white;
+  padding: 12px;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid var(--light-gray);
+}
+
+.detail-pop-title{
+  padding: 12px 0 12px 0;
+  border-bottom: 1px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  color: var(--var-text);
+
+}
+
+.detail-pop-x{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.detail-pop-character{
+  padding-top: 12px;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.detail-pop-mid{
+  padding: 0 30px 0 30px;
+
+}
+
+.item-title{
+  padding: 12px 0 12px 0;
+  text-align: center;
+  font-size: 16px;
+  font-family: var(--primary-kr);
+  font-weight: bold;
+}
+
+.item-details{
+
+  font-family: var(--var-text);
+  font-size: 14px;
+}
+
+.item-details p {
+  padding-bottom: 6px;
+  font-weight: bold;
+}
+
+.item-details span{
+  font-weight: lighter;
+}
+
+.detail-pop-btn{
+  padding: 18px 30px 34px 30px;
+  display: flex;
+  gap: 28px;
+}
+
+
+
+/* ####### 구매 완료 팝업 ######### */
+.shop-cp-inner{
+  display: none;
+  background-color: rgb(0, 13, 66, 0.7);
+  position: absolute;
+  z-index: 900;
+  padding-top: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.shop-cp-pop{
+  padding: 30px;
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  /* transform: translate(0,-50%); */
+}
+
+.pop-shop-cp{
+  /* width: 100%; */
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid var(--light-gray);
+  padding: 40px;
+}
+
+.shop-cp-title{
+  text-align: center;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+}
+
+.shop-cp-title p{
+  padding-bottom: 6px;
+}
+
+.shop-cp-title p:nth-child(1){
+  font-weight: bold;
+}
+
+.shop-cp-btn{
+  display: flex;
+  gap: 28px;
+  padding-top: 18px;
+}
+
+
+
+
 /* media */
-/* @media(min-width: 600px){
-  .container{
-    max-width: 600px;
+@media(min-width: 600px){
+  body{
+    padding: 0;
+    margin: 0;
   }
-} */
+
+  .container{
+    max-width: 500px;
+    margin: auto;
+
+  }
+
+  .main-header{
+    position: absolute;
+  }
+
+  .gnb{
+    position: absolute; 
+
+  }
+  
+  .item-shop-inner{
+    margin-top: 0px;
+  }
+
+  .item-shop-title{
+    margin-top: 70px;
+  }
+}
+
+@media(min-height: 700px){
+  .container{
+    height: 100vh;
+
+  }
+}
