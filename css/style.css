@@ -43,6 +43,9 @@
   cursor: pointer;
 }
 
+.no-scroll{
+  overflow: hidden;
+}
 
 
 
@@ -81,7 +84,6 @@
 .main-header{
   position: fixed;
   /* position: absolute; */
-  
   display: flex;
   text-align: center;
   height: 70px;
@@ -90,10 +92,6 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  /* padding-top: 27px;
-  padding-bottom: 22px;
-  padding-left: 28px;
-  padding-right: 28px; */
 } 
 
 .bnt-menu{
@@ -1801,16 +1799,23 @@
 .item-shop{
   /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
   height: inherit;
+  /* min-height: 100vh; */
 }
 
 .item-shop-inner{
-  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
-  margin-top: 70px;
-  padding: 27px;
-  padding-bottom: 110px;
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  padding-bottom: 80px;
+  min-height: 100vh;
   position: relative;
+  min-height: 100vh;
 }
 
+
+.item-shop-content{
+  width: 100%;
+  padding: 70px 28px 80px 28px;
+  height: 100%;
+}
 
 
 .item-shop-title{
@@ -1822,6 +1827,7 @@
   display: flex;
   align-items: center;
   padding-bottom: 24px;
+  padding-top: 24px;
 }
 
 .item-shop-title a:nth-child(1){
@@ -1935,9 +1941,11 @@
   width: 100%;
   /* height: inherit; */
   padding: 0 20px;
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
 }
 
 .detail-pop-inner{
@@ -2027,8 +2035,9 @@
   padding: 30px;
   width: 100%;
   position: absolute;
-  top: 20%;
-  /* transform: translate(0,-50%); */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .pop-shop-cp{
@@ -2071,13 +2080,15 @@
 
 /* ############ 내 아이템 ############# */
 .item-mine{
-  background-image: linear-gradient(to bottom, #1633A2, #000E48);
-  height: 100%;
+  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
+  /* height: 100%; */
+  height: inherit;
 }
 
 .item-mine-inner{
-  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
   padding-bottom: 80px;
+  min-height: 100vh;
 }
 
 .item-mine-content{
@@ -2096,6 +2107,7 @@
   align-items: center;
   gap: 4px;
   padding-bottom: 12px;
+  padding-top: 24px;
 }
 
 .item-mine-title a:nth-child(1){
@@ -2229,25 +2241,21 @@
   .container{
     max-width: 500px;
     margin: auto;
-
+    position: relative;
   }
 
   .main-header{
-    position: absolute;
+    position: fixed;
+    width: 500px;
+    
   }
 
   .gnb{
-    position: absolute; 
-
+    width: 500px;
+    position: fixed;
   }
   
-  .item-shop-inner{
-    margin-top: 0px;
-  }
 
-  .item-shop-title{
-    margin-top: 70px;
-  }
 }
 
 @media(min-height: 700px){
