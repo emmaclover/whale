@@ -326,23 +326,67 @@
 
 /* 메인 캐릭터 */
 .main-character {
-  /* height: inherit; */
-  height: 362px;
-  display: flex;
-  justify-content: center;
+  height: 380px;
+  /* display: flex;
+  justify-content: center; */
   position: relative;
-  
+  margin-top: 6px;
+  margin-bottom: 16px;
 }
 
-.main-character img{
+
+.character-section{
+  position: relative;
+  height: inherit;
+}
+
+.character-section img{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.character-section img:nth-child(1){
+  bottom: 26px;
+}
+
+.bubble-coment{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 14px 8px;
+  border: 1px solid white;
+  border-radius: 12px;
+  color: white;
+  max-width: 180px;
+  font-size: 14px;
+  font-family: var(--primary-kr);
+}
+
+.bubble-coment img{
+  position: absolute;
+  bottom: 0;
+  right: 60%;
+  transform: translate(0, calc(100% - 1px));
+}
+
+
+/* .main-character img{
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   position: absolute;
   top: 22%;
-}
+} */
+/* 
+.main-character img:nth-child(1){
+  top: 58px;
+  right: 22%;
+  z-index: 2;
+} */
 
-.main-character p{
+/* .main-character p{
   position: absolute;
   color: white;
   width: 184px;
@@ -353,9 +397,11 @@
   right: 10%;
   font-family: var(--primary-kr);
   font-size: 14px;
-}
+} */
 
-.bubble-home p::after{
+
+
+/* .bubble-home p::after{
   content: '';
   display: block;
   position: absolute;
@@ -368,7 +414,7 @@
   border-bottom:1px solid #CAD5E0;
   -moz-transform:rotate(45deg);
   -webkit-transform:rotate(45deg);
-}
+} */
 
 
 
@@ -386,11 +432,11 @@
 }
 
 .able-point-title {
-  padding: 2px 0;
+  padding: 4px 0;
   font-size: 14px;
   text-align: center;
   background-color: rgb(225, 225, 225, 0.1);
-  border-radius: 5px 5px 0 0 ;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -398,13 +444,22 @@
 }
 
 
+.today-pearl{
+  margin-top: 6px;
+}
+
+.able-pearl{
+  margin-top: 6px;
+}
+
 .able-pearl , .able-leaf{
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  padding: 6px 0;
+  padding: 6px 0 0 6px;
   gap: 10px;
 }
+
 
 .pearl, .leaf{
   max-width: 100%;
@@ -416,12 +471,11 @@
 /* 오늘하루 포인트 */
 
 .today-point {
-  width: 178px;
-
+  width: 186px;
 }
 
 .today-title{
-  padding: 2px 0;
+  padding: 4px 0;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -429,16 +483,17 @@
   font-family: var(--primary-kr);
   color: var(--mint-color);
   font-size: 14px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
 }
 
 .today-pearl, .today-leaf {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   color: white;
   padding: 4px 0;
   font-size: 14px;
+  padding-left: 6px;
 }
 
 
