@@ -168,10 +168,55 @@
 
 .gnb a .bi {}
 
+.gnb p {
+  font-size: 11px;
+  font-family: var(--primary-kr);
+  color: var(--light-gray);
+  text-align: center;
+  padding-top: 3px;
+}
 
 
+/* GNB - home */
+.gnb-bar-main .bi-home,
+.gnb-bar-main .bi-change-on,.gnb-bar-main .bi-shop-on,.gnb-bar-main .bi-person-on
+{
+  display: none;
+}
+
+.gnb-bar-main .bi-home-on p{
+  color: var(--var-text);
+}
 
 
+/* GNB - conversioin */
+.gnb-conversion .bi-home-on,
+.gnb-conversion .bi-change-on, .gnb-conversion .bi-shop-on,
+.gnb-conversion .bi-person-on
+{
+  display: none;
+}
+
+/* GNB - change */
+.gnb-change .bi-home-on ,
+.gnb-change .bi-change, .gnb-change .bi-shop-on, .gnb-change .bi-person-on{
+  display: none;
+}
+
+.gnb-change .bi-change-on p {
+  color: var(--var-text);
+}
+
+/* GNB - item */
+.gnb-item .bi-home-on,
+.gnb-item .bi-change-on, .gnb-item .bi-shop, .gnb-item .bi-person-on
+{
+  display: none;
+}
+
+.gnb-item .bi-shop-on p{
+  color: var(--var-text);
+}
 
 
 
