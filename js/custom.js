@@ -161,11 +161,18 @@ $(function(){
 
   // ## Item-shop 아이템 꾸리기
   var $item = $('.shop-item').first();
-  for(var i = 2; i <= 10; i++){
+  for(var i = 2; i <= 16; i++){
     var newItem =$item.clone();
     $('.shop-items').append(newItem)
   }
 
+
+  // ## Mine-item 아이템 꾸리기
+  var $myitem = $('.mine-item').first();
+  for(var i = 2; i < 22; i++){
+    var newMine = $myitem.clone();
+    $('.mine-items').append(newMine)
+  }
 
 
 })
