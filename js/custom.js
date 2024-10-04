@@ -83,14 +83,17 @@ $(function(){
   // ## 아이템 상세 팝업
   $('.item-detail-include').load('../include/item-detail-pop.html', function(){
     $('.shop-item-img').click(function(){
+      $('body').addClass('no-scroll');
       $('.item-detail-inner').show();
     })
 
     $('.detail-pop-x').click(function(){
+      $('body').removeClass('no-scroll');
       $('.item-detail-inner').hide();
     })
 
     $('.item-shop-cancel').click(function(){
+      $('body').removeClass('no-scroll');
       $('.item-detail-inner').hide();
     })
 
@@ -100,6 +103,7 @@ $(function(){
     })
 
     $('.keep-shop-btn').click(function(){
+      $('body').removeClass('no-scroll');
       $('.shop-cp-inner').hide();
     })
 
@@ -161,7 +165,7 @@ $(function(){
 
   // ## Item-shop 아이템 꾸리기
   var $item = $('.shop-item').first();
-  for(var i = 2; i <= 16; i++){
+  for(var i = 1; i <= 26; i++){
     var newItem =$item.clone();
     $('.shop-items').append(newItem)
   }
@@ -169,7 +173,7 @@ $(function(){
 
   // ## Mine-item 아이템 꾸리기
   var $myitem = $('.mine-item').first();
-  for(var i = 2; i < 22; i++){
+  for(var i = 1; i < 24; i++){
     var newMine = $myitem.clone();
     $('.mine-items').append(newMine)
   }
