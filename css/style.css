@@ -17,12 +17,7 @@
   /* height: 750px; */
   height: 100vh;
   position: relative;
-  /* border: 1px solid #000;
-  
-  
-  
-  
-  */
+  /* border: 1px solid #000; */
 }
 
         /* Basic Button */
@@ -48,6 +43,9 @@
   cursor: pointer;
 }
 
+.no-scroll{
+  overflow: hidden;
+}
 
 
 
@@ -86,7 +84,6 @@
 .main-header{
   position: fixed;
   /* position: absolute; */
-  
   display: flex;
   text-align: center;
   height: 70px;
@@ -94,11 +91,7 @@
   background-color: #15309B;
   top: 0;
   width: 100%;
-  z-index: 1000;
-  /* padding-top: 27px;
-  padding-bottom: 22px;
-  padding-left: 28px;
-  padding-right: 28px; */
+  z-index: 900;
 } 
 
 .bnt-menu{
@@ -145,6 +138,31 @@
 
 
 
+/* ########## Menu bar ########## */
+.menu-bar{
+  width: 100%;
+  z-index: 1000;
+  height: 100vh;
+  position: absolute;
+  background-color: rgb(0, 13, 66, 0.7);
+}
+
+.menu-bar-inner{
+  width: 78%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  /* position: absolute; */
+  padding: 50px 12px 24px 12px;
+}
+
+.menu-bar-title{
+  padding-bottom: 12px;
+  border-bottom: 1px solid #000D42;
+}
+
+.menu-bar-cate{
+  
+}
 
 /* ######### Gnb CSS ######### */
 .gnb {
@@ -164,7 +182,7 @@
   height: 86px;
   /* padding-top: 18px;
   padding-bottom: 46px; */
-  z-index: 1000;
+  z-index: 900;
 }
 
 .gnb a {
@@ -173,39 +191,84 @@
 
 .gnb a .bi {}
 
+.gnb p {
+  font-size: 11px;
+  font-family: var(--primary-kr);
+  color: var(--light-gray);
+  text-align: center;
+  padding-top: 3px;
+}
 
 
+/* GNB - home */
+.gnb-bar-main .bi-home,
+.gnb-bar-main .bi-change-on,.gnb-bar-main .bi-shop-on,.gnb-bar-main .bi-person-on
+{
+  display: none;
+}
+
+.gnb-bar-main .bi-home-on p{
+  color: var(--var-text);
+}
 
 
+/* GNB - conversioin */
+.gnb-conversion .bi-home-on,
+.gnb-conversion .bi-change-on, .gnb-conversion .bi-shop-on,
+.gnb-conversion .bi-person-on
+{
+  display: none;
+}
+
+/* GNB - change */
+.gnb-change .bi-home-on ,
+.gnb-change .bi-change, .gnb-change .bi-shop-on, .gnb-change .bi-person-on{
+  display: none;
+}
+
+.gnb-change .bi-change-on p {
+  color: var(--var-text);
+}
+
+/* GNB - item */
+.gnb-item .bi-home-on,
+.gnb-item .bi-change-on, .gnb-item .bi-shop, .gnb-item .bi-person-on
+{
+  display: none;
+}
+
+.gnb-item .bi-shop-on p{
+  color: var(--var-text);
+}
 
 
 
 
 /* ############# Home html CSS ############### */
 .home {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: inherit;
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
 }
 
 .home-part{
   width: 100%;
-  /* height: 100%; */
-  
 }
 
 .home-inner {
   padding: 70px 0;
   /* padding-bottom: 100px; */
   position: relative;
-  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
+
 }
 
 .home-line{
   /* width: 100%; */
   padding: 0 20px;
+  width: 90%;
+  margin: auto;
   border-top: 1px solid rgb(0, 13, 66, 0.7);
 }
 
@@ -241,6 +304,8 @@
   align-items: center;
 }
 
+
+
 .own-pearl,
 .own-leaf{
   width: 100%;
@@ -274,8 +339,8 @@
 
 .save-point img{
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -5px;
+  right: -5px;
   cursor: pointer;
 }
 
@@ -284,23 +349,67 @@
 
 /* 메인 캐릭터 */
 .main-character {
-  /* height: inherit; */
-  height: 362px;
-  display: flex;
-  justify-content: center;
+  height: 380px;
+  /* display: flex;
+  justify-content: center; */
   position: relative;
-  
+  margin-top: 6px;
+  margin-bottom: 16px;
 }
 
-.main-character img{
+
+.character-section{
+  position: relative;
+  height: inherit;
+}
+
+.character-section img{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.character-section img:nth-child(1){
+  bottom: 26px;
+}
+
+.bubble-coment{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 14px 8px;
+  border: 1px solid white;
+  border-radius: 12px;
+  color: white;
+  max-width: 180px;
+  font-size: 14px;
+  font-family: var(--primary-kr);
+}
+
+.bubble-coment img{
+  position: absolute;
+  bottom: 0;
+  right: 60%;
+  transform: translate(0, calc(100% - 1px));
+}
+
+
+/* .main-character img{
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   position: absolute;
   top: 22%;
-}
+} */
+/* 
+.main-character img:nth-child(1){
+  top: 58px;
+  right: 22%;
+  z-index: 2;
+} */
 
-.main-character p{
+/* .main-character p{
   position: absolute;
   color: white;
   width: 184px;
@@ -311,9 +420,11 @@
   right: 10%;
   font-family: var(--primary-kr);
   font-size: 14px;
-}
+} */
 
-.bubble-home p::after{
+
+
+/* .bubble-home p::after{
   content: '';
   display: block;
   position: absolute;
@@ -326,7 +437,7 @@
   border-bottom:1px solid #CAD5E0;
   -moz-transform:rotate(45deg);
   -webkit-transform:rotate(45deg);
-}
+} */
 
 
 
@@ -344,11 +455,11 @@
 }
 
 .able-point-title {
-  padding: 2px 0;
+  padding: 4px 0;
   font-size: 14px;
   text-align: center;
   background-color: rgb(225, 225, 225, 0.1);
-  border-radius: 5px 5px 0 0 ;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,13 +467,22 @@
 }
 
 
+.today-pearl{
+  margin-top: 6px;
+}
+
+.able-pearl{
+  margin-top: 6px;
+}
+
 .able-pearl , .able-leaf{
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  padding: 6px 0;
+  padding: 6px 0 0 6px;
   gap: 10px;
 }
+
 
 .pearl, .leaf{
   max-width: 100%;
@@ -374,12 +494,11 @@
 /* 오늘하루 포인트 */
 
 .today-point {
-  width: 178px;
-
+  width: 186px;
 }
 
 .today-title{
-  padding: 2px 0;
+  padding: 4px 0;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -387,16 +506,17 @@
   font-family: var(--primary-kr);
   color: var(--mint-color);
   font-size: 14px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
 }
 
 .today-pearl, .today-leaf {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   color: white;
   padding: 4px 0;
   font-size: 14px;
+  padding-left: 6px;
 }
 
 
@@ -579,20 +699,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url('../images/zamvoki-basic.svg') no-repeat 0 0%;
 }
 
 .login-part{
-  background: url('../images/character-login.svg') no-repeat 0 -30%;
   width: 100%;
   /* border: 1px solid #000; */
 }
 
 .login-inner{
-  padding: 40px;
+  padding: 0px 40px;
+  /* border: 1px solid #000; */
 }
 
 .login-header{
-  margin-top: 35%;
+  margin-top: 50%;
   position: relative;
   border: 1px solid transparent;
 }
@@ -617,7 +738,7 @@
 }
 
 .login-section{
-  margin-top: 170px;
+  margin-top: 215px;
 }
 
 .login-field input{
@@ -631,6 +752,7 @@
 .login-field input::placeholder{
   color: var(--light-gray);
   font-family: var(--primary-kr);
+  font-weight: 100;
   font-size: 16px;
 }
 
@@ -654,7 +776,7 @@
 }
 
 .login-btn-field{
-  margin-top: 24px;
+  margin-top: 34px;
 }
 .kakao-login{
   background: url('../images/logo-kakao.svg') no-repeat 20px center;
@@ -677,7 +799,9 @@
 
 
 
-
+.btn-login{
+  margin-top: 12px;
+}
 
 
 /* ################# Find Id Html CSS #################### */
@@ -751,7 +875,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 40px;
+  padding: 50px 40px;
 }
 
 
@@ -1098,7 +1222,8 @@
 /* ############### Conversion html CSS ################## */
 .conversion{
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
-  height: inherit;
+  /* border: 1px solid #000; */
+  /* height: inherit; */
   /* padding-bottom: 80px; */
 }
 
@@ -1115,7 +1240,6 @@
   width: 100%;
   padding: 70px 28px 80px 28px;
   height: 100%;
-
 }
 
 .conversion-have-all{
@@ -1698,14 +1822,25 @@
 
 /* ################## 아이템 샵 ################# */
 .item-shop{
-  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
+  height: inherit;
+  /* min-height: 100vh; */
 }
 
 .item-shop-inner{
-  margin-top: 70px;
-  padding: 27px;
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  padding-bottom: 80px;
+  min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
 }
 
+
+.item-shop-content{
+  width: 100%;
+  padding: 70px 28px 80px 28px;
+  height: 100%;
+}
 
 
 .item-shop-title{
@@ -1717,6 +1852,7 @@
   display: flex;
   align-items: center;
   padding-bottom: 24px;
+  padding-top: 24px;
 }
 
 .item-shop-title a:nth-child(1){
@@ -1810,9 +1946,346 @@
 
 
 
+
+
+/* ################# 아이템 상세 팝업 ################# */
+.item-detail-inner{
+  display: none;
+  background-color: rgb(0, 13, 66, 0.7);
+  position: absolute;
+  z-index: 900;
+  padding-top: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.detail-pop{
+  /* background: rgb(0, 13, 66, 0.7); */
+  width: 100%;
+  /* height: inherit; */
+  padding: 0 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.detail-pop-inner{
+  background-color: white;
+  padding: 12px;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid var(--light-gray);
+}
+
+.detail-pop-title{
+  padding: 12px 0 12px 0;
+  border-bottom: 1px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  color: var(--var-text);
+
+}
+
+.detail-pop-x{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.detail-pop-character{
+  padding-top: 12px;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.detail-pop-mid{
+  padding: 0 30px 0 30px;
+
+}
+
+.item-title{
+  padding: 12px 0 12px 0;
+  text-align: center;
+  font-size: 16px;
+  font-family: var(--primary-kr);
+  font-weight: bold;
+}
+
+.item-details{
+
+  font-family: var(--var-text);
+  font-size: 14px;
+}
+
+.item-details p {
+  padding-bottom: 6px;
+  font-weight: bold;
+}
+
+.item-details span{
+  font-weight: lighter;
+}
+
+.detail-pop-btn{
+  padding: 18px 30px 34px 30px;
+  display: flex;
+  gap: 28px;
+}
+
+
+
+/* ####### 구매 완료 팝업 ######### */
+.shop-cp-inner{
+  display: none;
+  background-color: rgb(0, 13, 66, 0.7);
+  position: absolute;
+  z-index: 900;
+  padding-top: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.shop-cp-pop{
+  padding: 30px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.pop-shop-cp{
+  /* width: 100%; */
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid var(--light-gray);
+  padding: 40px;
+}
+
+.shop-cp-title{
+  text-align: center;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+}
+
+.shop-cp-title p{
+  padding-bottom: 6px;
+}
+
+.shop-cp-title p:nth-child(1){
+  font-weight: bold;
+}
+
+.shop-cp-btn{
+  display: flex;
+  gap: 28px;
+  padding-top: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ############ 내 아이템 ############# */
+.item-mine{
+  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
+  /* height: 100%; */
+  height: inherit;
+}
+
+.item-mine-inner{
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.item-mine-content{
+  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
+  width: 100%;
+  padding: 70px 28px 80px 28px;
+  height: 100%;
+}
+
+.item-mine-title{
+  color: white;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 12px;
+  padding-top: 24px;
+}
+
+.item-mine-title a:nth-child(1){
+  color: var(--light-gray);
+  padding-right: 6px;
+}
+
+.item-mine-title a:nth-child(3){
+  padding-left: 3px;
+}
+.item-mine-title-line{
+  border: 1px solid var(--light-gray);
+  height: 12px;
+}
+
+
+.item-mine-chracter{
+  padding: 0px 22px 0px 22px
+}
+.item-mine-chracter-field{
+  width: 100%;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+.item-mine-chracter-field img{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.mine-shadow{
+  width: 80px;
+  height: 16px;
+  background-color: rgb(0, 0, 0, 0.15);
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.mine-rollback{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background-color: #000;
+  height: 24px;
+  width: 24px;
+  bottom: 64px;
+  right: 0;
+  border-radius: 5px;
+}
+
+.mine-commit{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background-color: #000;
+  height: 24px;
+  width: 24px;
+  bottom: 24px;
+  right: 0;
+  border-radius: 5px;
+}
+
+.mine-rollback img,
+.mine-commit img
+{
+  top: 50%;
+  right: 50%;
+  transform: translate(-48%, -50%);
+}
+
+
+
+
+/* 내아이템 영역 */
+.mine-item-box{
+  display: flex;
+  justify-content: center;
+}
+
+
+.mine-items{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 28px;
+}
+
+.mine-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.mine-item-img{
+  width: 78px;
+  height: 78px;
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mine-item-name{
+  color: white;
+  font-size: 12px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+
+
 /* media */
-/* @media(min-width: 600px){
-  .container{
-    max-width: 600px;
+@media(min-width: 600px){
+  body{
+    padding: 0;
+    margin: 0;
   }
-} */
+
+  .container{
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+  }
+
+  .main-header{
+    position: fixed;
+    width: 500px;
+    
+  }
+
+  .gnb{
+    width: 500px;
+    position: fixed;
+  }
+  
+
+}
+
+@media(min-height: 700px){
+  .container{
+    height: 100vh;
+
+  }
+}
