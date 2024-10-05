@@ -1,4 +1,3 @@
-// flutterInAppWebViewPlatformReady 이벤트 리스너
 window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
   console.log("WebView is ready for communication.");
 });
@@ -6,31 +5,60 @@ window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
 $(document).ready(function() {
   $('.kakao-login').on('click', function() {
     if (window.flutter_inappwebview) {
-      window.flutter_inappwebview.callHandler('web2app', '카카오 로그인 버튼이 클릭되었습니다.')
-        .then(function(result) {
-          console.log("Data sent to Flutter: 카카오 로그인 버튼이 클릭되었습니다.");
-        })
+      window.flutter_inappwebview.callHandler('kakao-login', '카카오 로그인 버튼이 클릭되었습니다.')
         .catch(function(error) {
           console.error("Error sending data to Flutter: ", error);
         });
     } else {
-      console.error("Flutter InAppWebView is not ready.");
+      console.log("Flutter InAppWebView is not ready.");
+      const message = { type: 'kakao-login', message: '카카오 로그인 버튼이 클릭되었습니다.' };
+      window.parent.postMessage(message, '*');
+      console.log("Message sent: ", JSON.stringify(message)); // JSON.stringify로 객체 내용을 문자열로 변환
+
     }
-//    alert('카카오 로그인 버튼이 클릭되었습니다.');
   });
 
   $('.apple-login').on('click', function() {
     if (window.flutter_inappwebview) {
-      window.flutter_inappwebview.callHandler('web2app', 'Apple 로그인 버튼이 클릭되었습니다.')
-        .then(function(result) {
-          console.log("Data sent to Flutter: Apple 로그인 버튼이 클릭되었습니다.");
-        })
+      window.flutter_inappwebview.callHandler('apple-login', 'Apple 로그인 버튼이 클릭되었습니다.')
         .catch(function(error) {
           console.error("Error sending data to Flutter: ", error);
         });
     } else {
       console.error("Flutter InAppWebView is not ready.");
     }
-    alert('Apple 로그인 버튼이 클릭되었습니다.');
+  });
+
+  document.getElementById('signup').addEventListener('click', function(event) {
+    if (window.flutter_inappwebview) {
+          window.flutter_inappwebview.callHandler('signup', '회원가입 버튼이 클릭되었습니다.')
+            .catch(function(error) {
+              console.error("Error sending data to Flutter: ", error);
+            });
+        } else {
+          console.error("Flutter InAppWebView is not ready.");
+        }
+  });
+
+  document.getElementById('find-id').addEventListener('click', function(event) {
+    if (window.flutter_inappwebview) {
+          window.flutter_inappwebview.callHandler('find-id', '회원가입 버튼이 클릭되었습니다.')
+            .catch(function(error) {
+              console.error("Error sending data to Flutter: ", error);
+            });
+        } else {
+          console.error("Flutter InAppWebView is not ready.");
+        }
+  });
+
+  document.getElementById('find-pwd').addEventListener('click', function(event) {
+    if (window.flutter_inappwebview) {
+          window.flutter_inappwebview.callHandler('find-pwd', '회원가입 버튼이 클릭되었습니다.')
+            .catch(function(error) {
+              console.error("Error sending data to Flutter: ", error);
+            });
+        } else {
+          console.error("Flutter InAppWebView is not ready.");
+        }
   });
 });
