@@ -92,11 +92,11 @@
   top: 0;
   width: 100%;
   z-index: 900;
+  /* border: 1px solid #000; */
 } 
 
 .bnt-menu{
-  /* border: 1px solid #000; */
-  /* background-color: transparent; */
+  background-color: transparent;
   border: none;
   color: var(--icon-color);
   flex: 1;
@@ -129,11 +129,6 @@
   right: -4px;
   top: -2px;
 }
-
-
-
-
-
 
 
 /* ########## Menu bar ########## */
@@ -328,15 +323,12 @@ border: 1px solid #000;
 
 .home-inner {
   padding: 70px 0;
-  /* padding-bottom: 100px; */
   position: relative;
-
 }
 
 .home-line{
-  /* width: 100%; */
   padding: 0 20px;
-  width: 90%;
+  width: 85%;
   margin: auto;
   border-top: 1px solid rgb(0, 13, 66, 0.7);
 }
@@ -2326,6 +2318,137 @@ border: 1px solid #000;
 
 
 
+
+/* ########## 마이페이지 ############# */
+.my-page{
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+}
+
+.header-line-one{
+  width: 85%;
+  height: 10px;
+  border-bottom: 1px solid rgb(0, 13, 66, 0.7);
+  padding-top: 70px;
+  margin: auto;
+}
+
+.my-page-inner{
+  padding: 28px;
+  color: white;
+  padding-bottom: 80px;
+}
+
+.user-profile-field{
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  padding: 0px 0px 24px 0px;
+}
+
+.user-profile-img img{
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--mint-color);
+  border-radius: 50px;
+  background-color: white;
+}
+
+.user-profile-name{
+  font-weight: bold;
+  color: var(--mint-color);
+  padding-bottom: 4px;
+}
+
+.user-profile-have{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.user-profile-have p:nth-child(1){
+  border-left: 1px solid rgb(225, 225, 225, 0.15);
+  border-right: 1px solid rgb(225, 225, 225, 0.15);
+  width: 45px;
+  text-align: center;
+}
+
+.user-profile-point{
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding-top: 3px;
+}
+
+.user-profile-point p:nth-child(1){
+  border-left: 1px solid rgb(225, 225, 225, 0.15);
+  border-right: 1px solid rgb(225, 225, 225, 0.15);
+  width: 45px;
+  text-align: center;
+}
+
+
+
+.user-info-field{
+  font-size: 14px;
+}
+
+.user-detail{
+  display: flex;
+  border-bottom: 1px solid rgb(225 , 225 , 225, 0.15);
+  padding: 16px 6px;
+}
+
+.user-detail:nth-child(1){
+  border-top: 1px solid rgb(225 , 225 , 225, 0.15);
+}
+
+.user-detail p:nth-child(1){
+  font-weight: bold;
+  flex: 1;
+}
+
+.user-detail p:nth-child(2){
+  flex: 1;
+}
+
+
+.user-update-info{
+  text-align: right;
+  padding: 12px 0px;
+  font-size: 14px;
+  color: var(--mint-color);
+  text-decoration: underline;
+  font-family: var(--primary-kr);
+}
+
+.user-out-log{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 54px 0px 24px 0px;
+}
+
+.my-page-line{
+  width: 3px;
+  height: 12px;
+  border-left: 1px solid rgb(225, 225, 225, 0.15);
+}
+
+.user-logout, .user-quit{
+  padding: 0px 6px;
+  font-size: 14px;
+  color: var(--light-gray);
+  font-family: var(--primary-kr);
+
+}
+
+
+
 /* media */
 @media(min-width: 600px){
   body{
@@ -2356,6 +2479,5 @@ border: 1px solid #000;
 @media(min-height: 700px){
   .container{
     height: 100vh;
-
   }
 }
