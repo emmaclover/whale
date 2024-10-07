@@ -236,7 +236,7 @@
 .gnb {
   position: fixed;
   /* position: absolute;    */
-
+border: 1px solid #000;
   width: 100%;
   bottom: 0;
   /* height: 86px; */
@@ -2193,7 +2193,7 @@
 }
 
 .item-mine-title{
-  color: white;
+  /* color: white;
   font-family: var(--primary-kr);
   font-size: 14px;
   font-weight: normal;
@@ -2201,16 +2201,17 @@
   align-items: center;
   gap: 4px;
   padding-bottom: 12px;
-  padding-top: 24px;
+  padding-top: 24px; */
 }
 
 .item-mine-title a:nth-child(1){
-  color: var(--light-gray);
-  padding-right: 6px;
+  color: rgb(255, 255, 255, 0.3);
+  /* padding-right: 6px; */
 }
 
 .item-mine-title a:nth-child(3){
-  padding-left: 3px;
+  color: white;
+  /* padding-left: 3px; */
 }
 .item-mine-title-line{
   border: 1px solid var(--light-gray);

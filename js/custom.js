@@ -18,6 +18,14 @@ $(function(){
     } else {
       $(".header-include .logo").text("잠보기의 하루");
     }
+
+    
+    $('.bnt-menu').click(function(){
+      $('.menu-bar').show();
+      $('.menu-bar-inner').animate({
+        left:0
+      }, 500);
+    })
   });
 
 
@@ -97,12 +105,6 @@ $(function(){
       $('.point-popup-inner').hide();
     })
 
-    $('.bnt-menu').click(function(){
-      $('.menu-bar').show();
-      $('.menu-bar-inner').animate({
-        left:0
-      }, 500);
-    })
 
 
   })
@@ -177,23 +179,32 @@ $(function(){
     // 모달 오픈
     $('.btn-toleaf').click(function(){
       $('.ch-pop-inner').show();
+      $('body').addClass('no-scroll');
     })
 
     $('.btn-topearl').click(function(){
       $('.ch-pop-inner').show();
+      $('body').addClass('no-scroll');
     })
 
     // 모달 닫기
     $('.ch-popx').click(function(){
       $('.ch-pop-inner').hide();
+      $('body').removeClass('no-scroll');
     })
 
     $('.ch-popx').click(function(){
       $('.ch-pop-inner').hide();
+      $('body').removeClass('no-scroll');
     })
 
     $('.btn-cancel').click(function(){
       $('.ch-pop-inner').hide();
+      $('body').removeClass('no-scroll');
+    })
+
+    $('.btn-chack').click(function(){
+      alert('교환하기 확인되었습니다. (기능구현중)');
     })
   })
 
