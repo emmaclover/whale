@@ -63,6 +63,14 @@ $(function(){
   });
 
 
+  // ## 메뉴 버튼
+  $('.main-menu-include').load('../include/main-menu-bar.html',function(){
+      
+      
+
+  })
+
+
 
 
   // ## Home 화면 포인트 보유 팝업
@@ -77,7 +85,26 @@ $(function(){
     $('.point-popx').click(function(){
       $('.point-popup-inner').hide();
     })
+
+    $('.bnt-menu').click(function(){
+      $('.menu-bar').show();
+    })
+
+
   })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   // ## 아이템 상세 팝업
@@ -113,10 +140,6 @@ $(function(){
   });
 
 
-  // ## 아이템 구매 완료 팝업
-  // $('.shop-cp-include').load('../include/shop-pay-pop.html', function(){
-    
-  // })
 
 
 
