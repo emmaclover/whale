@@ -137,22 +137,38 @@
 
 
 /* ########## Menu bar ########## */
+.main-menu-inner{
+  width: 100%;
+  height: 100h;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+
 .menu-bar{
-  /* display: none; */
+  display: none;
   width: 100%;
   z-index: 1000;
   height: 100vh;
   position: absolute;
-  background-color: rgb(0, 13, 66, 0.7);
   font-family: var(--primary-kr);
-  
+  overflow: hidden;
+}
+
+.menu-back{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 13, 66, 0.7);
 }
 
 .menu-bar-inner{
+  position: absolute;
+  left: -100px;
   width: 78%;
   height: 100vh;
   background-color: rgb(255, 255, 255);
   padding: 50px 12px 24px 12px;
+  transition: 0.03s;
 }
 
 .menu-bar-content{
@@ -199,6 +215,20 @@
 }
 
 
+.menu-cate-active .menu-bi-down{
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+
+
+.menu-open{
+  left: 0;
+}
+
+.menu-open .menu-bar{
+  display: block;
+}
 
 
 
@@ -289,6 +319,7 @@
   /* align-items: center; */
   height: inherit;
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  position: relative;
 }
 
 .home-part{
