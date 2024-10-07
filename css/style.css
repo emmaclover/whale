@@ -130,40 +130,77 @@
   top: -2px;
 }
 
-/* .user-manage{
-  flex: 0.7;
-} */
 
-.icon-manage{}
+
+
 
 
 
 /* ########## Menu bar ########## */
 .menu-bar{
-  display: none;
+  /* display: none; */
   width: 100%;
   z-index: 1000;
   height: 100vh;
   position: absolute;
   background-color: rgb(0, 13, 66, 0.7);
+  font-family: var(--primary-kr);
+  
 }
 
 .menu-bar-inner{
   width: 78%;
   height: 100vh;
   background-color: rgb(255, 255, 255);
-  /* position: absolute; */
   padding: 50px 12px 24px 12px;
+}
+
+.menu-bar-content{
+  position: relative;
+  height: 100%;
 }
 
 .menu-bar-title{
   padding-bottom: 12px;
-  border-bottom: 1px solid #000D42;
+  border-bottom: 1px solid #000;
 }
 
-.menu-bar-cate{
-  
+
+.menu-bar-box{
+  padding: 12px;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  font-family: var(--primary-kr);
 }
+
+.main-category{
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-category{
+  display: none;
+}
+
+.sub-category p{
+  padding: 8px 0px 0px 8px;
+}
+
+
+.company-info{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: var(--light-gray);
+  bottom: 0;
+}
+
+
+
+
 
 /* ######### Gnb CSS ######### */
 .gnb {
