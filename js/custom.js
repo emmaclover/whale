@@ -66,7 +66,18 @@ $(function(){
   // ## 메뉴 버튼
   $('.main-menu-include').load('../include/main-menu-bar.html',function(){
       
-      
+      $('.main-category').click(function(){
+        $(this).toggleClass('menu-cate-active');
+        $(this).next('.sub-category').slideToggle();
+      })
+
+      $('.menu-back').click(function(){
+        $('.menu-bar').css('display','none');
+        $('.menu-bar-inner').animate({
+          left: -500
+        }, 500);
+      })
+
 
   })
 
@@ -88,6 +99,9 @@ $(function(){
 
     $('.bnt-menu').click(function(){
       $('.menu-bar').show();
+      $('.menu-bar-inner').animate({
+        left:0
+      }, 500);
     })
 
 
@@ -95,7 +109,7 @@ $(function(){
 
 
 
-
+  
 
 
 
