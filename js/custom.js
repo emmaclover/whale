@@ -19,7 +19,9 @@ $(function(){
       $(".header-include .logo").text("마이페이지");
     } else if (currentPage.endsWith("my-page-update.html")){
       $(".header-include .logo").text("마이페이지");
-    }else {
+    } else if (currentPage.endsWith("quit-app.html")){
+      $(".header-include .logo").text("탈퇴하기");
+    } else {
       $(".header-include .logo").text("잠보기의 하루");
     }
 
@@ -234,6 +236,23 @@ $(function(){
     })
   })
 
+
+
+
+  // ### 탈퇴하기
+  $('.btm-quit-app').click(function(){
+    $('.quit-pop').show();
+  })
+
+  $('.quit-app-pop-include').load("../include/quit-pop.html", function(){
+    $('.bnt-quit-back').click(function(){
+      $('.quit-pop').hide();
+    })
+
+    $('.bnt-quit-too').click(function(){
+      alert('...탈퇴하기 기능 구현중...')
+    })
+  })
 
 
 

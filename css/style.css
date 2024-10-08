@@ -145,7 +145,7 @@
   width: 100%;
   z-index: 1000;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   font-family: var(--primary-kr);
   overflow: hidden;
 }
@@ -2546,7 +2546,114 @@ border: 1px solid #000;
 
 
 
+/* ############### 탈퇴하기 ################# */
+.quit-app{
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  height: inherit;
+}
 
+.quit-app-inner{
+  padding: 36px 80px 140px 80px;
+  /* padding: 30px; */
+  color: white;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.quit-app-warning{
+  color: var(--mint-color);
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.quit-app-bubble {
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.quit-app-bubble p{
+  font-size: 14px;
+  padding: 8px;
+  text-align: center;
+}
+
+.quit-app-bubble img{
+  position: absolute;
+  top: 100%;
+  left: 30%;
+  transform: translate(0, calc(-0% - 1px));
+}
+
+
+.quit-app-character{
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.quit-app-point{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 36px 0px;
+  font-size: 16px;
+}
+
+.quit-app-point p:nth-child(1){
+  font-weight: bold;
+}
+
+.btn-keep-app{
+  margin-bottom: 24px;
+}
+
+
+
+/* ####### 탈퇴하기 팝업 ####### */
+.quit-pop{
+  display: none;
+  position: relative;
+  z-index: 200;
+}
+
+.quit-pop-part{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 13, 66, 0.7);  
+  padding: 60px 28px;
+}
+
+.quit-pop-content{
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 36px 54px;
+  text-align: center;
+  font-family: var(--primary-kr);
+  font-size: 16px;
+}
+
+.quit-pop-content p{
+  padding-bottom: 26px;
+}
+
+.quit-pop-content img{
+  padding-bottom: 24px;
+}
+
+.bnt-quit-section{
+  display: flex;
+  gap: 28px;
+}
 
 
 /* media */
@@ -2573,7 +2680,9 @@ border: 1px solid #000;
     position: fixed;
   }
   
-
+  .menu-bar{
+    position: absolute;
+  }
 }
 
 @media(min-height: 750px){
@@ -2581,4 +2690,5 @@ border: 1px solid #000;
     height: 100vh;
   }
 
+  
 }
