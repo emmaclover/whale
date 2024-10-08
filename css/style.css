@@ -2656,6 +2656,88 @@ border: 1px solid #000;
 }
 
 
+
+
+
+/* ########## 게시판 기본 ############# */
+.board-basic-write-part{
+  padding: 94px 24px;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+}
+.board-basic-title{
+  /* border: 1px solid #000; */
+  display: flex;
+  align-items: center;
+}
+
+.board-basic-title a:nth-child(1),
+.board-basic-title a:nth-child(3) {
+  padding: 6px;
+}
+
+.board-basic-title-line{
+  width: 2px;
+  height: 14px;
+  border-left: 1px solid var(--light-gray);
+}
+
+.board-basic-title a:nth-child(3) {
+  padding: 6px;
+  color: var(--light-gray);
+}
+
+.board-write-title-section{
+  padding: 18px 14px;
+}
+
+.board-write-section p{
+  padding-bottom: 6px;
+}
+.board-write-title-section input{
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+}
+
+.board-write-section input::placeholder{
+  color: var(--light-gray);
+  font-family: var(--primary-kr);
+}
+
+.board-write-field{
+  padding: 0px 14px;
+  
+}
+
+.board-write-field textarea{
+  width: 100%;
+  height: 200px;
+  padding: 9px 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  resize: none;
+}
+
+.board-write-field textarea::placeholder{
+  color: var(--light-gray);
+  font-family: var(--primary-kr);
+}
+
+.board-write-upimg{
+  padding: 10px 14px;
+}
+.board-write-upimg button{
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  background-image: url('../images/bi-plus-50.svg') no-repeat;
+}
+
+
+
 /* media */
 @media(min-width: 600px){
   body{
