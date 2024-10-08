@@ -15,7 +15,11 @@ $(function(){
       $(".header-include .logo").text("포인트 전환");
     } else if (currentPage.endsWith("exchange.html")){
       $(".header-include .logo").text("거래소");
-    } else {
+    } else if (currentPage.endsWith("my-page.html")){
+      $(".header-include .logo").text("마이페이지");
+    } else if (currentPage.endsWith("my-page-update.html")){
+      $(".header-include .logo").text("마이페이지");
+    }else {
       $(".header-include .logo").text("잠보기의 하루");
     }
 
@@ -179,18 +183,18 @@ $(function(){
     // 모달 오픈
     $('.btn-toleaf').click(function(){
       $('.ch-pop-inner').show();
-      $('body').addClass('no-scroll');
+      // $('body').addClass('no-scroll');
     })
 
     $('.btn-topearl').click(function(){
       $('.ch-pop-inner').show();
-      $('body').addClass('no-scroll');
+      // $('body').addClass('no-scroll');
     })
 
     // 모달 닫기
     $('.ch-popx').click(function(){
       $('.ch-pop-inner').hide();
-      $('body').removeClass('no-scroll');
+      // $('body').removeClass('no-scroll');
     })
 
     $('.ch-popx').click(function(){
@@ -211,6 +215,29 @@ $(function(){
 
 
 
+
+  // ## 마이페이지
+  
+  $('.user-logout').click(function(){
+    $('.user-logout-pop').show();
+  })
+
+  
+  // 로그아웃 팝업
+  $('.logout-pop-include').load("../include/logout-pop.html",function(){
+    $('.btn-logout-cancel').click(function(){
+      $('.user-logout-pop').hide();
+    })
+
+    $('.btn-logout-basic').click(function(){
+      alert('...로그아웃 기능 구현중....');
+    })
+  })
+
+
+
+
+
   // ## Item-shop 아이템 꾸리기
   var $item = $('.shop-item').first();
   for(var i = 1; i <= 26; i++){
@@ -225,6 +252,12 @@ $(function(){
     var newMine = $myitem.clone();
     $('.mine-items').append(newMine)
   }
+
+
+
+
+
+
 
 
 })
