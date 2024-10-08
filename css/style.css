@@ -2449,6 +2449,69 @@ border: 1px solid #000;
 
 
 
+
+
+/* ######### 마이페이지 수정 ########## */
+.user-detail-update select{
+  flex: 1;
+  border-radius: 5px;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 9px 6px;
+  -webkit-appearance: none; /* 크롬 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none;  /* 화살표 없애기 */
+
+  background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
+
+  background-color: white;
+  /* padding: 12px; */
+}
+
+
+
+
+.user-detail-update{
+  display: flex;
+  align-items: center;
+  padding: 6px 6px;
+  border-bottom: 1px solid rgb(225, 225, 225, 0.15);
+  font-family: var(--primary-kr);
+}
+
+.user-detail-update p{
+  flex: 1;
+
+}
+
+
+.user-update-name{
+  padding: 16px 6px;
+  border-top: 1px solid rgb(255, 255, 255, 0.15);
+}
+.user-detail-update p:nth-child(1){
+  font-weight: bold;
+}
+
+.user-detail-update input{
+  flex: 1;
+  padding: 9px 6px;
+  border-radius: 5px;
+  border: 1px solid var(--light-gray);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* media */
 @media(min-width: 600px){
   body{
