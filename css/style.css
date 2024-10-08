@@ -2733,7 +2733,7 @@ border: 1px solid #000;
   height: 50px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
-  background-image: url('../images/bi-plus-50.svg') no-repeat;
+  background: url('../images/bi-plus-50.svg') no-repeat center;
 }
 
 
