@@ -231,7 +231,7 @@
 .gnb {
   position: fixed;
   /* position: absolute;    */
-border: 1px solid #000;
+  border-top: 1px solid rgb(0, 0, 0, 0.05);
   width: 100%;
   bottom: 0;
   /* height: 86px; */
