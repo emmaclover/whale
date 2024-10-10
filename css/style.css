@@ -2349,6 +2349,7 @@ border: 1px solid #000;
   padding: 0px 0px 24px 0px;
 }
 
+
 .user-profile-img img{
   width: 80px;
   height: 80px;
@@ -2508,6 +2509,7 @@ border: 1px solid #000;
 .user-logout-pop{
   display: none;
   position: absolute;
+  
 }
 
 .user-logout-pop-inner{
@@ -2622,6 +2624,7 @@ border: 1px solid #000;
   display: none;
   position: relative;
   z-index: 200;
+  
 }
 
 .quit-pop-part{
@@ -2664,11 +2667,21 @@ border: 1px solid #000;
   padding: 94px 24px;
   font-family: var(--primary-kr);
   font-size: 14px;
+  height: 100vh;
 }
+
+.board-basic-write-inner {
+  
+}
+
 .board-basic-title{
-  /* border: 1px solid #000; */
   display: flex;
   align-items: center;
+}
+
+.board-write-section{
+  /* border: 1px solid #15309B; */
+  height: 100%;
 }
 
 .board-basic-title a:nth-child(1),
@@ -2727,14 +2740,133 @@ border: 1px solid #000;
 
 .board-write-upimg{
   padding: 10px 14px;
+
 }
+
 .board-write-upimg button{
   width: 50px;
   height: 50px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
-  background: url('../images/bi-plus-50.svg') no-repeat center;
 }
+
+
+.board-btn-section{
+  border: 1px solid red;
+  min-height: 100px;
+  height: 100%;
+  /* height: 100; */
+  position: relative;
+  margin-top: 20px;
+}
+
+
+.btn-board{
+  position: absolute;
+  bottom: 0;
+}
+
+
+
+
+/* ########## 게시판 리스트 ############ */
+.board-list-part{
+  padding: 94px 24px;
+  font-family: var(--primary-kr);
+  font-size: 12px;
+  height: 100vh;
+}
+
+.board-list-title a:nth-child(1){
+  font-weight: normal;
+  color: var(--light-gray);
+}
+
+.board-basic-title a:nth-child(3){
+  color: var(--var-text);
+  font-weight: bold;
+}
+
+.board-list-coment{
+  padding-left: 5px;
+  color: rgb(0, 0, 0,0.7);
+}
+
+
+
+.board-list-items{
+  margin-top: 24px;
+}
+
+.board-item{
+  border-top: 1px solid rgb(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgb(0, 0, 0, 0.12);
+  /* padding: 12px 6px 0px 6px; */
+}
+
+
+.board-item-title{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgb(0, 0, 0,0.7);
+  padding: 12px 6px;
+}
+
+.board-item-title p:nth-child(1){
+  flex: 2;
+  color: #000;
+}
+
+
+.board-item-detail{
+
+  background-color: rgb(0, 0, 0, 0.05);
+  padding: 24px 14px 24px 6px;
+}
+
+.board-qst{
+
+}
+
+.board-qst, .board-ans{
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+}
+.board-qst p:nth-child(1){
+  padding-top: 2px;
+  color: rgb(0, 0, 0,0.7);
+  font-weight: bold;
+}
+
+
+.board-ans p:nth-child(1){
+  padding-top: 3px;
+  font-weight: bold;
+  color: var(--mint-color);
+}
+
+.board-img{
+  text-align: center;
+  padding: 14px 0;
+}
+
+.board-img img{
+  width: 92px;
+  height: 92px;
+  background-color: #d9d9d9;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
