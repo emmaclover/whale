@@ -21,7 +21,11 @@ $(function(){
       $(".header-include .logo").text("마이페이지");
     } else if (currentPage.endsWith("quit-app.html")){
       $(".header-include .logo").text("탈퇴하기");
-    } else {
+    } else if (currentPage.endsWith("board-list.html")){
+      $(".header-include .logo").text("1:1 문의하기");
+    }  else if (currentPage.endsWith("board-basic-write.html")){
+      $(".header-include .logo").text("1:1 문의하기");
+    } else { 
       $(".header-include .logo").text("잠보기의 하루");
     }
 
@@ -95,7 +99,25 @@ $(function(){
 
   })
 
+  
+  // ## Board-List 아이템 꾸리기
+  var $myQuest = $('.board-list-items').first();
+  for(var i = 1; i < 3; i++){
+    var newBoard = $myQuest.clone();
+    $('.board-list-items').append(newBoard);
+  }
 
+
+  
+  // ## 게시판 리스트
+  $('.board-item-title').click(function(){
+    $(this).next('.board-item-detail').slideToggle();
+  })
+
+  // ## 공지&이벤트
+  $('.notice-title').click(function(){
+    $(this).next('.notice-detail').slideToggle();
+  })
 
 
   // ## Home 화면 포인트 보유 팝업
@@ -132,7 +154,7 @@ $(function(){
   // ## 아이템 상세 팝업
   $('.item-detail-include').load('../include/item-detail-pop.html', function(){
     $('.shop-item-img').click(function(){
-      $('body').addClass('no-scroll');
+      // $('body').addClass('no-scroll');
       $('.item-detail-inner').show();
     })
 
@@ -271,8 +293,6 @@ $(function(){
     var newMine = $myitem.clone();
     $('.mine-items').append(newMine)
   }
-
-
 
 
 
