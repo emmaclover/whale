@@ -8,6 +8,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- Custom CSS & JS -->
   <script src="../js/custom.js"></script>
+  <script src="../js/home.js"></script>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -38,8 +39,8 @@
         <div class="exchange-content">
           <div class="exchange-have-all">
             <p>보유</p>
-            <p>진주</p><p>120,000</p>
-            <p>산호</p><p>100,000</p>
+            <p>진주</p><p class="pearl-total">0</p>
+            <p>산호</p><p class="coral-total">0</p>
           </div>
           <div class="exchange-today">
             <div class="exchange-today-title">
@@ -50,7 +51,7 @@
               <p>x <span>1</span></p>
               <img src="../images/bi-exchange.svg" alt="">
               <img src="../images/bi-leaf.svg" alt="">
-              <p>x <span>2.5</span></p>
+              <p>x <span class="exchangeRatio">2.5</span></p>
             </div>
           </div>
         </div>
@@ -74,11 +75,11 @@
               <div class="exchange-my-items">
                 <div class="my-pearl"> 
                   <img src="../images/bi-pearl.svg" alt="">
-                  <p>x 28</p>
+                  <p> x </p><p class="pearl-tradable">0</p>
                 </div>
                 <div class="my-leaf">
                   <img src="../images/bi-leaf.svg" alt="">
-                  <p>x 60</p>
+                  <p> x </p><p class="coral-tradable">0</p>
                 </div>
               </div>
               <div class="exchange-get-btn">

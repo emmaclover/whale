@@ -35,13 +35,6 @@ $(document).ready(function() {
             element.innerText = result;
           });
       });
-
-      $('.gotochange').on('click', function() {
-            window.flutter_inappwebview.callHandler('gotochange', '포인트 전환 버튼이 클릭되었습니다.')
-              .catch(function(error) {
-                console.error("Error sending data to Flutter: ", error);
-              });
-        });
     } else {
       console.log("Flutter InAppWebView is not ready.");
     }
