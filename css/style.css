@@ -18,6 +18,7 @@
   height: 100vh;
   position: relative;
   /* border: 1px solid #000; */
+  transition: transform 0.5x ease;
 }
 
         /* Basic Button */
@@ -2900,6 +2901,19 @@
 
 
 /* ########### 공지 및 이벤트 ############ */
+
+.newContent{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+
+.board-notice{
+
+}
+
 .board-notice-part{
   padding: 86px 28px ;
   font-family: var(--primary-kr);
@@ -2971,6 +2985,9 @@
   height: 100%;
   object-fit: contain;
 }
+
+
+
 
 /* media */
 @media(min-width: 600px){

@@ -38,6 +38,33 @@ $(function(){
         left:0
       }, 500);
     })
+
+
+    // ## 알림
+    // $('.icon-arlarm').on('click', function(){
+    //   $('.home-inner').css('transform', 'translateX(-100%)');
+
+      
+    //   $.ajax({
+    //     url: '../include/notice-board.html',
+    //     success: function(data){
+    //       $('.container').append('<div class="board-notice-part">'+ data +'</div>');
+    //       $('.board-notice-part').css('transform', 'translateX(100%)');
+
+    //       setTimeout(function(){
+    //         $('.board-notice-part').css('transform', 'translateX(0)');
+    //       }, 100);
+    //     },
+    //     error: function(){
+    //       alert('실패...');
+    //     }
+    //   })
+
+    // })
+
+
+
+
   });
 
 
@@ -277,6 +304,15 @@ $(function(){
       alert('...탈퇴하기 기능 구현중...')
     })
   })
+
+
+
+
+
+  // ### 공지 및 이벤트 
+
+
+
 
 
 
