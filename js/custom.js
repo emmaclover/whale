@@ -15,9 +15,29 @@ $(function(){
       $(".header-include .logo").text("포인트 전환");
     } else if (currentPage.endsWith("exchange.html")){
       $(".header-include .logo").text("거래소");
-    } else {
+    } else if (currentPage.endsWith("my-page.html")){
+      $(".header-include .logo").text("마이페이지");
+    } else if (currentPage.endsWith("my-page-update.html")){
+      $(".header-include .logo").text("마이페이지");
+    } else if (currentPage.endsWith("quit-app.html")){
+      $(".header-include .logo").text("탈퇴하기");
+    } else if (currentPage.endsWith("board-list.html")){
+      $(".header-include .logo").text("1:1 문의하기");
+    }  else if (currentPage.endsWith("board-basic-write.html")){
+      $(".header-include .logo").text("1:1 문의하기");
+    } else if (currentPage.endsWith("board-notice.html")){
+      $(".header-include .logo").text("공지 및 이벤트");
+    } else { 
       $(".header-include .logo").text("잠보기의 하루");
     }
+
+    
+    $('.bnt-menu').click(function(){
+      $('.menu-bar').show();
+      $('.menu-bar-inner').animate({
+        left:0
+      }, 500);
+    })
   });
 
 
@@ -63,6 +83,43 @@ $(function(){
   });
 
 
+  // ## 메뉴 버튼
+  $('.main-menu-include').load('../include/main-menu-bar.html',function(){
+      
+      $('.main-category').click(function(){
+        $(this).toggleClass('menu-cate-active');
+        $(this).next('.sub-category').slideToggle();
+      })
+
+      $('.menu-back').click(function(){
+        $('.menu-bar').css('display','none');
+        $('.menu-bar-inner').animate({
+          left: -500
+        }, 500);
+      })
+
+
+  })
+
+  
+  // ## Board-List 아이템 꾸리기
+  var $myQuest = $('.board-list-items').first();
+  for(var i = 1; i < 3; i++){
+    var newBoard = $myQuest.clone();
+    $('.board-list-items').append(newBoard);
+  }
+
+
+  
+  // ## 게시판 리스트
+  $('.board-item-title').click(function(){
+    $(this).next('.board-item-detail').slideToggle();
+  })
+
+  // ## 공지&이벤트
+  $('.notice-title').click(function(){
+    $(this).next('.notice-detail').slideToggle();
+  })
 
 
   // ## Home 화면 포인트 보유 팝업
@@ -77,13 +134,29 @@ $(function(){
     $('.point-popx').click(function(){
       $('.point-popup-inner').hide();
     })
+
+
+
   })
+
+
+
+  
+
+
+
+
+
+
+
+
+
 
 
   // ## 아이템 상세 팝업
   $('.item-detail-include').load('../include/item-detail-pop.html', function(){
     $('.shop-item-img').click(function(){
-      $('body').addClass('no-scroll');
+      // $('body').addClass('no-scroll');
       $('.item-detail-inner').show();
     })
 
@@ -112,11 +185,7 @@ $(function(){
     })
   });
 
-
-  // ## 아이템 구매 완료 팝업
-  // $('.shop-cp-include').load('../include/shop-pay-pop.html', function(){
-    
-  // })
+ 
 
 
 
@@ -140,23 +209,72 @@ $(function(){
     // 모달 오픈
     $('.btn-toleaf').click(function(){
       $('.ch-pop-inner').show();
+      // $('body').addClass('no-scroll');
     })
 
     $('.btn-topearl').click(function(){
       $('.ch-pop-inner').show();
+      // $('body').addClass('no-scroll');
     })
 
     // 모달 닫기
     $('.ch-popx').click(function(){
       $('.ch-pop-inner').hide();
+      // $('body').removeClass('no-scroll');
     })
 
     $('.ch-popx').click(function(){
       $('.ch-pop-inner').hide();
+      $('body').removeClass('no-scroll');
     })
 
     $('.btn-cancel').click(function(){
       $('.ch-pop-inner').hide();
+      $('body').removeClass('no-scroll');
+    })
+
+    $('.btn-chack').click(function(){
+      alert('교환하기 확인되었습니다. (기능구현중)');
+    })
+  })
+
+
+
+
+
+  // ## 마이페이지
+  
+  $('.user-logout').click(function(){
+    $('.user-logout-pop').show();
+  })
+
+  
+  // 로그아웃 팝업
+  $('.logout-pop-include').load("../include/logout-pop.html",function(){
+    $('.btn-logout-cancel').click(function(){
+      $('.user-logout-pop').hide();
+    })
+
+    $('.btn-logout-basic').click(function(){
+      alert('...로그아웃 기능 구현중....');
+    })
+  })
+
+
+
+
+  // ### 탈퇴하기
+  $('.btm-quit-app').click(function(){
+    $('.quit-pop').show();
+  })
+
+  $('.quit-app-pop-include').load("../include/quit-pop.html", function(){
+    $('.bnt-quit-back').click(function(){
+      $('.quit-pop').hide();
+    })
+
+    $('.bnt-quit-too').click(function(){
+      alert('...탈퇴하기 기능 구현중...')
     })
   })
 
@@ -177,6 +295,10 @@ $(function(){
     var newMine = $myitem.clone();
     $('.mine-items').append(newMine)
   }
+
+
+
+
 
 
 })
