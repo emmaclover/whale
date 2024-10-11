@@ -1,4 +1,3 @@
-// flutterInAppWebViewPlatformReady 이벤트 리스너
 window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
   console.log("WebView is ready for communication.");
 });
@@ -14,7 +13,6 @@ $(document).ready(function() {
     const wakeTime = document.getElementById('wakeTime').value;
     const sedentaryTime = document.getElementById('sitTime').value;
 
-    // 가져온 데이터를 객체로 변환
     const surveyData = {
       name: name,
       gender: gender,
