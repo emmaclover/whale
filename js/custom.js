@@ -233,9 +233,9 @@ $(function(){
       $('body').removeClass('no-scroll');
     })
 
-    $('.btn-chack').click(function(){
-      alert('교환하기 확인되었습니다. (기능구현중)');
-    })
+//    $('.btn-chack').click(function(){
+//      alert('교환하기 확인되었습니다. (기능구현중)');
+//    })
   })
 
 

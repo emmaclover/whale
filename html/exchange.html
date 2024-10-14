@@ -9,6 +9,7 @@
   <!-- Custom CSS & JS -->
   <script src="../js/custom.js"></script>
   <script src="../js/home.js"></script>
+  <script src="../js/exchange.js"></script>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -51,7 +52,7 @@
               <p>x <span>1</span></p>
               <img src="../images/bi-exchange.svg" alt="">
               <img src="../images/bi-leaf.svg" alt="">
-              <p>x <span class="exchangeRatio">2.5</span></p>
+              <p>x <span class="exchangeRatio">1</span></p>
             </div>
           </div>
         </div>
@@ -89,20 +90,22 @@
             </div>
 
             <!-- 클릭 시 펼치기 기능 -->
+            <!-- 진주얻기 클릭시 -->
             <div class="exchange-topearl">
               <div class="topearl-input">
-                <input type="text">
+                <input type="text" id="exchangePearlInput" oninput="getPearl()">
                 <img src="../images/bi-exchange.svg" alt="">
-                <input type="text" placeholder="20" readonly>
+                <input type="text" placeholder="0" readonly id="exchangedCoralInput">
               </div>
               <button class="btn-basic btn-topearl">교환하기</button>
             </div>
             <!-- 클릭 시 펼치기 기능 -->
+            <!-- 산호얻기 클릭시 -->
             <div class="exchange-toleaf">
               <div class="toleaf-input">
-                <input type="text" placeholder="20" readonly>
+                <input type="text" placeholder="0" readonly id="exchangedPearlInput">
                 <img src="../images/bi-exchange.svg" alt="">
-                <input type="text"  >
+                <input type="text" id="exchangeCoralInput" oninput="getCoral()">
               </div>
               <button class="btn-basic btn-toleaf">교환하기</button>
             </div>
