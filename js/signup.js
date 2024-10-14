@@ -15,5 +15,4 @@ $(document).ready(function() {
       console.error("Flutter InAppWebView is not ready.");
     }
   });
-
 });

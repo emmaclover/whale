@@ -1000,6 +1000,16 @@
   gap: 6px;
 }
 
+.name-input-field{
+  width: 50%;
+  align-items: center;
+}
+
+.age-year-input-field{
+  width: 40%;
+  align-items: center;
+}
+
 .signup-id{
   width: 35%;
   border: 1px solid var(--light-gray);
@@ -1008,9 +1018,11 @@
   font-family: var(--primary-kr);
   color: var(--light-gray);
 }
+
 .email-box p{
   width: 5%;
 }
+
 .signup-email{
   width: 35%;
   font-family: var(--primary-kr);
