@@ -306,6 +306,18 @@
 }
 
 
+/* Friends-list */
+.gnb-bar-friends .bi-home-on,.gnb-bar-friends  .bi-change-on,.gnb-bar-friends  .bi-shop-on,.gnb-bar-friends  .bi-person{
+  display: none;
+}
+
+.gnb-bar-friends  .bi-person-on p{
+  color: var(--var-text);
+}
+
+
+
+
 
 
 /* ############# Home html CSS ############### */
@@ -676,6 +688,11 @@
 
 .gotochange{
   margin-top: 24px;
+}
+
+
+.btn-bi-shop{
+  margin-bottom: 24px;
 }
 
 
@@ -3040,7 +3057,67 @@
 
 
 
-/* ############# 이용약관 ############### */
+
+
+
+/* ############# 친구목록 ############### */
+.friends-list{
+  /* height: inherit; */
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  /* position: relative; */
+}
+
+
+.friends-list-part{
+  padding-top: 80px;
+  padding-bottom: 120px;
+  color: white;
+  padding-left: 24px;
+  padding-right: 24px;  
+  font-size: 16px;
+  font-family: var(--primary-kr)
+}
+
+.friend-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #000; */
+  gap: 6px;
+  padding-bottom: 8px;
+}
+
+.friends-img{
+  flex: 1;
+  /* border: 1px solid #000; */
+  text-align: center;
+}
+
+.friends-info{
+  flex: 2;
+  /* border: 1px solid #000; */
+}
+
+.friends-name {
+  color: var(--mint-color);
+}
+
+
+.friends-point{
+  display: flex;
+}
+
+
+.friends-point p:nth-child(1){
+  padding: 0 6px;
+  margin-right: 5px;
+  border-left: 1px solid rgb(225, 225, 225, 0.15);
+  border-right: 1px solid rgb(225, 225, 225, 0.15);
+}
+
+
+
+
 
 
 
