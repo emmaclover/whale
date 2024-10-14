@@ -708,14 +708,15 @@
   border-radius: 5px;
   padding: 12px;
 }
+
 .point-popup-top{
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px 0;
   position: relative;
-
 }
+
 .point-popup-title{
   font-family: var(--primary-kr);
   color: var(--bar-text);
@@ -723,7 +724,6 @@
   padding-bottom: 12px;
   border-bottom: 1px solid var(--light-gray);
   text-align: center;
-
 }
 
 .point-popx{
@@ -2985,6 +2985,34 @@
   height: 100%;
   object-fit: contain;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
