@@ -1003,11 +1003,20 @@
 .name-input-field{
   width: 50%;
   align-items: center;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 8px 6px;
+  font-family: var(--primary-kr);
+  color: var(--light-gray);
 }
 
 .age-year-input-field{
   width: 40%;
   align-items: center;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  font-family: var(--primary-kr);
+  color: var(--light-gray);
 }
 
 .signup-id{

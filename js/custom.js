@@ -166,27 +166,6 @@ $(function(){
 
   })
 
-  // 회원가입 - 생년 input 숫자 입력 제한
-  $(document).ready(function() {
-    $('.age-year-input-field').on('input', function() {
-      if ($(this).val().length > 4) {
-        $(this).val($(this).val().slice(0, 4));  // 4자리 이상 입력 시 잘라냄
-      }
-    });
-  });
-
-  
-
-
-
-
-
-
-
-
-
-
-
   // ## 아이템 상세 팝업
   $('.item-detail-include').load('../include/item-detail-pop.html', function(){
     $('.shop-item-img').click(function(){
