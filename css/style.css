@@ -1057,7 +1057,6 @@
   border-radius: 5px;
   padding: 8px 6px;
   color: var(--light-gray);
-
   /* 드롭다운 버튼 커스텀 */
   -webkit-appearance: none; /* 크롬 */
   -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
@@ -1066,7 +1065,9 @@
   background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
 }
 
-
+signup-email::placeholder {
+  color: var(--light-gray);
+}
 
 .email-check{
   font-size: 14px;

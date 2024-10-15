@@ -27,3 +27,43 @@ $(document).ready(function() {
     }
   });
 });
+
+$(function(){
+
+   // Signin Field
+   $('.all-term').on('change', function() {
+    // all-term 모두 체크 선택 and 해제
+    $('.chk-term').prop('checked', $(this).prop('checked'));
+  });
+
+  // 개별 체크 시 전체 체크 해제
+  $('.chk-term').on('change', function() {
+    if ($('.chk-term:checked').length === $('.chk-term').length) {
+      $('.all-term').prop('checked', true);
+    } else {
+      $('.all-term').prop('checked', false);
+    }
+  });
+
+  $('.chk-basic').click(function(){
+    $('.term-part-basic').show();
+  })
+
+  $('.chk-personal').click(function(){
+    $('.term-part-personal').show();
+  })
+
+  // 약관동의 체크
+  $('.term-basic-include').load('../include/term-basic.html', function(){
+    $('.btn-term-personal').click(function(){
+      $('.term-part').css('display','none');
+    })
+  })
+
+  $('.term-personal-include').load('../include/term-personal.html', function(){
+    $('.btn-term-personal').click(function(){
+      $('.term-part').css('display','none');
+    })
+  })
+  
+})
