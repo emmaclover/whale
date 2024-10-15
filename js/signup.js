@@ -6,12 +6,15 @@ window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
 $(document).ready(function() {
   $('.signup-btn').on('click', function() {
     const password = document.getElementById('password').value;
+    const passwordChk = document.getElementById('password-chk').value;
     const emailId = document.getElementById('email-id').value;
     const emailAddress = document.getElementById('email-address').value;
+    const email = emailId + "@" + emailAddress;
 
     const signupData = JSON.stringify({
-      email: emailId + '@' + emailAddress,
-      password: password
+      email: email,
+      password: password,
+      passwordChk: passwordChk
     });
 
     if (window.flutter_inappwebview) {
@@ -24,7 +27,3 @@ $(document).ready(function() {
     }
   });
 });
-
-$('.header-include').load('../include/header.html', function() {
-
-})
