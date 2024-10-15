@@ -44,7 +44,7 @@ $(function(){
     // $('.icon-arlarm').on('click', function(){
     //   $('.home-inner').css('transform', 'translateX(-100%)');
 
-      
+    
     //   $.ajax({
     //     url: '../include/notice-board.html',
     //     success: function(data){
@@ -72,7 +72,19 @@ $(function(){
   $('.gnb-main').load('../include/gnb.html')
 
 
+
+
    // Signin Field
+  $('.signup-email').change(function(){
+    if($(this).val() == 'self'){
+      $('.signup-email').hide();
+      $('.email-dat').hide();
+      $('.signup-id').hide();
+      $('.signup-self').show();
+    }
+  })
+
+
   $('.all-term').on('change', function() {
     // all-term 모두 체크 선택 and 해제
     $('.chk-term').prop('checked', $(this).prop('checked'));
@@ -87,6 +99,8 @@ $(function(){
     }
   });
 
+
+  // 약관팝업 창. 띄우는 거 
   $('.chk-basic').click(function(){
     $('.term-part-basic').show();
   })
@@ -95,20 +109,32 @@ $(function(){
     $('.term-part-personal').show();
   })
 
+  $('.chk-marketing').click(function(){
+    $('.term-part-marketing').show();
+  })
 
-  // 약관동의 체크
+  
+  // 약관동의 display 없애기 
   $('.term-basic-include').load('../include/term-basic.html', function(){
-    $('.btn-term-personal').click(function(){
+    $('.btn-term-basic').click(function(){
       $('.term-part').css('display','none');
+      $('.basic').prop('checked', true);
     })
   })
 
   $('.term-personal-include').load('../include/term-personal.html', function(){
     $('.btn-term-personal').click(function(){
       $('.term-part').css('display','none');
+      $('.chk-term-personal').prop('checked', true);
     })
   })
 
+  $('.term-marketing-include').load('../include/term-marketing.html',function(){
+    $('.btn-term-marketing').click(function(){
+      $('.term-part').css('display','none');
+      $('.chk-term-marketing').prop('checked', true);
+    })
+  })
 
 
 
@@ -158,6 +184,7 @@ $(function(){
     var newBoard = $myQuest.clone();
     $('.board-list-items').append(newBoard);
   }
+
 
 
   
@@ -336,13 +363,16 @@ $(function(){
 
   // ## Mine-item 아이템 꾸리기
   var $myitem = $('.mine-item').first();
-  for(var i = 1; i < 24; i++){
+  for(var i = 1; i < 10; i++){
     var newMine = $myitem.clone();
     $('.mine-items').append(newMine)
   }
 
+  
 
-
+  // $('.mine-items').click(function(){
+  //   $(this).next('.mine-item-img').css('border', '2px solid red');
+  // })
 
 
 
