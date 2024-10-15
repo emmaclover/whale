@@ -1048,12 +1048,30 @@
   gap: 6px;
 }
 
+.signup-self{
+  width: 78%;
+  display: none;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 8px 6px;
+  font-family: var(--primary-kr);
+  /* color: var(--light-gray); */
+}
+
+.signup-self::placeholder{
+  color: var(--light-gray);
+}
+
 .signup-id{
   width: 35%;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
   padding: 8px 6px;
   font-family: var(--primary-kr);
+  /* color: var(--light-gray); */
+}
+
+.signup-id::placeholder{
   color: var(--light-gray);
 }
 
@@ -1062,6 +1080,7 @@
 }
 
 .signup-email{
+  /* display: none; */
   width: 35%;
   font-family: var(--primary-kr);
   border: 1px solid var(--light-gray);
@@ -1189,7 +1208,7 @@
   font-size: 16;
 }
 
-.btn-term-personal{
+.btn-term-personal, .btn-term-basic, .btn-term-marketing{
   margin-top: 22px;
 }
 
