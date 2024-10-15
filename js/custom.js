@@ -95,6 +95,10 @@ $(function(){
     $('.term-part-personal').show();
   })
 
+  $('.chk-marketing').click(function(){
+    $('.term-part-marketing').show();
+  })
+  
 
   // 약관동의 체크
   $('.term-basic-include').load('../include/term-basic.html', function(){
@@ -109,6 +113,11 @@ $(function(){
     })
   })
 
+  $('.term-marketing-include').load('../include/term-marketing.html',function(){
+    $('.btn-term-personal').click(function(){
+      $('.term-part').css('display','none');
+    })
+  })
 
 
 
@@ -350,7 +359,7 @@ $(function(){
 
   // ## Mine-item 아이템 꾸리기
   var $myitem = $('.mine-item').first();
-  for(var i = 1; i < 24; i++){
+  for(var i = 1; i < 10; i++){
     var newMine = $myitem.clone();
     $('.mine-items').append(newMine)
   }

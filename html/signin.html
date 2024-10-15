@@ -24,7 +24,7 @@
       </div>
 
       <!-- 회원가입 컨텐츠 -->
-      <div class="signup-content">
+      <form class="signup-content">
         <!-- 이름&생년월일 필드 -->
         <div class="auto-field">
           <div class="name-field">
@@ -39,7 +39,7 @@
 
         <!-- 이메일 필드 -->
         <div class="email-field">
-          <p class="field-bold">이메일</p>
+          <label class="field-bold">이메일</label>
           <div class="email-box">
             <input type="text" class="signup-id" placeholder="이메일">
             <p>@</p>
@@ -77,19 +77,20 @@
               <input type="checkbox" class="chk-term"><em></em><p><a href="#none" class="chk-personal">개인정보 수집 및 이용에 대한 동의(필수)</a></p>
             </label>
             <label>
-              <input type="checkbox" class="chk-term"><em></em><p><a href="#none">마케팅 정보 수신 동의(선택)</a></p>
+              <input type="checkbox" class="chk-term"><em></em><p><a href="#none" class="chk-marketing">마케팅 정보 수신 동의(선택)</a></p>
             </label>
           </div>
         </div>
 
 
         <button class="btn-basic signup-btn">가입하기</button>
-      </div>
+      </form>
         <!-- 약관동의 -->
         <div class="term-basic-include"></div>
         <!-- 개인정보동의 -->
         <div class="term-personal-include"></div>
-        
+        <!-- 마케팅 동의 ( 약관 내용 넣어야함 ) -->
+        <div class="term-marketing-include"></div>
     </div>
   </div>
 
