@@ -28,42 +28,97 @@ $(document).ready(function() {
   });
 });
 
-$(function(){
+$(document).ready(function() {
+  $('.phone-check-box').on('click', function() {
 
-   // Signin Field
-   $('.all-term').on('change', function() {
-    // all-term 모두 체크 선택 and 해제
-    $('.chk-term').prop('checked', $(this).prop('checked'));
-  });
-
-  // 개별 체크 시 전체 체크 해제
-  $('.chk-term').on('change', function() {
-    if ($('.chk-term:checked').length === $('.chk-term').length) {
-      $('.all-term').prop('checked', true);
+    if (window.flutter_inappwebview) {
+        window.flutter_inappwebview.callHandler('kcp')
+        .catch(function(error) {
+          console.error("Error sending data to Flutter: ", error);
+        });
     } else {
-      $('.all-term').prop('checked', false);
+      console.error("Flutter InAppWebView is not ready.");
     }
   });
+});
 
-  $('.chk-basic').click(function(){
-    $('.term-part-basic').show();
-  })
+// $(function(){
 
-  $('.chk-personal').click(function(){
-    $('.term-part-personal').show();
-  })
+//    // Signin Field
+//    $(document).ready(function() {
+//     $('.kcp-api-verification').on('click', function() {
+//       console.log('awefawef')
+//       if (window.flutter_inappwebview) {
+//           window.flutter_inappwebview.callHandler('kcp-api-verification')
+//           .catch(function(error) {
+//             console.error("Error sending data to Flutter: ", error);
+//           });
+//       } else {
+//         console.error("Flutter InAppWebView is not ready.");
+//       }
+//     });
+//   })
 
-  // 약관동의 체크
-  $('.term-basic-include').load('../include/term-basic.html', function(){
-    $('.btn-term-personal').click(function(){
-      $('.term-part').css('display','none');
-    })
-  })
+//   $(document).ready(function() {
+//     $('.all-term').on('change', function() {
+//       // all-term 모두 체크 선택 and 해제
+//       $('.chk-term').prop('checked', $(this).prop('checked'));
+//       if (window.flutter_inappwebview) {
+//         window.flutter_inappwebview.callHandler('kcp-api-verification')
+//         .catch(function(error) {
+//           console.error("Error sending data to Flutter: ", error);
+//         });
+//     } else {
+//       console.error("Flutter InAppWebView is not ready.");
+//     }
+//     });
 
-  $('.term-personal-include').load('../include/term-personal.html', function(){
-    $('.btn-term-personal').click(function(){
-      $('.term-part').css('display','none');
-    })
-  })
-  
-})
+//     $('.kcp-api-verification').on('click', function() {
+//       console.log('awefawef')
+//       if (window.flutter_inappwebview) {
+//           window.flutter_inappwebview.callHandler('kcp-api-verification')
+//           .catch(function(error) {
+//             console.error("Error sending data to Flutter: ", error);
+//           });
+//       } else {
+//         console.error("Flutter InAppWebView is not ready.");
+//       }
+//     });
+//   })
+
+//    $('.all-term').on('change', function() {
+//     // all-term 모두 체크 선택 and 해제
+//     $('.chk-term').prop('checked', $(this).prop('checked'));
+//   });
+
+//   // 개별 체크 시 전체 체크 해제
+//   $('.chk-term').on('change', function() {
+//     if ($('.chk-term:checked').length === $('.chk-term').length) {
+//       $('.all-term').prop('checked', true);
+//     } else {
+//       $('.all-term').prop('checked', false);
+//     }
+//   });
+
+//   $('.chk-basic').click(function(){
+//     $('.term-part-basic').show();
+//   })
+
+//   $('.chk-personal').click(function(){
+//     $('.term-part-personal').show();
+//   })
+
+//   // 약관동의 체크
+//   $('.term-basic-include').load('../include/term-basic.html', function(){
+//     $('.btn-term-personal').click(function(){
+//       $('.term-part').css('display','none');
+//     })
+//   })
+
+//   $('.term-personal-include').load('../include/term-personal.html', function(){
+//     $('.btn-term-personal').click(function(){
+//       $('.term-part').css('display','none');
+//     })
+//   })
+
+// })
