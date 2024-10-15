@@ -42,13 +42,18 @@
           <label class="field-bold">이메일</label>
           <div class="email-box">
             <input type="text" class="signup-id" placeholder="이메일">
-            <p>@</p>
+            <p class="email-dat">@</p>
             <select name="" id="" class="signup-email">
               <option value="">선택</option>
               <option value="">naver.com</option>
               <option value="">gmail.com</option>
               <option value="">daum.net</option>
+              <option value="">nate.com</option>
+              <option value="">kakao.com</option>
+              <option value="">yahoo.com</option>
+              <option value="self">직접입력</option>
             </select>
+            <input type="text" class="signup-self" placeholder="직접입력">
             <button class="email-check">중복확인</button>
           </div>
         </div>
@@ -69,15 +74,15 @@
               <input type="checkbox" class="all-term"><em></em><p>전체 약관에 동의합니다.(선택포함)</p>
             </label>
             <label>
-              <input type="checkbox" class="chk-term chk-term-psn"><em></em><p>
+              <input type="checkbox" class="chk-term basic"><em></em><p>
                 <a href="#none" class="chk-basic">이용약관 동의(필수)</a>
               </p>
             </label>
             <label>
-              <input type="checkbox" class="chk-term"><em></em><p><a href="#none" class="chk-personal">개인정보 수집 및 이용에 대한 동의(필수)</a></p>
+              <input type="checkbox" class="chk-term chk-term-personal"><em></em><p><a href="#none" class="chk-personal">개인정보 수집 및 이용에 대한 동의(필수)</a></p>
             </label>
             <label>
-              <input type="checkbox" class="chk-term"><em></em><p><a href="#none" class="chk-marketing">마케팅 정보 수신 동의(선택)</a></p>
+              <input type="checkbox" class="chk-term chk-term-marketing"><em></em><p><a href="#none" class="chk-marketing">마케팅 정보 수신 동의(선택)</a></p>
             </label>
           </div>
         </div>
