@@ -26,13 +26,11 @@ $(document).ready(function() {
       console.error("Flutter InAppWebView is not ready.");
     }
   });
-});
 
-$(document).ready(function() {
-  $('.phone-check-box').on('click', function() {
+  $('.signup-phone-btn').on('click', function() {
 
     if (window.flutter_inappwebview) {
-        window.flutter_inappwebview.callHandler('kcp')
+        window.flutter_inappwebview.callHandler('kcp', signupData)
         .catch(function(error) {
           console.error("Error sending data to Flutter: ", error);
         });
@@ -41,6 +39,20 @@ $(document).ready(function() {
     }
   });
 });
+
+// $(document).ready(function() {
+//   $('.phone-check-box').on('click', function() {
+
+//     if (window.flutter_inappwebview) {
+//         window.flutter_inappwebview.callHandler('kcp', signupData)
+//         .catch(function(error) {
+//           console.error("Error sending data to Flutter: ", error);
+//         });
+//     } else {
+//       console.error("Flutter InAppWebView is not ready.");
+//     }
+//   });
+// });
 
 // $(function(){
 
