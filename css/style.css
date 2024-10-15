@@ -306,6 +306,18 @@
 }
 
 
+/* Friends-list */
+.gnb-bar-friends .bi-home-on,.gnb-bar-friends  .bi-change-on,.gnb-bar-friends  .bi-shop-on,.gnb-bar-friends  .bi-person{
+  display: none;
+}
+
+.gnb-bar-friends  .bi-person-on p{
+  color: var(--var-text);
+}
+
+
+
+
 
 
 /* ############# Home html CSS ############### */
@@ -679,6 +691,11 @@
 }
 
 
+.btn-bi-shop{
+  margin-bottom: 24px;
+}
+
+
 /* ################################## 포인트 팝업 */
 .point-popup-inner{
   display: none;
@@ -929,7 +946,7 @@
 
 
 
-/* #################### Signup Html CSS ################### */
+/* #################### SignIn Html CSS ################### */
 
 
 .signup-inner{
@@ -938,6 +955,7 @@
   justify-content: center;
   align-items: center;
   padding: 50px 40px;
+  position: relative;
 }
 
 
@@ -1112,6 +1130,57 @@
 
 
 
+/* ########### 이용약관 ########### */
+.term-part{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.5);
+  position: absolute;
+  padding-top: 80px;
+  padding: 100px 24px 80px 24px;
+  top: 0;
+  left: 0;
+  /* display: none; */
+}
+
+.term-part-basic{
+  display: none;
+}
+
+.term-part-personal{
+  display: none;
+}
+
+.term-back{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  height: 100%;
+  /* padding: 24px; */
+
+}
+.term-personal{
+  padding: 24px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: white;
+  max-height: 80%; /* 부모 높이의 80%로 설정 */
+  overflow: auto; /* 스크롤 추가 */
+  word-wrap: break-word; 
+  font-family: var(--primary-kr);
+  font-size: 15px;
+  /* position: fixed; */
+}
+
+.term-personal p:nth-child(1){
+  padding-bottom: 12px;
+  font-weight: bold;
+  font-size: 16;
+}
+
+.btn-term-personal{
+  margin-top: 22px;
+}
 
 
 
@@ -3006,6 +3075,67 @@
   height: 100%;
   object-fit: contain;
 }
+
+
+
+
+
+
+/* ############# 친구목록 ############### */
+.friends-list{
+  /* height: inherit; */
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  /* position: relative; */
+}
+
+
+.friends-list-part{
+  padding-top: 80px;
+  padding-bottom: 120px;
+  color: white;
+  padding-left: 24px;
+  padding-right: 24px;  
+  font-size: 16px;
+  font-family: var(--primary-kr)
+}
+
+.friend-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #000; */
+  gap: 6px;
+  padding-bottom: 8px;
+}
+
+.friends-img{
+  flex: 1;
+  /* border: 1px solid #000; */
+  text-align: center;
+}
+
+.friends-info{
+  flex: 2;
+  /* border: 1px solid #000; */
+}
+
+.friends-name {
+  color: var(--mint-color);
+}
+
+
+.friends-point{
+  display: flex;
+}
+
+
+.friends-point p:nth-child(1){
+  padding: 0 6px;
+  margin-right: 5px;
+  border-left: 1px solid rgb(225, 225, 225, 0.15);
+  border-right: 1px solid rgb(225, 225, 225, 0.15);
+}
+
 
 
 
