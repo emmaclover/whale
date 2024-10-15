@@ -1180,7 +1180,8 @@
   border-radius: 5px;
   width: 100%;
   background-color: white;
-  max-height: 80%; /* 부모 높이의 80%로 설정 */
+  min-height: inherit;
+  max-height: 70%; /* 부모 높이의 80%로 설정 */
   overflow: auto; /* 스크롤 추가 */
   word-wrap: break-word; 
   font-family: var(--primary-kr);
@@ -2686,6 +2687,7 @@
   font-size: 16px;
   justify-content: center;
   align-items: center;
+  border: 1px solid #000;
 }
 
 .quit-app-warning{
