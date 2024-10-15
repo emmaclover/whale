@@ -59,7 +59,6 @@ $(document).ready(function() {
     // 산호로 교환하기
     $('.btn-toleaf').on('click', function() {
         window.flutter_inappwebview.callHandler('pearlToCoral').then(function(result) {
-        console.log('result', result);
             document.querySelector('.afterPearlTotal').innerText = result['afterPearlTotal'];
             document.querySelector('.afterCoralTotal').innerText = result['afterCoralTotal'];
             document.querySelector('.afterTradablePearl').innerText = result['afterTradablePearl'];
