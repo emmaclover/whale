@@ -980,8 +980,6 @@
 
 
 /* #################### SignIn Html CSS ################### */
-
-
 .signup-inner{
   display: flex;
   flex-direction: column;
@@ -990,7 +988,6 @@
   padding: 50px 40px;
   position: relative;
 }
-
 
 .signup-title{
   width: 100%;
@@ -1009,11 +1006,9 @@
   padding: 24px 0;
 }
 
-
 .signup-phone-btn{
   width: 154px;
 }
-
 
 .signup-content{
   margin-top: 42px;
@@ -1023,10 +1018,12 @@
   display: flex;
   font-size: 14px;
 }
+
 .name-field{
   flex: 1;
   display: flex;
 }
+
 .birth-field{
   flex: 1;
   display: flex;
@@ -1059,9 +1056,11 @@
   font-family: var(--primary-kr);
   color: var(--light-gray);
 }
+
 .email-box p{
   width: 5%;
 }
+
 .signup-email{
   width: 35%;
   font-family: var(--primary-kr);
@@ -1078,8 +1077,6 @@
   background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
 }
 
-
-
 .email-check{
   font-size: 14px;
   font-family: var(--primary-kr);
@@ -1090,9 +1087,6 @@
 }
 
 
-.password-field p{
-  
-}
 
 .password-field input{
   width: 100%;
@@ -2671,7 +2665,7 @@
 }
 
 
-
+ 
 
 /* ############### 탈퇴하기 ################# */
 .quit-app{
@@ -2687,7 +2681,7 @@
   font-size: 16px;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 .quit-app-warning{
