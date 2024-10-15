@@ -980,8 +980,6 @@
 
 
 /* #################### SignIn Html CSS ################### */
-
-
 .signup-inner{
   display: flex;
   flex-direction: column;
@@ -990,7 +988,6 @@
   padding: 50px 40px;
   position: relative;
 }
-
 
 .signup-title{
   width: 100%;
@@ -1009,11 +1006,9 @@
   padding: 24px 0;
 }
 
-
 .signup-phone-btn{
   width: 154px;
 }
-
 
 .signup-content{
   margin-top: 42px;
@@ -1023,10 +1018,12 @@
   display: flex;
   font-size: 14px;
 }
+
 .name-field{
   flex: 1;
   display: flex;
 }
+
 .birth-field{
   flex: 1;
   display: flex;
@@ -1081,6 +1078,7 @@
 .email-box p{
   width: 5%;
 }
+
 .signup-email{
   /* display: none; */
   width: 35%;
@@ -1098,8 +1096,6 @@
   background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
 }
 
-
-
 .email-check{
   font-size: 14px;
   font-family: var(--primary-kr);
@@ -1110,9 +1106,6 @@
 }
 
 
-.password-field p{
-  
-}
 
 .password-field input{
   width: 100%;
@@ -2010,13 +2003,13 @@
 
 /* ################## 아이템 샵 ################# */
 .item-shop{
-  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
   height: inherit;
   /* min-height: 100vh; */
 }
 
 .item-shop-inner{
-  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  /* background-image: linear-gradient(to bottom, #1633A2, #000E48); */
   padding-bottom: 80px;
   min-height: 100vh;
   position: relative;
@@ -2026,7 +2019,7 @@
 
 .item-shop-content{
   width: 100%;
-  padding: 70px 28px 80px 28px;
+  padding: 0px 28px 80px 28px;
   height: 100%;
 }
 
@@ -2328,18 +2321,6 @@
   height: 100%;
 }
 
-.item-mine-title{
-  /* color: white;
-  font-family: var(--primary-kr);
-  font-size: 14px;
-  font-weight: normal;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding-bottom: 12px;
-  padding-top: 24px; */
-}
-
 .item-mine-title a:nth-child(1){
   color: rgb(255, 255, 255, 0.3);
   /* padding-right: 6px; */
@@ -2432,6 +2413,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 28px;
+  gap: 28px;
+  margin-top: 24px;
 }
 
 .mine-item{
@@ -2439,7 +2422,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 24px;
 }
 
 .mine-item-img{
@@ -2472,8 +2454,8 @@
 .header-line-one{
   width: 85%;
   height: 10px;
-  border-bottom: 1px solid rgb(0, 13, 66, 0.7);
-  padding-top: 70px;
+  /* border-bottom: 1px solid rgb(0, 13, 66, 0.7); */
+  /* padding-top: 70px; */
   margin: auto;
 }
 
@@ -2628,8 +2610,7 @@
 }
 
 .user-detail-update p{
-  flex: 1;
-
+  width: 50%;
 }
 
 
@@ -2642,11 +2623,12 @@
 }
 
 .user-detail-update input{
-  flex: 1;
+  width: 50%;
   padding: 10px 6px;
   border-radius: 5px;
   border: 1px solid var(--light-gray);
 }
+
 
 
 /* ######### 로그아웃 팝업 ########## */
@@ -2654,7 +2636,6 @@
 .user-logout-pop{
   display: none;
   position: absolute;
-  
 }
 
 .user-logout-pop-inner{
@@ -2707,7 +2688,7 @@
   font-size: 16px;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 .quit-app-warning{
@@ -3121,7 +3102,7 @@
 
 /* ############# 친구목록 ############### */
 .friends-list{
-  /* height: inherit; */
+  height: inherit;
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
   /* position: relative; */
 }
@@ -3241,6 +3222,10 @@
   } */
 
   .home{
+    height: 100vh;
+  }
+
+  .quit-app{
     height: 100vh;
   }
   

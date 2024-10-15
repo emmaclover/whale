@@ -44,7 +44,7 @@ $(function(){
     // $('.icon-arlarm').on('click', function(){
     //   $('.home-inner').css('transform', 'translateX(-100%)');
 
-      
+    
     //   $.ajax({
     //     url: '../include/notice-board.html',
     //     success: function(data){
@@ -184,6 +184,7 @@ $(function(){
     var newBoard = $myQuest.clone();
     $('.board-list-items').append(newBoard);
   }
+
 
 
   
@@ -381,8 +382,11 @@ $(function(){
     $('.mine-items').append(newMine)
   }
 
+  
 
-
+  // $('.mine-items').click(function(){
+  //   $(this).next('.mine-item-img').css('border', '2px solid red');
+  // })
 
 
 
