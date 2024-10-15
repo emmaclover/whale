@@ -27,4 +27,34 @@ $(document).ready(function() {
                 console.error("Error sending data to Flutter: ", error);
               });
         });
+      $('.mypage').on('click', function() {
+            window.flutter_inappwebview.callHandler('mypage', 'mypage 버튼이 클릭되었습니다.')
+              .catch(function(error) {
+                console.error("Error sending data to Flutter: ", error);
+              });
+        });
+      $('.tutorial').on('click', function() {
+            window.flutter_inappwebview.callHandler('tutorial', 'tutorial 버튼이 클릭되었습니다.')
+              .catch(function(error) {
+                console.error("Error sending data to Flutter: ", error);
+              });
+        });
+      $('.notification').on('click', function() {
+            window.flutter_inappwebview.callHandler('notification', 'notification 버튼이 클릭되었습니다.')
+              .catch(function(error) {
+                console.error("Error sending data to Flutter: ", error);
+              });
+        });
+      $('.faq').on('click', function() {
+            window.flutter_inappwebview.callHandler('faq', 'faq 버튼이 클릭되었습니다.')
+              .catch(function(error) {
+                console.error("Error sending data to Flutter: ", error);
+              });
+        });
+      $('.inquiry').on('click', function() {
+            window.flutter_inappwebview.callHandler('inquiry', 'inquiry 버튼이 클릭되었습니다.')
+              .catch(function(error) {
+                console.error("Error sending data to Flutter: ", error);
+              });
+        });
 });
