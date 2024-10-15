@@ -40,15 +40,15 @@
         <div class="email-field">
           <p class="field-bold">이메일</p>
           <div class="email-box">
-            <input type="text" class="signup-id" placeholder="이메일">
+            <input id="email-id" type="text" class="signup-id" placeholder="이메일">
             <p>@</p>
-            <select name="" id="" class="signup-email">
+            <select name="email-address" id="email-address" class="signup-email">
               <option value="">선택</option>
-              <option value="">naver.com</option>
-              <option value="">gmail.com</option>
-              <option value="">daum.net</option>
-              <option value="">kakao.com</option>
-              <option value="">yahoo.com</option>
+              <option value="naver.com">naver.com</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="daum.net">daum.net</option>
+              <option value="kakao.com">kakao.com</option>
+              <option value="yahoo.com">yahoo.com</option>
               <option value="">직접입력</option>
             </select>
             <button class="email-check">중복확인</button>
@@ -58,7 +58,7 @@
         <!-- 비밀번호 필드 -->
         <div class="password-field">
           <p class="field-bold">비밀번호</p>
-          <input type="password" placeholder="8~32자리 영문 대소문자, 숫자 특수문자 조합">
+          <input id="password" name="password" type="password" placeholder="8~32자리 영문 대소문자, 숫자 특수문자 조합">
           <input type="password" placeholder="비밀번호 확인">
         </div>
 
