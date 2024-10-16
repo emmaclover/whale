@@ -152,7 +152,7 @@
 /* ########## Menu bar ########## */
 .main-menu-inner{
   width: 100%;
-  height: 100h;
+  /* height: 100h; */
   position: relative;
   /* overflow: hidden; */
 }
@@ -349,6 +349,7 @@
 
 .home-part{
   width: 100%;
+
 }
 
 .home-inner {
