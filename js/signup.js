@@ -1,26 +1,36 @@
 // flutterInAppWebViewPlatformReady 이벤트 리스너
-window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
+window.addEventListener("flutterInAppWebViewPlatformReady", function (event) {
   console.log("WebView is ready for communication.");
 });
 
-$(document).ready(function() {
-  
-  $('.signup-btn').on('click', function() {
+$(document).ready(function () {
+
+  // 이벤트 : 회원 가입하기 버튼
+  $('.signup-btn').on('click', function () {
     const password = document.getElementById('password').value;
     const passwordChk = document.getElementById('password-chk').value;
     const emailId = document.getElementById('email-id').value;
     const emailAddress = document.getElementById('email-address').value;
-    const email = emailId + "@" + emailAddress;
+    const emailFullAddress = emailId + "@" + emailAddress;
+    const emailSelf = document.getElementById('signup-self').value;
+    const email = emailSelf == '' ? emailFullAddress : emailSelf;
+    
+    const isAgreeTerms = document.getElementById('is_agree_terms').checked ? true : false;
+    const isAgreePrivacy = document.getElementById('is_agree_privacy').checked ? true : false;
+    const isAgreeMarketing = document.getElementById('is_agree_marketing').checked ? true : false;
 
     const signupData = JSON.stringify({
       email: email,
       password: password,
-      passwordChk: passwordChk
+      passwordChk: passwordChk,
+      isAgreeTerms: isAgreeTerms,
+      isAgreePrivacy: isAgreePrivacy,
+      isAgreeMarketing: isAgreeMarketing
     });
 
     if (window.flutter_inappwebview) {
-        window.flutter_inappwebview.callHandler('signup', signupData)
-        .catch(function(error) {
+      window.flutter_inappwebview.callHandler('signup', signupData)
+        .catch(function (error) {
           console.error("Error sending data to Flutter: ", error);
         });
     } else {
@@ -29,8 +39,8 @@ $(document).ready(function() {
   });
 
   // 이메일 직접 입력
-  $('.signup-email').change(function(){
-    if($(this).val() == 'self'){
+  $('.signup-email').change(function () {
+    if ($(this).val() == 'self') {
       $('.signup-email').hide();
       $('.email-dat').hide();
       $('.signup-id').hide();
@@ -38,12 +48,11 @@ $(document).ready(function() {
     }
   })
 
-  // 
-  $('.signup-phone-btn').on('click', function() {
-
+  // 이벤트 : 휴대폰 본인인증
+  $('.signup-phone-btn').on('click', function () {
     if (window.flutter_inappwebview) {
-        window.flutter_inappwebview.callHandler('kcp')
-        .catch(function(error) {
+      window.flutter_inappwebview.callHandler('kcp')
+        .catch(function (error) {
           console.error("Error sending data to Flutter: ", error);
         });
     } else {
@@ -51,13 +60,17 @@ $(document).ready(function() {
     }
   });
 
-  $('.all-term').on('change', function() {
+  // 약관동의 체크박스
+  $('.all-term').on('change', function () {
     // all-term 모두 체크 선택 and 해제
     $('.chk-term').prop('checked', $(this).prop('checked'));
+    if (window.flutter_inappwebview) {
+      window.flutter_inappwebview.callHandler('')
+    }
   });
 
   // 개별 체크 시 전체 체크 해제
-  $('.chk-term').on('change', function() {
+  $('.chk-term').on('change', function () {
     if ($('.chk-term:checked').length === $('.chk-term').length) {
       $('.all-term').prop('checked', true);
     } else {
@@ -65,38 +78,83 @@ $(document).ready(function() {
     }
   });
 
-    // 약관팝업 창. 띄우는 거 
-  $('.chk-basic').click(function(){
-    $('.term-part-basic').show();
-  })
-  
-  $('.chk-personal').click(function(){
-    $('.term-part-personal').show();
-  })
-  
-  $('.chk-marketing').click(function(){
-    $('.term-part-marketing').show();
-  })
-
   // 약관동의 display 없애기 
-  $('.term-basic-include').load('../include/term-basic.html', function(){
-    $('.btn-term-basic').click(function(){
-      $('.term-part').css('display','none');
+  $('.term-basic-include').load('../include/term-basic.html', function () {
+    $('.btn-term-basic').click(function () {
+      $('.term-part').css('display', 'none');
       $('.basic').prop('checked', true);
     })
   })
 
-  $('.term-personal-include').load('../include/term-personal.html', function(){
-    $('.btn-term-personal').click(function(){
-      $('.term-part').css('display','none');
+  $('.term-personal-include').load('../include/term-personal.html', function () {
+    $('.btn-term-personal').click(function () {
+      $('.term-part').css('display', 'none');
       $('.chk-term-personal').prop('checked', true);
     })
   })
 
-  $('.term-marketing-include').load('../include/term-marketing.html',function(){
-    $('.btn-term-marketing').click(function(){
-      $('.term-part').css('display','none');
+  $('.term-marketing-include').load('../include/term-marketing.html', function () {
+    $('.btn-term-marketing').click(function () {
+      $('.term-part').css('display', 'none');
       $('.chk-term-marketing').prop('checked', true);
     })
+  })
+
+  // // 이벤트 : 이용약관 동의 (필수)
+  // $('.basic').on('click', function () {
+  //   console.log('이용약관 동의(필수)')
+  //   const isAgreeTerms = document.getElementById('is_agree_terms').value;
+
+  //   if (window.flutter_inappwebview) {
+  //     window.flutter_inappwebview.callHandler('sginup', '이용약관 동의(필수) 클릭', isAgreeTerms)
+  //       .catch(function (error) {
+  //         console.error("Error sending data to Flutter: ", error);
+  //       });
+  //   } else {
+  //     console.error("Flutter InAppWebView is not ready.");
+  //   }
+  // })
+
+  // // 이벤트 : 개인정보 수집 및 이용에 대한 동의 (필수)
+  // $('.chk-term-personal').on('click', function () {
+  //   console.log('개인정보 수집 및 이용에 대한 동의 (필수)')
+  //   const isAgreePrivacy = document.getElementById('is_agree_privacy').value;
+
+  //   if (window.flutter_inappwebview) {
+  //     window.flutter_inappwebview.callHandler('sginup', '개인정보 수집 및 이용에 대한 동의 (필수)', isAgreePrivacy)
+  //       .catch(function (error) {
+  //         console.error("Error sending data to Flutter: ", error);
+  //       });
+  //   } else {
+  //     console.error("Flutter InAppWebView is not ready.");
+  //   }
+  // })
+
+  // // 이벤트 : 마케팅 정보 수신 동의 (선택)
+  // $('.chk-term-marketing').on('click', function () {
+  //   console.log('마케팅 정보 수신 동의 (선택)')
+  //   const isAgreeMarketing = document.getElementById('is_agree_marketing').value;
+
+  //   if (window.flutter_inappwebview) {
+  //     window.flutter_inappwebview.callHandler('sginup', '마케팅 정보 수신 동의 (선택)', isAgreeMarketing)
+  //       .catch(function (error) {
+  //         console.error("Error sending data to Flutter: ", error);
+  //       });
+  //   } else {
+  //     console.error("Flutter InAppWebView is not ready.");
+  //   }
+  // })
+
+  // 이벤트 : 약관동의 팝업
+  $('.chk-basic').click(function () {
+    $('.term-part-basic').show();
+  })
+
+  $('.chk-personal').click(function () {
+    $('.term-part-personal').show();
+  })
+
+  $('.chk-marketing').click(function () {
+    $('.term-part-marketing').show();
   })
 });
