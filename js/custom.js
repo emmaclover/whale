@@ -216,20 +216,6 @@ $(function(){
 
   })
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
   // ## 아이템 상세 팝업
   $('.item-detail-include').load('../include/item-detail-pop.html', function(){
     $('.shop-item-img').click(function(){

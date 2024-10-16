@@ -7,6 +7,7 @@
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- Custom CSS & JS -->
+  <script src="../js/signup.js"></script>
   <script src="../js/custom.js"></script>
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -20,7 +21,7 @@
         <p>회원가입</p>
       </div>
       <div class="phone-check-box">
-        <button class="btn-basic signup-phone-btn">휴대폰 본인인증</button>
+        <button id="kcp-btn" class="btn-basic signup-phone-btn">휴대폰 본인인증</button>
       </div>
 
       <!-- 회원가입 컨텐츠 -->
@@ -41,17 +42,17 @@
         <div class="email-field">
           <label class="field-bold">이메일</label>
           <div class="email-box">
-            <input type="text" class="signup-id" placeholder="이메일">
-            <p class="email-dat">@</p>
-            <select name="" id="" class="signup-email">
+            <input id="email-id" type="text" class="signup-id" placeholder="이메일">
+            <p>@</p>
+            <select name="email-address" id="email-address" class="signup-email">
               <option value="">선택</option>
-              <option value="">naver.com</option>
-              <option value="">gmail.com</option>
-              <option value="">daum.net</option>
-              <option value="">nate.com</option>
-              <option value="">kakao.com</option>
-              <option value="">yahoo.com</option>
-              <option value="self">직접입력</option>
+              <option value="naver.com">naver.com</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="daum.net">daum.net</option>
+              <option value="kakao.com">kakao.com</option>
+              <option value="yahoo.com">yahoo.com</option>
+              <option value="yahoo.com">nate.com</option>
+              <option value="">직접입력</option>
             </select>
             <input type="text" class="signup-self" placeholder="직접입력">
             <button class="email-check">중복확인</button>
@@ -61,8 +62,8 @@
         <!-- 비밀번호 필드 -->
         <div class="password-field">
           <p class="field-bold">비밀번호</p>
-          <input type="password" placeholder="8~32자리 영문 대소문자, 숫자 특수문자 조합">
-          <input type="password" placeholder="비밀번호 확인">
+          <input id="password" name="password" type="password" placeholder="8~32자리 영문 대소문자, 숫자 특수문자 조합">
+          <input id="password-chk" name="password-chk" type="password" placeholder="비밀번호 확인">
         </div>
 
 

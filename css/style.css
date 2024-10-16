@@ -679,7 +679,7 @@
   border: 1px solid var(--light-gray);
   border-radius: 5px;
   padding: 12px;
-  
+
 }
 
 .hold-top{
@@ -1071,6 +1071,25 @@
   gap: 6px;
 }
 
+.name-input-field{
+  width: 50%;
+  align-items: center;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 8px 6px;
+  font-family: var(--primary-kr);
+  color: var(--light-gray);
+}
+
+.age-year-input-field{
+  width: 40%;
+  align-items: center;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  font-family: var(--primary-kr);
+  color: var(--light-gray);
+}
+
 .signup-self{
   width: 78%;
   display: none;
@@ -1117,6 +1136,10 @@
   appearance: none;  /* 화살표 없애기 */
 
   background: url('../images/icon-chevron-down.svg') no-repeat right 12px center;
+}
+
+signup-email::placeholder {
+  color: var(--light-gray);
 }
 
 .email-check{
