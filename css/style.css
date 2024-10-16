@@ -334,6 +334,28 @@
 
 
 
+/* ############## Splash ############## */
+.splash{
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+
+}
+
+.splash-inner{
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-content {
+  color: white;
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  text-align: center;
+}
+
 
 
 
@@ -3020,9 +3042,11 @@
 }
 
 
-.board-notice{
-
+.board-header .line{
+  border: 1px solid transparent;
 }
+
+
 
 .board-notice-part{
   padding: 86px 28px ;
