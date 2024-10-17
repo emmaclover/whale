@@ -38,6 +38,24 @@ $(document).ready(function () {
     }
   });
 
+  // 이메일 중복 체크
+  $('.email-check').on('click', function () {
+    const emailId = document.getElementById('email-id').value;
+    const emailAddress = document.getElementById('email-address').value;
+    const emailFullAddress = emailId + "@" + emailAddress;
+    const emailSelf = document.getElementById('signup-self').value;
+    const email = emailSelf == '' ? emailFullAddress : emailSelf;
+
+    if (window.flutter_inappwebview) {
+      window.flutter_inappwebview.callHandler('email-check', email)
+        .catch(function (error) {
+          console.error("Error sending data to Flutter: ", error);
+        });
+    } else {
+      console.error("Flutter InAppWebView is not ready.");
+    }
+  })
+
   // 이메일 직접 입력
   $('.signup-email').change(function () {
     if ($(this).val() == 'self') {
@@ -99,51 +117,6 @@ $(document).ready(function () {
       $('.chk-term-marketing').prop('checked', true);
     })
   })
-
-  // // 이벤트 : 이용약관 동의 (필수)
-  // $('.basic').on('click', function () {
-  //   console.log('이용약관 동의(필수)')
-  //   const isAgreeTerms = document.getElementById('is_agree_terms').value;
-
-  //   if (window.flutter_inappwebview) {
-  //     window.flutter_inappwebview.callHandler('sginup', '이용약관 동의(필수) 클릭', isAgreeTerms)
-  //       .catch(function (error) {
-  //         console.error("Error sending data to Flutter: ", error);
-  //       });
-  //   } else {
-  //     console.error("Flutter InAppWebView is not ready.");
-  //   }
-  // })
-
-  // // 이벤트 : 개인정보 수집 및 이용에 대한 동의 (필수)
-  // $('.chk-term-personal').on('click', function () {
-  //   console.log('개인정보 수집 및 이용에 대한 동의 (필수)')
-  //   const isAgreePrivacy = document.getElementById('is_agree_privacy').value;
-
-  //   if (window.flutter_inappwebview) {
-  //     window.flutter_inappwebview.callHandler('sginup', '개인정보 수집 및 이용에 대한 동의 (필수)', isAgreePrivacy)
-  //       .catch(function (error) {
-  //         console.error("Error sending data to Flutter: ", error);
-  //       });
-  //   } else {
-  //     console.error("Flutter InAppWebView is not ready.");
-  //   }
-  // })
-
-  // // 이벤트 : 마케팅 정보 수신 동의 (선택)
-  // $('.chk-term-marketing').on('click', function () {
-  //   console.log('마케팅 정보 수신 동의 (선택)')
-  //   const isAgreeMarketing = document.getElementById('is_agree_marketing').value;
-
-  //   if (window.flutter_inappwebview) {
-  //     window.flutter_inappwebview.callHandler('sginup', '마케팅 정보 수신 동의 (선택)', isAgreeMarketing)
-  //       .catch(function (error) {
-  //         console.error("Error sending data to Flutter: ", error);
-  //       });
-  //   } else {
-  //     console.error("Flutter InAppWebView is not ready.");
-  //   }
-  // })
 
   // 이벤트 : 약관동의 팝업
   $('.chk-basic').click(function () {
