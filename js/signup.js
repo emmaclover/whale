@@ -36,6 +36,7 @@ $(document).ready(function () {
     } else {
       console.error("Flutter InAppWebView is not ready.");
     }
+    return false;
   });
 
   // 이메일 중복 체크
@@ -54,6 +55,7 @@ $(document).ready(function () {
     } else {
       console.error("Flutter InAppWebView is not ready.");
     }
+    return false;
   })
 
   // 이메일 직접 입력
