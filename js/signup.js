@@ -14,7 +14,7 @@ $(document).ready(function () {
     const emailFullAddress = emailId + "@" + emailAddress;
     const emailSelf = document.getElementById('signup-self').value;
     const email = emailSelf == '' ? emailFullAddress : emailSelf;
-    
+
     const isAgreeTerms = document.getElementById('is_agree_terms').checked ? true : false;
     const isAgreePrivacy = document.getElementById('is_agree_privacy').checked ? true : false;
     const isAgreeMarketing = document.getElementById('is_agree_marketing').checked ? true : false;
@@ -39,24 +39,30 @@ $(document).ready(function () {
     return false;
   });
 
-  // 이메일 중복 체크
+  // 버튼 클릭 이벤트 핸들러
   $('.email-check').on('click', function () {
     const emailId = document.getElementById('email-id').value;
     const emailAddress = document.getElementById('email-address').value;
     const emailFullAddress = emailId + "@" + emailAddress;
     const emailSelf = document.getElementById('signup-self').value;
-    const email = emailSelf == '' ? emailFullAddress : emailSelf;
+    const email = emailSelf === '' ? emailFullAddress : emailSelf;
 
     if (window.flutter_inappwebview) {
-      window.flutter_inappwebview.callHandler('email-check', email)
-        .catch(function (error) {
-          console.error("Error sending data to Flutter: ", error);
-        });
-    } else {
-      console.error("Flutter InAppWebView is not ready.");
+      window.flutter_inappwebview.callHandler('email-check', email).then(function (result) {
+        console.log('isEmailDuplicated', result);
+
+        const emailChkButton = document.getElementsByClassName('email-check');
+        if (emailChkButton.length > 0) {
+          if (result == true) {
+            emailChkButton[0].style.setProperty('background-color', 'yellow', 'important'); // 첫 번째 버튼 색상 변경
+          } else {
+            emailChkButton[0].style.setProperty('background-color', 'red', 'important'); // 첫 번째 버튼 색상 변경
+          }
+        }
+      })
+      return false;
     }
-    return false;
-  })
+  });
 
   // 이메일 직접 입력
   $('.signup-email').change(function () {
