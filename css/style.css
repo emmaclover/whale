@@ -826,6 +826,22 @@
 
 
 
+.zamvoki-info{
+  color: var(--light-gray);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0px;
+}
+
+.zamvoki-info p{
+  text-align: center;
+}
+
+
+
+
 
 
 
@@ -3308,7 +3324,7 @@ signup-email::placeholder {
   } */
 
   .home{
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .quit-app{
