@@ -213,8 +213,9 @@
   display: none;
 }
 
-.sub-category p{
+.sub-category a{
   padding: 8px 0px 0px 8px;
+  display: block;
 }
 
 
@@ -1199,6 +1200,24 @@ signup-email::placeholder {
   margin-top: 42px;
 }
 
+
+/* ############## 이용약관 페이지 ############# */
+.term-survice-part{
+  padding: 36px;
+  height: 100vh;
+}
+
+.term-survice-inner {
+  font-family: var(--primary-kr);
+  padding-bottom: 120px;
+
+}
+
+.term-survice-inner p:nth-child(1){
+  padding-bottom: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 
 /* ########### 이용약관 ########### */
@@ -2850,6 +2869,7 @@ signup-email::placeholder {
 .board-basic-title{
   display: flex;
   align-items: center;
+  font-size: 14px;
 }
 
 .board-write-section{
@@ -2862,10 +2882,25 @@ signup-email::placeholder {
   padding: 6px;
 }
 
+.board-basic-title a:nth-child(1){
+  color: var(--light-gray);
+}
+
 .board-basic-title-line{
   width: 2px;
   height: 14px;
   border-left: 1px solid var(--light-gray);
+}
+
+.board-basic-write .board-basic-title a:nth-child(1){
+  color: #000;
+  font-weight: bold;
+
+}
+
+.board-basic-write .board-basic-title a:nth-child(3){
+  color: var(--light-gray);
+  font-weight: lighter;
 }
 
 .board-basic-title a:nth-child(3) {
@@ -2956,7 +2991,9 @@ signup-email::placeholder {
 }
 
 .board-list-title{
+  font-size: 14px;
 }
+
 
 .board-list-title a:nth-child(1){
   font-weight: normal;
@@ -3072,7 +3109,7 @@ signup-email::placeholder {
 
 
 .board-notice-part{
-  padding: 86px 28px ;
+  padding: 30px 28px ;
   font-family: var(--primary-kr);
 }
 
@@ -3243,24 +3280,25 @@ signup-email::placeholder {
   }
 
   .container{
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
     position: relative;
   }
 
   .main-header{
     position: fixed;
-    width: 500px;
+    width: 600px;
     
   }
 
   .gnb{
-    width: 500px;
+    width: 600px;
     position: fixed;
   }
   
   .menu-bar{
-    position: absolute;
+    width: 600px;
+    position: fixed;
   }
 }
 
