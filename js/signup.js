@@ -72,7 +72,7 @@ $(document).ready(function () {
       $('.signup-id').hide();
       $('.signup-self').show();
     }
-  })
+  });
 
   // 이벤트 : 휴대폰 본인인증
   $('.signup-phone-btn').on('click', function () {
@@ -110,32 +110,32 @@ $(document).ready(function () {
       $('.term-part').css('display', 'none');
       $('.basic').prop('checked', true);
     })
-  })
+  });
 
   $('.term-personal-include').load('../include/term-personal.html', function () {
     $('.btn-term-personal').click(function () {
       $('.term-part').css('display', 'none');
       $('.chk-term-personal').prop('checked', true);
     })
-  })
+  });
 
   $('.term-marketing-include').load('../include/term-marketing.html', function () {
     $('.btn-term-marketing').click(function () {
       $('.term-part').css('display', 'none');
       $('.chk-term-marketing').prop('checked', true);
     })
-  })
+  });
 
   // 이벤트 : 약관동의 팝업
   $('.chk-basic').click(function () {
     $('.term-part-basic').show();
-  })
+  });
 
   $('.chk-personal').click(function () {
     $('.term-part-personal').show();
-  })
+  });
 
   $('.chk-marketing').click(function () {
     $('.term-part-marketing').show();
-  })
+  });
 });
