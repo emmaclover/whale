@@ -27,6 +27,8 @@ $(function(){
       $(".header-include .logo").text("1:1 문의하기");
     } else if (currentPage.endsWith("board-notice.html")){
       $(".header-include .logo").text("공지 및 이벤트");
+    } else if (currentPage.endsWith("board-faq.html")){
+      $(".header-include .logo").text("자주 묻는 질문");
     } else { 
       $(".header-include .logo").text("잠보기의 하루");
     }
