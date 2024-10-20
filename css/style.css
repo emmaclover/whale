@@ -108,7 +108,7 @@
   border-bottom: 1px solid rgb(0, 13, 66,0.7);
 }
 
-.board-basic-write .line, .board-list .line{
+.board-basic-write .line, .board-list .line, .board-notice .line, .history .line{
   display: none;
 }
 
@@ -152,7 +152,7 @@
 /* ########## Menu bar ########## */
 .main-menu-inner{
   width: 100%;
-  height: 100h;
+  /* height: 100h; */
   position: relative;
   /* overflow: hidden; */
 }
@@ -213,8 +213,9 @@
   display: none;
 }
 
-.sub-category p{
+.sub-category a{
   padding: 8px 0px 0px 8px;
+  display: block;
 }
 
 
@@ -334,6 +335,74 @@
 
 
 
+/* ############## Splash ############## */
+.splash{
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  height: 100vh;
+  width: 100vw; 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-inner {
+
+}
+
+.splash-content {
+  text-align: center;
+}
+
+.splash-content img {
+  max-width: 100%; 
+  max-height: 90vh; 
+  height: auto; 
+}
+
+.splash-content p {
+  font-size: 14px;
+  color: white;
+  margin-top: 1em;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .splash-content img {
+    max-height: 90vh; 
+  }
+
+  .splash-content p {
+    font-size: 14px; 
+  }
+}
+
+/* 
+.splash-inner{
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-content {
+  color: white;
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-content img{
+  width: 100%;
+  height: auto;
+}
+ */
 
 
 
@@ -347,8 +416,10 @@
   position: relative;
 }
 
+
 .home-part{
   width: 100%;
+
 }
 
 .home-inner {
@@ -783,8 +854,7 @@
   top: 0px;
 }
 
-.point-popup-mid{
-  display: flex;
+.point-popup-mid{  display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 0 65px 0;
@@ -799,6 +869,131 @@
 .point-pop-comen p:nth-child(1){
   font-weight: bold;
 }
+
+
+
+.zamvoki-info{
+  color: var(--light-gray);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0px;
+}
+
+.zamvoki-info p{
+  text-align: center;
+}
+
+
+
+
+/* ####### 튜토리얼 (기본 이미지) ####### */
+.tutorial-basic{
+  display: none;
+}
+.tutorial-part{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: #000; */
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+}
+
+.tutorial-part > img{
+  width: 100%;
+}
+.tutorial-inner{
+  position: absolute;
+  top: 3%;
+  right: 10%;
+}
+
+.tutorial .tutorial-inner  button{
+  color: var(--var-text);
+  width: 40px;
+  height: 20px;
+  background: rgb(225, 225, 225, 0.4);
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+/* ####### 튜토리얼 (닉네임) ####### */
+.tutorial-nick-part{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.nick-input-section{
+  padding: 12px;
+  width: 34%;
+  border: 1px solid white;
+  border-radius: 14px;
+  color: white;
+  position: absolute;
+  top: 16%;
+  right: 10%;
+  /* text-align: center; */
+}
+
+.nick-input-section p{
+  padding-bottom: 12px;
+}
+
+.nick-input-section input{
+  width: 70%;
+  height: 24px;
+  border-radius: 4px;
+  border: none;
+}
+
+.nick-input-section .bubble-try{
+  position: absolute;
+  bottom: -23%;
+  right: 20%;
+}
+
+.nick-input-section button{
+  background-color: white;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+
+/* ########## 튜토리얼 엔드 ########### */
+.tutorial-end-part{
+  display: none;
+  /* background-color: #000; */
+}
+
+.tutorial-end-section{
+
+  width: 45%;
+}
+
+.tutorial-end-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorial-end-btn button{
+  width: 80%;
+  position: absolute;
+  bottom: 10%;
+}
+
+
 
 
 
@@ -1176,6 +1371,24 @@ signup-email::placeholder {
   margin-top: 42px;
 }
 
+
+/* ############## 이용약관 페이지 ############# */
+.term-survice-part{
+  padding: 36px;
+  height: 100vh;
+}
+
+.term-survice-inner {
+  font-family: var(--primary-kr);
+  padding-bottom: 120px;
+
+}
+
+.term-survice-inner p:nth-child(1){
+  padding-bottom: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 
 /* ########### 이용약관 ########### */
@@ -2839,6 +3052,7 @@ signup-email::placeholder {
 .board-basic-title{
   display: flex;
   align-items: center;
+  font-size: 14px;
 }
 
 .board-write-section{
@@ -2851,10 +3065,25 @@ signup-email::placeholder {
   padding: 6px;
 }
 
+.board-basic-title a:nth-child(1){
+  color: var(--light-gray);
+}
+
 .board-basic-title-line{
   width: 2px;
   height: 14px;
   border-left: 1px solid var(--light-gray);
+}
+
+.board-basic-write .board-basic-title a:nth-child(1){
+  color: #000;
+  font-weight: bold;
+
+}
+
+.board-basic-write .board-basic-title a:nth-child(3){
+  color: var(--light-gray);
+  font-weight: lighter;
 }
 
 .board-basic-title a:nth-child(3) {
@@ -2945,7 +3174,9 @@ signup-email::placeholder {
 }
 
 .board-list-title{
+  font-size: 14px;
 }
+
 
 .board-list-title a:nth-child(1){
   font-weight: normal;
@@ -3054,12 +3285,14 @@ signup-email::placeholder {
 }
 
 
-.board-notice{
-
+.board-header .line{
+  border: 1px solid transparent;
 }
 
+
+
 .board-notice-part{
-  padding: 86px 28px ;
+  padding: 110px 28px ;
   font-family: var(--primary-kr);
 }
 
@@ -3197,6 +3430,48 @@ signup-email::placeholder {
 
 
 
+/* ############# 히스토리 ############ */
+.history-part{
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+}
+
+
+.history-inner{
+  padding: 30px;
+  /* border: 1px solid #000; */
+}
+
+
+.history-title{
+  font-size: 16px;
+  font-family: var(--primary-kr);
+  font-weight: bold;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.history-list{
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  display: flex;
+  align-items: center;
+  /* border-top: 1px solid var(--light-gray); */
+  border-bottom: 1px solid var(--light-gray);
+  padding: 12px 4px;
+  color: var(--var-text);
+}
+
+.history-list p {
+  flex: 1;
+  text-align: center;
+  /* border: 1px solid #000; */
+}
+
+.history-list p:nth-child(1){
+  flex: 0.5;
+}
 
 
 
@@ -3230,24 +3505,25 @@ signup-email::placeholder {
   }
 
   .container{
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
     position: relative;
   }
 
   .main-header{
     position: fixed;
-    width: 500px;
+    width: 600px;
     
   }
 
   .gnb{
-    width: 500px;
+    width: 600px;
     position: fixed;
   }
   
   .menu-bar{
-    position: absolute;
+    width: 600px;
+    position: fixed;
   }
 }
 
@@ -3257,11 +3533,18 @@ signup-email::placeholder {
   } */
 
   .home{
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .quit-app{
     height: 100vh;
   }
   
+}
+
+
+@media(min-height:540px){
+  .conversion{
+    height: 100%;
+  }
 }
