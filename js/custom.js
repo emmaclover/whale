@@ -27,9 +27,9 @@ $(function () {
       $(".header-include .logo").text("1:1 문의하기");
     } else if (currentPage.endsWith("board-notice.html")) {
       $(".header-include .logo").text("공지 및 이벤트");
-    } else if (currentPage.endsWith("board-faq.html")){
+    } else if (currentPage.endsWith("board-faq.html")) {
       $(".header-include .logo").text("자주 묻는 질문");
-    } else { 
+    } else {
       $(".header-include .logo").text("잠보기의 하루");
     }
 
@@ -46,7 +46,7 @@ $(function () {
     // $('.icon-arlarm').on('click', function(){
     //   $('.home-inner').css('transform', 'translateX(-100%)');
 
-    
+
     //   $.ajax({
     //     url: '../include/notice-board.html',
     //     success: function(data){
@@ -140,16 +140,16 @@ $(function () {
 
 
   // ## home 튜토리얼
-  $('.tutorial-include').load('../include/tutorial.html', function(){
+  $('.tutorial-include').load('../include/tutorial.html', function () {
 
   });
 
-  $('.tutorial-nickname-include').load('../include/tutorial-nick.html', function(){
+  $('.tutorial-nickname-include').load('../include/tutorial-nick.html', function () {
 
   })
 
-  $('.tutorial-end-include').load('../include/tutorial-end.html', function(){
-    
+  $('.tutorial-end-include').load('../include/tutorial-end.html', function () {
+
   })
 
 
@@ -189,25 +189,48 @@ $(function () {
 
   })
 
-  // ## 공지사항 데이터 fetch
   if (window.flutter_inappwebview) {
     window.flutter_inappwebview.callHandler('notification').then(function (noticeList) {
-      var $noticeItem = $('.notice-items');
-      var $itemTemplate = $('#notice-template');
-      console.log('notice list chk', noticeList[0]);
+      var $noticeContainer = $('.board-notice-inner');  // 공지사항 항목을 추가할 컨테이너
+      var $itemTemplate = $('#notice-template');  // 템플릿 요소 가져오기
 
       noticeList.forEach(function (item, index) {
-        console.log(item);
-        var $newItem = $itemTemplate.clone();
-        $newItem.removeAttr('id');
-        $newItem.show();
+        var $newItem = $itemTemplate.clone();  // 템플릿을 복제
+        $newItem.removeAttr('id');  // 템플릿의 id 제거
+        $newItem.show();  // 복제한 템플릿을 표시
 
-        $newItem.find('.notice-title').text(item.itemName);
-        $newItem.attr('data-item-id', item.itemId);
-        $newItem.append($newItem);
+        // 템플릿 요소에 데이터 삽입
+        $newItem.find('.notice-main-title p').text(item.title || '제목 없음');  // 제목 삽입
+        $newItem.find('.notice-date p').text(new Date(item.postTime).toLocaleDateString());  // 날짜 형식 변환 후 삽입
+        $newItem.find('.notice-text p').text(item.content || '내용 없음');  // 내용 삽입
+
+        // 공지사항 항목 클릭 이벤트
+        $newItem.on('click', function () {
+          // notice-detail이 보이도록 토글
+          var $noticeDetail = $(this).find('.notice-detail');
+          $noticeDetail.slideToggle();
+
+          // 세부 내용을 업데이트 (필요시 추가 데이터를 여기에 삽입)
+          $noticeDetail.find('.notice-text p').text(item.content);
+
+          // 이미지가 있으면 표시
+          if (item.img) {
+            $noticeDetail.find('.notice-img img').attr('src', 'http://172.16.1.24:3000/' + item.img);
+            console.log(item.img)
+          }
+        });
+        // 새로운 아이템을 DOM에 추가
+        $('.board-notice-inner').append($newItem);
+        // 공지사항 컨테이너에 새 항목 추가
+        $noticeContainer.append($newItem);
       });
+    }).catch(function (error) {
+      console.error('Failed to fetch notifications:', error);
     });
+  } else {
+    console.error("Flutter InAppWebView is not available.");
   }
+
 
   // ## Board-List 아이템 꾸리기
   var $myQuest = $('.board-list-items').first();
@@ -218,7 +241,7 @@ $(function () {
 
 
 
-  
+
   // ## 게시판 리스트
   $('.board-item-title').click(function () {
     $(this).next('.board-item-detail').slideToggle();
@@ -399,7 +422,7 @@ $(function () {
     $('.mine-items').append(newMine)
   }
 
-  
+
 
   // $('.mine-items').click(function(){
   //   $(this).next('.mine-item-img').css('border', '2px solid red');
