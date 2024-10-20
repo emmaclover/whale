@@ -3441,3 +3441,10 @@ signup-email::placeholder {
   }
   
 }
+
+
+@media(min-height:540px){
+  .conversion{
+    height: 100%;
+  }
+}
