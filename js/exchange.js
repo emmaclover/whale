@@ -8,7 +8,7 @@ $(document).ready(function() {
     if (window.flutter_inappwebview) {
         window.flutter_inappwebview.callHandler('exchangeRatio').then(function(result) {
             document.querySelector('.exchangeRatio').innerText = result;
-    });
+        });
 
     // 진주얻기
     window.getPearl = function() {

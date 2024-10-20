@@ -27,7 +27,9 @@ $(function () {
       $(".header-include .logo").text("1:1 문의하기");
     } else if (currentPage.endsWith("board-notice.html")) {
       $(".header-include .logo").text("공지 및 이벤트");
-    } else {
+    } else if (currentPage.endsWith("board-faq.html")){
+      $(".header-include .logo").text("자주 묻는 질문");
+    } else { 
       $(".header-include .logo").text("잠보기의 하루");
     }
 
@@ -44,7 +46,7 @@ $(function () {
     // $('.icon-arlarm').on('click', function(){
     //   $('.home-inner').css('transform', 'translateX(-100%)');
 
-
+    
     //   $.ajax({
     //     url: '../include/notice-board.html',
     //     success: function(data){
@@ -137,8 +139,18 @@ $(function () {
   })
 
 
+  // ## home 튜토리얼
+  $('.tutorial-include').load('../include/tutorial.html', function(){
 
+  });
 
+  $('.tutorial-nickname-include').load('../include/tutorial-nick.html', function(){
+
+  })
+
+  $('.tutorial-end-include').load('../include/tutorial-end.html', function(){
+    
+  })
 
 
   // ## home 화면 보유 팝업
@@ -177,14 +189,6 @@ $(function () {
 
   })
 
-
-  // ## Board-List 아이템 꾸리기
-  var $myQuest = $('.board-list-items').first();
-  for (var i = 1; i < 3; i++) {
-    var newBoard = $myQuest.clone();
-    $('.board-list-items').append(newBoard);
-  }
-
   // ## 공지사항 데이터 fetch
   if (window.flutter_inappwebview) {
     window.flutter_inappwebview.callHandler('notification').then(function (noticeList) {
@@ -205,6 +209,16 @@ $(function () {
     });
   }
 
+  // ## Board-List 아이템 꾸리기
+  var $myQuest = $('.board-list-items').first();
+  for (var i = 1; i < 3; i++) {
+    var newBoard = $myQuest.clone();
+    $('.board-list-items').append(newBoard);
+  }
+
+
+
+  
   // ## 게시판 리스트
   $('.board-item-title').click(function () {
     $(this).next('.board-item-detail').slideToggle();
@@ -385,8 +399,11 @@ $(function () {
     $('.mine-items').append(newMine)
   }
 
+  
 
-
+  // $('.mine-items').click(function(){
+  //   $(this).next('.mine-item-img').css('border', '2px solid red');
+  // })
 
 
 
