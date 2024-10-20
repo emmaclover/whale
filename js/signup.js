@@ -1,7 +1,3 @@
-// flutterInAppWebViewPlatformReady 이벤트 리스너
-window.addEventListener("flutterInAppWebViewPlatformReady", function (event) {
-  console.log("WebView is ready for communication.");
-});
 
 $(document).ready(function () {
 
@@ -46,7 +42,7 @@ $(document).ready(function () {
     const emailFullAddress = emailId + "@" + emailAddress;
     const emailSelf = document.getElementById('signup-self').value;
     const email = emailSelf === '' ? emailFullAddress : emailSelf;
-  
+
     if (window.flutter_inappwebview) {
       window.flutter_inappwebview.callHandler('email-check', email).then(function (result) {
         console.log('isEmailDuplicated', result);
@@ -77,7 +73,9 @@ $(document).ready(function () {
   // 이벤트 : 휴대폰 본인인증
   $('.signup-phone-btn').on('click', function () {
     if (window.flutter_inappwebview) {
-      window.flutter_inappwebview.callHandler('kcp')
+      window.flutter_inappwebview.callHandler('kcp').then(function (result) {
+        console.log(result);
+      })
         .catch(function (error) {
           console.error("Error sending data to Flutter: ", error);
         });
@@ -86,56 +84,48 @@ $(document).ready(function () {
     }
   });
 
-  // 약관동의 체크박스
+  // 전체 약관 체크박스
   $('.all-term').on('change', function () {
-    // all-term 모두 체크 선택 and 해제
     $('.chk-term').prop('checked', $(this).prop('checked'));
-    if (window.flutter_inappwebview) {
-      window.flutter_inappwebview.callHandler('')
-    }
   });
 
   // 개별 체크 시 전체 체크 해제
   $('.chk-term').on('change', function () {
-    if ($('.chk-term:checked').length === $('.chk-term').length) {
-      $('.all-term').prop('checked', true);
-    } else {
-      $('.all-term').prop('checked', false);
-    }
+    $('.all-term').prop('checked', $('.chk-term:checked').length === $('.chk-term').length);
   });
 
-  // 약관동의 display 없애기 
+  // 약관 팝업 창을 띄우는 코드
+  $('.chk-basic').click(function () {
+    $('.term-part-basic').show();  // 해당 약관 팝업 보이기
+  });
+
+  $('.chk-personal').click(function () {
+    $('.term-part-personal').show();  // 해당 약관 팝업 보이기
+  });
+
+  $('.chk-marketing').click(function () {
+    $('.term-part-marketing').show();  // 해당 약관 팝업 보이기
+  });
+
+  // 약관 내용 로드 및 버튼 클릭 시 처리
   $('.term-basic-include').load('../include/term-basic.html', function () {
     $('.btn-term-basic').click(function () {
-      $('.term-part').css('display', 'none');
-      $('.basic').prop('checked', true);
-    })
+      $('.term-part-basic').hide();  // 기본 약관 팝업 숨기기
+      $('.basic').prop('checked', true);  // 체크박스 체크
+    });
   });
 
   $('.term-personal-include').load('../include/term-personal.html', function () {
     $('.btn-term-personal').click(function () {
-      $('.term-part').css('display', 'none');
-      $('.chk-term-personal').prop('checked', true);
-    })
+      $('.term-part-personal').hide();  // 개인 정보 약관 팝업 숨기기
+      $('.chk-term-personal').prop('checked', true);  // 체크박스 체크
+    });
   });
 
   $('.term-marketing-include').load('../include/term-marketing.html', function () {
     $('.btn-term-marketing').click(function () {
-      $('.term-part').css('display', 'none');
-      $('.chk-term-marketing').prop('checked', true);
-    })
-  });
-
-  // 이벤트 : 약관동의 팝업
-  $('.chk-basic').click(function () {
-    $('.term-part-basic').show();
-  });
-
-  $('.chk-personal').click(function () {
-    $('.term-part-personal').show();
-  });
-
-  $('.chk-marketing').click(function () {
-    $('.term-part-marketing').show();
+      $('.term-part-marketing').hide();  // 마케팅 약관 팝업 숨기기
+      $('.chk-term-marketing').prop('checked', true);  // 체크박스 체크
+    });
   });
 });
