@@ -139,8 +139,18 @@ $(function(){
   })
 
 
+  // ## home 튜토리얼
+  $('.tutorial-include').load('../include/tutorial.html', function(){
 
+  });
 
+  $('.tutorial-nickname-include').load('../include/tutorial-nick.html', function(){
+
+  })
+
+  $('.tutorial-end-include').load('../include/tutorial-end.html', function(){
+    
+  })
 
 
   // ## home 화면 보유 팝업

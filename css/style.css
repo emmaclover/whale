@@ -370,6 +370,7 @@
   position: relative;
 }
 
+
 .home-part{
   width: 100%;
 
@@ -807,8 +808,7 @@
   top: 0px;
 }
 
-.point-popup-mid{
-  display: flex;
+.point-popup-mid{  display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 0 65px 0;
@@ -823,6 +823,131 @@
 .point-pop-comen p:nth-child(1){
   font-weight: bold;
 }
+
+
+
+.zamvoki-info{
+  color: var(--light-gray);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0px;
+}
+
+.zamvoki-info p{
+  text-align: center;
+}
+
+
+
+
+/* ####### 튜토리얼 (기본 이미지) ####### */
+.tutorial-basic{
+  display: none;
+}
+.tutorial-part{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: #000; */
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+}
+
+.tutorial-part > img{
+  width: 100%;
+}
+.tutorial-inner{
+  position: absolute;
+  top: 3%;
+  right: 10%;
+}
+
+.tutorial .tutorial-inner  button{
+  color: var(--var-text);
+  width: 40px;
+  height: 20px;
+  background: rgb(225, 225, 225, 0.4);
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+/* ####### 튜토리얼 (닉네임) ####### */
+.tutorial-nick-part{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.nick-input-section{
+  padding: 12px;
+  width: 34%;
+  border: 1px solid white;
+  border-radius: 14px;
+  color: white;
+  position: absolute;
+  top: 16%;
+  right: 10%;
+  /* text-align: center; */
+}
+
+.nick-input-section p{
+  padding-bottom: 12px;
+}
+
+.nick-input-section input{
+  width: 70%;
+  height: 24px;
+  border-radius: 4px;
+  border: none;
+}
+
+.nick-input-section .bubble-try{
+  position: absolute;
+  bottom: -23%;
+  right: 20%;
+}
+
+.nick-input-section button{
+  background-color: white;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+
+/* ########## 튜토리얼 엔드 ########### */
+.tutorial-end-part{
+  display: none;
+  /* background-color: #000; */
+}
+
+.tutorial-end-section{
+
+  width: 45%;
+}
+
+.tutorial-end-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorial-end-btn button{
+  width: 80%;
+  position: absolute;
+  bottom: 10%;
+}
+
+
 
 
 
@@ -3308,11 +3433,18 @@ signup-email::placeholder {
   } */
 
   .home{
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .quit-app{
     height: 100vh;
   }
   
+}
+
+
+@media(min-height:540px){
+  .conversion{
+    height: 100%;
+  }
 }
