@@ -46,7 +46,7 @@ $(document).ready(function () {
     const emailFullAddress = emailId + "@" + emailAddress;
     const emailSelf = document.getElementById('signup-self').value;
     const email = emailSelf === '' ? emailFullAddress : emailSelf;
-
+  
     if (window.flutter_inappwebview) {
       window.flutter_inappwebview.callHandler('email-check', email).then(function (result) {
         console.log('isEmailDuplicated', result);
