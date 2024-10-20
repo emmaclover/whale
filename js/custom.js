@@ -213,11 +213,12 @@ $(function () {
           // 세부 내용을 업데이트 (필요시 추가 데이터를 여기에 삽입)
           $noticeDetail.find('.notice-text p').text(item.content);
 
+          // FIXME: 시연을 위해서 임시로 이미지 제거
           // 이미지가 있으면 표시
-          if (item.img) {
-            $noticeDetail.find('.notice-img img').attr('src', 'http://172.16.1.24:3000/' + item.img);
-            console.log(item.img)
-          }
+          // if (item.img) {
+          //   $noticeDetail.find('.notice-img img').attr('src', 'http://172.16.1.24:3000/' + item.img);
+          //   console.log(item.img)
+          // }
         });
         // 새로운 아이템을 DOM에 추가
         $('.board-notice-inner').append($newItem);
@@ -360,6 +361,7 @@ $(function () {
 
 
   // ## 마이페이지
+  
 
   $('.user-logout').click(function () {
     $('.user-logout-pop').show();
