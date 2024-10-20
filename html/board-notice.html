@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>공지 이벤트</title>
 
-            <!-- jQuery CDN -->
+  <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- Custom CSS & JS -->
   <script src="../js/custom.js"></script>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-  
+
   <div class="container board-notice">
-    
-      <!-- Menu CDN -->
-      <div class="main-menu-include"></div>
-      <!-- Header CDN -->
-      <div class="header-include board-header"></div>
-    
+
+    <!-- Menu CDN -->
+    <div class="main-menu-include"></div>
+    <!-- Header CDN -->
+    <div class="header-include"></div>
+
 
     <div class="board-notice-part">
       <div class="board-notice-inner">
@@ -28,16 +30,16 @@
           <p>새로운 소식을 확인해 보세요.</p>
         </div>
 
-        <div class="notice-items">
+        <div id="notice-template" class="notice-items" style="display:none;">
           <div class="notice-title">
             <div class="notice-partof">
-              <p>이벤트</p>
+              <p id="noticeCategori">이벤트</p>
             </div>
             <div class="notice-main-title">
-              <p>서비스 점검 공지</p>
+              <p id="noticeTitle">서비스 점검 공지</p>
             </div>
             <div class="notice-date">
-              <p>2024.11.01</p>
+              <p id="noticeDate">2024.11.01</p>
             </div>
           </div>
 
@@ -46,79 +48,12 @@
               <img src="../images/board-img1.jpg" alt="">
             </div>
             <div class="notice-text">
-              <p>어쩌다 고작 그 마음도 못 참고 멍청하게 다 던졌는지 뭔가 들켜 버린 것 같아. 표정을 보니 말이야. 나도 티가 나버린 고백에 얼마나 놀랐는지 몰라. 매일 치는 장난에도 두근댔고 오늘도 몇 번이고 떨렸지만</p>
+              <p>어쩌다 고작 그 마음도 못 참고 멍청하게 다 던졌는지 뭔가 들켜 버린 것 같아. 표정을 보니 말이야. 나도 티가 나버린 고백에 얼마나 놀랐는지 몰라. 매일 치는 장난에도 두근댔고 오늘도
+                몇 번이고 떨렸지만</p>
             </div>
           </div>
         </div>
 
-        <div class="notice-items">
-          <div class="notice-title">
-            <div class="notice-partof">
-              <p>공지</p>
-            </div>
-            <div class="notice-main-title">
-              <p>서비스 점검 공지</p>
-            </div>
-            <div class="notice-date">
-              <p>2024.11.01</p>
-            </div>
-          </div>
-
-          <div class="notice-detail">
-            <div class="notice-img">
-              <img src="../images/board-img2.jpg" alt="">
-            </div>
-            <div class="notice-text">
-              <p>어쩌다 고작 그 마음도 못 참고 멍청하게 다 던졌는지 뭔가 들켜 버린 것 같아. 표정을 보니 말이야. 나도 티가 나버린 고백에 얼마나 놀랐는지 몰라. 매일 치는 장난에도 두근댔고 오늘도 몇 번이고 떨렸지만</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="notice-items">
-          <div class="notice-title">
-            <div class="notice-partof">
-              <p>공지</p>
-            </div>
-            <div class="notice-main-title">
-              <p>서비스 점검 공지</p>
-            </div>
-            <div class="notice-date">
-              <p>2024.11.01</p>
-            </div>
-          </div>
-
-          <div class="notice-detail">
-            <div class="notice-img">
-              <img src="../images/board-img3.jpg" alt="">
-            </div>
-            <div class="notice-text">
-              <p>어쩌다 고작 그 마음도 못 참고 멍청하게 다 던졌는지 뭔가 들켜 버린 것 같아. 표정을 보니 말이야. 나도 티가 나버린 고백에 얼마나 놀랐는지 몰라. 매일 치는 장난에도 두근댔고 오늘도 몇 번이고 떨렸지만</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="notice-items">
-          <div class="notice-title">
-            <div class="notice-partof">
-              <p>공지</p>
-            </div>
-            <div class="notice-main-title">
-              <p>서비스 점검 공지</p>
-            </div>
-            <div class="notice-date">
-              <p>2024.11.01</p>
-            </div>
-          </div>
-
-          <div class="notice-detail">
-            <div class="notice-img">
-              <img src="../images/board-img1.jpg" alt="">
-            </div>
-            <div class="notice-text">
-              <p>어쩌다 고작 그 마음도 못 참고 멍청하게 다 던졌는지 뭔가 들켜 버린 것 같아. 표정을 보니 말이야. 나도 티가 나버린 고백에 얼마나 놀랐는지 몰라. 매일 치는 장난에도 두근댔고 오늘도 몇 번이고 떨렸지만</p>
-            </div>
-          </div>
-        </div>
 
       </div>
     </div>
@@ -131,4 +66,5 @@
 
 
 </body>
+
 </html>
