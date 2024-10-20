@@ -1428,7 +1428,7 @@ signup-email::placeholder {
 .conversion{
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
   /* border: 1px solid #000; */
-  height: inherit;
+  /* height: inherit; */
   /* padding-bottom: 80px; */
 }
 
@@ -2140,6 +2140,12 @@ signup-email::placeholder {
   border-radius: 20px;
   border: 2px solid #c1c1c1;
 }
+.itemImg {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 
 .shop-item-name{
   color: white;
@@ -2227,6 +2233,12 @@ signup-email::placeholder {
   align-items: center; 
   justify-content: center;
 }
+
+.detailImg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
 
 .detail-pop-mid{
   padding: 0 30px 0 30px;

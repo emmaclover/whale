@@ -13,7 +13,7 @@ $(document).ready(function() {
                 $newItem.removeAttr('id');
                 $newItem.show();
 
-                $newItem.find('.itemImg').attr('src', item.itemImage);
+                $newItem.find('.itemImg').attr('src','http://172.16.1.27:3000/uploads/' + item.itemImage);
                 $newItem.find('.itemName').text(item.itemName);
                 $newItem.attr('data-item-id', item.itemId);
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
               var clickedItem = items.find(item => item.itemId == clickedItemId);
 
               if (clickedItem) {
-                  $('.detailImg').attr('src', clickedItem.itemImage);
+                  $('.detailImg').attr('src','http://172.16.1.27:3000/uploads/' + clickedItem.itemImage);
                   $('.detailName').text(clickedItem.itemName);
                   $('.detailCurrency').text(clickedItem.currency);
                   $('.detailPrice').text(clickedItem.itemPrice);
