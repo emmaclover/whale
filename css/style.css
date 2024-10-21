@@ -3572,9 +3572,19 @@ signup-email::placeholder {
   
 }
 
-
+/* 
 @media(min-height:540px){
   .conversion{
-    height: 100%;
+    height: 100vh;
+  }
+} */
+
+
+
+
+@media(min-height:500px){
+  .conversion{
+    height: inherit;
   }
 }
+
