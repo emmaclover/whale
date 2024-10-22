@@ -471,7 +471,7 @@
 }
 
 .mypoint .own-point {
-  width: 128px;
+  width: 132px;
 }
 
 .own-title {
@@ -487,25 +487,31 @@
 }
 
 
+.own-content{
+  background-color: rgb(255, 255, 255, 0.85);
+  padding: 4px 10px;
+}
 
+.own-content:last-child{
+  border-radius: 0 0 5px 5px;
+  padding-bottom: 6px;
+}
 .own-pearl,
 .own-leaf{
-  width: 100%;
-  padding: 4px;
+  /* width: 100%; */
+  /* padding: 4px; */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  background-color: rgb(255, 255, 255, 0.85);
-  gap: 12px;
+  gap: 6px;
+  padding-left: 2px;
 }
 
 .own-pearl img,
 .own-leaf img{
-  width: 20%;
 }
 
 .own-leaf {
-  border-radius: 0 0 5px 5px;
 }
 
 .own-pearl p,
