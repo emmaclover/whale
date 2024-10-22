@@ -3555,12 +3555,11 @@ signup-email::placeholder {
     width: 600px;
     position: fixed;
   }
+
 }
 
 @media(min-height: 750px){
-  /* .container{
-    height: 100vh;
-  } */
+
 
   .home{
     /* height: 100vh; */
@@ -3572,19 +3571,19 @@ signup-email::placeholder {
   
 }
 
-/* 
-@media(min-height:540px){
+
+@media(min-height:750px){
   .conversion{
     height: 100vh;
   }
-} */
+}
 
 
 
 
-@media(min-height:500px){
+@media(min-height:750px){
   .conversion{
-    height: inherit;
+    /* height: inherit; */
   }
 }
 
