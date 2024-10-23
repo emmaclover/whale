@@ -201,8 +201,9 @@ $(function () {
 
         // 템플릿 요소에 데이터 삽입
         $newItem.find('.notice-main-title p').text(item.title || '제목 없음');  // 제목 삽입
+        $newItem.find('.notice-partof p').text(item.category.categoryName || '제목 없음');  // 제목 삽입
         $newItem.find('.notice-date p').text(new Date(item.postTime).toLocaleDateString());  // 날짜 형식 변환 후 삽입
-        $newItem.find('.notice-text p').text(item.content || '내용 없음');  // 내용 삽입
+        $newItem.find('.notice-text p').html(item.content || '내용 없음');  // 내용 삽입
 
         // 공지사항 항목 클릭 이벤트
         $newItem.on('click', function () {
@@ -211,14 +212,9 @@ $(function () {
           $noticeDetail.slideToggle();
 
           // 세부 내용을 업데이트 (필요시 추가 데이터를 여기에 삽입)
-          $noticeDetail.find('.notice-text p').text(item.content);
+          $noticeDetail.find('.notice-text p').html(item.content)
+          console.log(item.content.length);
 
-          // FIXME: 시연을 위해서 임시로 이미지 제거
-          // 이미지가 있으면 표시
-          // if (item.img) {
-          //   $noticeDetail.find('.notice-img img').attr('src', 'http://172.16.1.24:3000/' + item.img);
-          //   console.log(item.img)
-          // }
         });
         // 새로운 아이템을 DOM에 추가
         $('.board-notice-inner').append($newItem);
