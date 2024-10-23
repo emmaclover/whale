@@ -374,11 +374,11 @@ $(function(){
 
 
   // ## Mine-item 아이템 꾸리기
-  var $myitem = $('.mine-item').first();
-  for(var i = 1; i < 10; i++){
-    var newMine = $myitem.clone();
-    $('.mine-items').append(newMine)
-  }
+//  var $myitem = $('.mine-item').first();
+//  for(var i = 1; i < 10; i++){
+//    var newMine = $myitem.clone();
+//    $('.mine-items').append(newMine)
+//  }
 
   
 

@@ -2382,6 +2382,7 @@ signup-email::placeholder {
   border-radius: 20px;
   border: 2px solid #c1c1c1;
 }
+
 .itemImg {
     width: 75px;
     height: 75px;
@@ -2710,6 +2711,24 @@ signup-email::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.myItemImg {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+.mine-character-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.fixed-img {
+    width: auto;
+    height: auto;
 }
 
 .mine-item-name{
@@ -3585,8 +3604,8 @@ signup-email::placeholder {
 }
 
 
-@media(min-height:540px){
+@media(min-height:500px){
   .conversion{
-    height: 100%;
+    height: inherit;
   }
 }
