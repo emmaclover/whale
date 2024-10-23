@@ -58,7 +58,7 @@ $(function () {
 
     })
     if (window.flutter_inappwebview) {
-        window.flutter_inappwebview.callHandler('notification').then(function (noticeList) {
+        window.flutter_inappwebview.callHandler('board-notice').then(function (noticeList) {
             var $noticeContainer = $('.board-notice-inner');  // 공지사항 항목을 추가할 컨테이너
             var $itemTemplate = $('#notice-template');  // 템플릿 요소 가져오기
 
