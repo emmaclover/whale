@@ -71,7 +71,7 @@ $(function () {
                 $newItem.find('.notice-main-title p').text(item.faqQuestion || '제목 없음');  // 제목 삽입
                 $newItem.find('.notice-partof p').text(item.category.categoryName || '제목 없음');  // 제목 삽입
                 $newItem.find('.notice-date p').text(new Date(item.createTime).toLocaleDateString());  // 날짜 형식 변환 후 삽입
-                $newItem.find('.notice-text p').html(item.content || '내용 없음');  // 내용 삽입
+                $newItem.find('.notice-text p').html(item.faqAnswer || '내용 없음');  // 내용 삽입
 
                 // 공지사항 항목 클릭 이벤트
                 $newItem.on('click', function () {
@@ -80,8 +80,8 @@ $(function () {
                     $noticeDetail.slideToggle();
 
                     // 세부 내용을 업데이트 (필요시 추가 데이터를 여기에 삽입)
-                    $noticeDetail.find('.notice-text p').html(item.content)
-                    console.log(item.content.length);
+                    $noticeDetail.find('.notice-text p').html(item.faqAnswer)
+                    console.log(item.faqAnswer.length);
 
                 });
                 // 새로운 아이템을 DOM에 추가
