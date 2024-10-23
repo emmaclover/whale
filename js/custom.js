@@ -355,13 +355,14 @@ $(function(){
     var newMine = $myitem.clone();
     $('.mine-items').append(newMine)
   }
-
   
 
   $('.mine-items').on('click', '.mine-item-img', function(){
-    $('.mine-item-img').css('border','none');
+    $('.mine-item-img').css('border','2px solid var(--light-gray)');
 
-    $(this).css('border', '2px solid red');
+    $(this).css('border', '2px solid var(--mint-color)');
   })
+
+
 
 })
