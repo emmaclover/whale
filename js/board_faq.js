@@ -68,9 +68,9 @@ $(function () {
                 $newItem.show();  // 복제한 템플릿을 표시
 
                 // 템플릿 요소에 데이터 삽입
-                $newItem.find('.notice-main-title p').text(item.title || '제목 없음');  // 제목 삽입
+                $newItem.find('.notice-main-title p').text(item.faqQuestion || '제목 없음');  // 제목 삽입
                 $newItem.find('.notice-partof p').text(item.category.categoryName || '제목 없음');  // 제목 삽입
-                $newItem.find('.notice-date p').text(new Date(item.postTime).toLocaleDateString());  // 날짜 형식 변환 후 삽입
+                $newItem.find('.notice-date p').text(new Date(item.createTime).toLocaleDateString());  // 날짜 형식 변환 후 삽입
                 $newItem.find('.notice-text p').html(item.content || '내용 없음');  // 내용 삽입
 
                 // 공지사항 항목 클릭 이벤트
