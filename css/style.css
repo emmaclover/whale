@@ -558,7 +558,7 @@
   transform: translate(-50%, 0);
 }
 
-.character-section img:nth-child(1){
+.character-section img:nth-child(2){
   bottom: 26px;
 }
 
@@ -1055,21 +1055,21 @@
 }
 
 .login-header{
-  margin-top: 50%;
+  margin-top: 40%;
   position: relative;
   border: 1px solid transparent;
 }
 
 .point-img{
   position: absolute;
-  top: 0;
+  top: -40px;
   right: 0;
   padding: 1px;
 }
 
 .point-coment{
   position: absolute;
-  top: 50px;
+  top: 10px;
   right: 0;
   font-size: 24px;
   font-family: var(--primary-kr);
@@ -1077,10 +1077,11 @@
   font-weight: bold;
   line-height: 1.6em;
   text-align: center;
+
 }
 
 .login-section{
-  margin-top: 215px;
+  margin-top: 200px;
 }
 
 .login-field input{
@@ -1782,8 +1783,22 @@ signup-email::placeholder {
   text-align: center;
 }
 
+.bubble-conversion img{
+  position: absolute;
+  top: 100%;
+  right: 26%;
+}
 
-.bubble-conversion::after{
+.bubble-exchange img{
+  position: absolute;
+  top: 100%;
+  left: 20%;
+}
+
+
+
+
+/* .bubble-conversion::after{
   content: '';
   display: block;
   position: absolute;
@@ -1796,7 +1811,7 @@ signup-email::placeholder {
   border-bottom:1px solid #CAD5E0;
   -moz-transform:rotate(45deg);
   -webkit-transform:rotate(45deg);
-}
+} */
 
 .bubble-conversion p{
   /* border: 1px solid white; */
@@ -2052,7 +2067,7 @@ signup-email::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 42px;
 }
 
 .btn-get-pearl{
@@ -3492,21 +3507,42 @@ signup-email::placeholder {
   font-size: 14px;
   font-family: var(--primary-kr);
   display: flex;
+  flex-direction: column;
   align-items: center;
   /* border-top: 1px solid var(--light-gray); */
   border-bottom: 1px solid var(--light-gray);
-  padding: 12px 4px;
+  padding: 6px 4px;
   color: var(--var-text);
 }
 
-.history-list p {
-  flex: 1;
-  text-align: center;
-  /* border: 1px solid #000; */
+.history-first-line{
+  display: flex;
+  width: 100%;
+  padding: 2px;
 }
 
-.history-list p:nth-child(1){
-  flex: 0.5;
+.history-first-line p{
+  text-align: left;
+  color: var(--light-gray);
+}
+.history-sec-line {
+  width: 100%;
+  display: flex;
+  /* flex: 1; */
+}
+.history-sec-line p:first-child{
+  flex: 4.8;
+  /* color: var(--light-gray); */
+}
+.history-sec-line p{
+  color: var(--icon-color);
+  flex: 1.2;
+}
+
+.history-sec-line p:last-child{
+  flex: 1.8;
+  color: var(--mint-color);
+  text-align: right;
 }
 
 
@@ -3573,8 +3609,7 @@ signup-email::placeholder {
 
   .quit-app{
     height: 100vh;
-  }
-  
+  } 
 }
 
 
@@ -3582,14 +3617,22 @@ signup-email::placeholder {
   .conversion{
     height: 100vh;
   }
+
+
 }
 
 
 
-
-@media(min-height:750px){
-  .conversion{
-    /* height: inherit; */
+@media(min-height:820px){
+  .login-inner > p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    font-family: var(--primary-kr);
   }
 }
 
