@@ -543,6 +543,7 @@
 .character-section{
   position: relative;
   height: inherit;
+  border: 1px solid #000;
 }
 
 .character-section img{
@@ -552,9 +553,17 @@
   transform: translate(-50%, 0);
 }
 
+
 .character-section img:nth-child(1){
+  border: 1px solid red;
   bottom: 26px;
 }
+
+.homeItem-img {
+    width: 100px;
+    height: auto;
+}
+
 
 .bubble-coment{
   position: absolute;
@@ -2720,7 +2729,7 @@ signup-email::placeholder {
     border-radius: 20px;
   }
 
-.mine-character-img img {
+.myItem-img {
     width: 100px;
     height: 100px;
     object-fit: contain;

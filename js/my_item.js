@@ -34,7 +34,7 @@ $(document).ready(function() {
                     existingImg.attr('src', 'http://192.168.1.122:3000/uploads/' + item.itemImage);
                 } else {
                     // 새 이미지 추가
-                    var newImg = '<img src="http://192.168.1.122:3000/uploads/' + item.itemImage + '" alt="" data-category="' + category + '">';
+                    var newImg = '<img src="http://192.168.1.122:3000/uploads/' + item.itemImage + '" alt="" data-category="' + category + '" class="myItem-img">';
                     $('.mine-character-img').append(newImg);
                 }
             });
@@ -67,7 +67,7 @@ $(document).ready(function() {
                         applyMap.set(clickedCategory, clickedItem.item);
 
                         // 캐릭터 영역에 해당 카테고리 이미지 적용
-                        $('.mine-character-img').append('<img src="http://192.168.1.122:3000/uploads/' + clickedItem.item.itemImage + '" alt="" data-category="' + clickedCategory + '">');
+                        $('.mine-character-img').append('<img src="http://192.168.1.122:3000/uploads/' + clickedItem.item.itemImage + '" alt="" data-category="' + clickedCategory + '" class="myItem-img">');
                     }
                 }
 
