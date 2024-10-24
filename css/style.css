@@ -225,8 +225,8 @@
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  color: var(--icon-color);
-  font-size: 15px;
+  color: rgb(0, 0, 0, 0.7);
+  font-size: 12px;
   bottom: 0;
 }
 
@@ -568,7 +568,7 @@
   top: 0;
   padding: 14px 8px;
   border: 1px solid white;
-  border-radius: 12px;
+  border-radius: 10px;
   color: white;
   max-width: 180px;
   font-size: 14px;
@@ -631,13 +631,16 @@
 
 /* 내 포인트 영역 */
 .main-point {
+  font-family: var(--primary-kr);
+  font-size: 14px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 12px;
 }
 
 
 .able-point{
-  width: 90px;
+  width: 100px;
   /* background-color: #000; */
   color: white;
 }
@@ -1776,7 +1779,7 @@ signup-email::placeholder {
 .bubble-conversion{
   background: transparent;
   border: 1px solid #CAD5E0;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 4px;
   position: relative;
   /* min-width: 280px; */
@@ -2023,7 +2026,7 @@ signup-email::placeholder {
 
 .exchange-title{
   font-size: 16px;
-  color: var(--var-text);
+  color: var(--icon-color);
 }
 
 .exchange-get{
@@ -2053,8 +2056,12 @@ signup-email::placeholder {
   flex: 1;
 }
 
+.my-pearl img, .my-leaf img{
+  padding-right: 4px;
+}
+
 .btn-get-pearl, .btn-get-leaf {
-  padding: 9px 0;
+  padding: 10px 0;
   border-radius: 5px;
   font-family: var(--primary-kr);
   font-size: 14px;
@@ -2062,6 +2069,11 @@ signup-email::placeholder {
   cursor: pointer;
 }
 
+#exchangePearlInput::placeholder,
+#exchangeCoralInput::placeholder{
+  font-family: var(--primary-kr);
+  color: #c1c1c1;
+}
 .exchange-get-btn{
   width: 100%;
   display: flex;
@@ -2752,7 +2764,7 @@ signup-email::placeholder {
 }
 
 .user-profile-field{
-  /* border: 1px solid #000; */
+  border: 1px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2775,20 +2787,34 @@ signup-email::placeholder {
   font-weight: bold;
   color: var(--mint-color);
   padding-bottom: 4px;
+
 }
 
 .user-profile-have{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   gap: 3px;
 }
 
-.user-profile-have p:nth-child(1){
+
+.user-profile-text{
+  display: flex;
+  height: 24px;
   border-left: 1px solid rgb(225, 225, 225, 0.15);
   border-right: 1px solid rgb(225, 225, 225, 0.15);
   width: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.user-profile-have p:nth-child(1){
   text-align: center;
+}
+
+.user-profile-all p{
+  padding-bottom: 4px;
 }
 
 .user-profile-point{
@@ -3490,6 +3516,7 @@ signup-email::placeholder {
   font-weight: bold;
   padding: 12px 0;
   border-bottom: 1px solid var(--light-gray);
+  color: #000D42;
 }
 
 .history-title input{
@@ -3512,10 +3539,11 @@ signup-email::placeholder {
   /* border-top: 1px solid var(--light-gray); */
   border-bottom: 1px solid var(--light-gray);
   padding: 6px 4px;
-  color: var(--var-text);
+  color: #000;
 }
 
 .history-first-line{
+  color: #000;
   display: flex;
   width: 100%;
   padding: 2px;
@@ -3528,14 +3556,19 @@ signup-email::placeholder {
 .history-sec-line {
   width: 100%;
   display: flex;
+
   /* flex: 1; */
 }
+
+.history-sec-line p{
+  color: #000;
+}
+
 .history-sec-line p:first-child{
   flex: 4.8;
   /* color: var(--light-gray); */
 }
 .history-sec-line p{
-  color: var(--icon-color);
   flex: 1.2;
 }
 
