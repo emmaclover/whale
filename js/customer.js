@@ -79,8 +79,8 @@ $(function () {
 
     if (window.flutter_inappwebview) {
         window.flutter_inappwebview.callHandler('question-list').then(function (questionList) {
-            var $noticeContainer = $('.board-notice-inner');  // 공지사항 항목을 추가할 컨테이너
-            var $itemTemplate = $('#notice-template');  // 템플릿 요소 가져오기
+            var $questionContainer = $('.board-list-inner');  // 공지사항 항목을 추가할 컨테이너
+            var $itemTemplate = $('#questions-template');  // 템플릿 요소 가져오기
 
             questionList.forEach(function (item, index) {
                 var $newItem = $itemTemplate.clone();  // 템플릿을 복제
@@ -88,26 +88,28 @@ $(function () {
                 $newItem.show();  // 복제한 템플릿을 표시
 
                 // 템플릿 요소에 데이터 삽입
-                $newItem.find('.notice-main-title p').text(item.title || '제목 없음');  // 제목 삽입
-                $newItem.find('.notice-partof p').text(item.category.categoryName || '제목 없음');  // 제목 삽입
-                $newItem.find('.notice-date p').text(new Date(item.postTime).toLocaleDateString());  // 날짜 형식 변환 후 삽입
-                $newItem.find('.notice-text p').html(item.content || '내용 없음');  // 내용 삽입
+                $newItem.find('#question-title').text(item.customerTitle || '제목없음');
+                $newItem.find('#question-date').text(new Date(item.requestTime).toLocaleDateString('ko-KR', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                }).replace(/\s/g, '').replace(/\.$/, '') || '날짜없음');
+                $newItem.find('#question-is-replied').text(item.isReplied == 'N' ? "답변대기" : "답변완료");
 
                 // 공지사항 항목 클릭 이벤트
                 $newItem.on('click', function () {
                     // notice-detail이 보이도록 토글
-                    var $noticeDetail = $(this).find('.notice-detail');
-                    $noticeDetail.slideToggle();
+                    var $questionDetail = $(this).find('.board-item-detail');
+                    $questionDetail.slideToggle();
 
                     // 세부 내용을 업데이트 (필요시 추가 데이터를 여기에 삽입)
-                    $noticeDetail.find('.notice-text p').html(item.content)
-                    console.log(item.content.length);
-
+                    $questionDetail.find('#question-content').text(item.customerQuestion);
+                    $questionDetail.find('#question-answer').text(item.questionAnswer != null ? item.questionAnswer : "")
                 });
                 // 새로운 아이템을 DOM에 추가
                 $('.board-notice-inner').append($newItem);
                 // 공지사항 컨테이너에 새 항목 추가
-                $noticeContainer.append($newItem);
+                $questionContainer.append($newItem);
             });
         }).catch(function (error) {
             console.error('Failed to fetch notifications:', error);
@@ -116,24 +118,17 @@ $(function () {
         console.error("Flutter InAppWebView is not available.");
     }
 
-    $("#question-title").on('input', function () {
-        const questionTitle = $(this).val();
+    $("#question-submit").on('click', function () {
+        const questionTitle = $("#question-title").val();
+        const questionContent = $("#question-content").val();
+        customerData = JSON.stringify({
+            customerTitle: questionTitle,
+            customerQuestion: questionContent
+        });
+        console.log(questionContent);
         console.log(questionTitle);
         if (window.flutter_inappwebview) {
-            window.flutter_inappwebview.callHandler('question', questionTitle).then(function (response) {
-            }).catch(function (error) {
-                console.error('Failed to fetch notifications:', error);
-            });
-        } else {
-            console.error("Flutter InAppWebView is not available.");
-        }
-    });
-
-    $("#question-content").on('input', function () {
-        const questionContent = $(this).val();
-        console.log(questionContent);
-        if (window.flutter_inappwebview) {
-            window.flutter_inappwebview.callHandler('question', questionContent).then(function (response) {
+            window.flutter_inappwebview.callHandler('question', customerData).then(function (response) {
             }).catch(function (error) {
                 console.error('Failed to fetch notifications:', error);
             });
