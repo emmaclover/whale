@@ -88,7 +88,7 @@ $(document).ready(function() {
               const formattedDate = new Date(reward.recordDate).toLocaleDateString().replace(/\.$/, '');
 
               const rewardElement = document.createElement('div');
-              rewardElement.classList.add('reward-list');
+              rewardElement.classList.add('reward-history-list');
               rewardElement.innerHTML = `
                 <p>${index + 1}</p>
                 <p>${saveByToString(reward.saveBy)}</p>

@@ -39,24 +39,20 @@ $(document).ready(function() {
       window.flutter_inappwebview.callHandler('homecharacter').then(function(result) {
           const applyMap = new Map();
 
-          // Filter items where isApplied is "Y" and store them in applyMap
           result.forEach(function(itemPurchase, index) {
               if(itemPurchase.isApplied == "Y") {
                   applyMap.set(itemPurchase.item.itemCategory.categoryId, itemPurchase.item);
               }
           });
 
-          // Iterate over the applyMap and update/add images
           applyMap.forEach(function(item, category) {
               var existingImg = $('.character-section img[data-category="' + category + '"]');
 
               if (existingImg.length > 0) {
-                  // Update the src of the existing image
                   existingImg.attr('src', 'http://192.168.1.122:3000/uploads/' + item.itemImage);
               } else {
-                  // Add a new img tag if it doesn't exist
                   var newImg = '<img src="http://192.168.1.122:3000/uploads/' + item.itemImage + '" alt="" data-category="' + category + '" class="homeItem-img">';
-                  $('.character-section').append(newImg); // Append to the character-section div
+                  $('.character-section').append(newImg);
               }
           });
       }).catch(function(error) {
