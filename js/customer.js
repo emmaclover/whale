@@ -122,11 +122,10 @@ $(function () {
         const questionTitle = $("#question-title").val();
         const questionContent = $("#question-content").val();
         customerData = JSON.stringify({
-            customerTitle: questionTitle,
-            customerQuestion: questionContent
+            customerTitle: questionTitle || null,
+            customerQuestion: questionContent || null
         });
-        console.log(questionContent);
-        console.log(questionTitle);
+
         if (window.flutter_inappwebview) {
             window.flutter_inappwebview.callHandler('question', customerData).then(function (response) {
             }).catch(function (error) {
