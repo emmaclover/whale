@@ -42,30 +42,6 @@ $(function(){
     })
 
 
-    // ## 알림
-    // $('.icon-arlarm').on('click', function(){
-    //   $('.home-inner').css('transform', 'translateX(-100%)');
-
-    
-    //   $.ajax({
-    //     url: '../include/notice-board.html',
-    //     success: function(data){
-    //       $('.container').append('<div class="board-notice-part">'+ data +'</div>');
-    //       $('.board-notice-part').css('transform', 'translateX(100%)');
-
-    //       setTimeout(function(){
-    //         $('.board-notice-part').css('transform', 'translateX(0)');
-    //       }, 100);
-    //     },
-    //     error: function(){
-    //       alert('실패...');
-    //     }
-    //   })
-
-    // })
-
-
-
 
   });
 
@@ -380,11 +356,12 @@ $(function(){
 //    $('.mine-items').append(newMine)
 //  }
 
-  
 
-  // $('.mine-items').click(function(){
-  //   $(this).next('.mine-item-img').css('border', '2px solid red');
-  // })
+  $('.mine-items').on('click', '.mine-item-img', function(){
+    $('.mine-item-img').css('border','2px solid var(--light-gray)');
+
+    $(this).css('border', '2px solid var(--mint-color)');
+  })
 
 
 
