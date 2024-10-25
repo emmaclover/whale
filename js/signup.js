@@ -69,7 +69,8 @@ $(document).ready(function () {
       $('.signup-self').show();
     }
   });
-
+  let isPhoneVerified = false;  // 본인인증 여부 상태 변수 추가
+  
   // 이벤트 : 휴대폰 본인인증
   $('.signup-phone-btn').on('click', function () {
     if (window.flutter_inappwebview) {
