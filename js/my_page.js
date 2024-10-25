@@ -7,8 +7,14 @@ $(document).ready(function() {
         window.flutter_inappwebview.callHandler('userData').then(function(user) {
             console.log('userjs',  Object.entries(user));
 
-           document.querySelector('.uName').innerText = user.name;
-           document.querySelector('.uNickname').innerText = user.nickname;
+//           document.querySelector('.uName').innerText = user.name;
+//           document.querySelector('.uNickname').innerText = user.nickname;
+           document.querySelectorAll('.uName').forEach(function(element) {
+                 element.innerText = user.name;
+              });
+              document.querySelectorAll('.uNickname').forEach(function(element) {
+                 element.innerText = user.nickname;
+              });
            document.querySelector('.uJob').innerText = user.job;
            document.querySelector('.uSleepTime').innerText = user.sleepTime;
            document.querySelector('.uWakeTime').innerText = user.wakeTime;
@@ -23,7 +29,30 @@ $(document).ready(function() {
         });
 
         $('.btn-logout-basic').on('click', function(result) {
-            window.flutter_inappwebview.callHandler('editUser','로그아웃')
+            const name = document.getElementById('userName').value;
+            const gender = document.querySelector('gender')?.value;
+            const birthday = document.getElementById('birthDate').value;
+            const job = document.getElementById('userJob').value;
+            const sleepTime = document.getElementById('sleepTime').value;
+            const wakeTime = document.getElementById('wakeTime').value;
+            const sedentaryTime = document.getElementById('sitTime').value;
+
+            const surveyData = {
+              name: name,
+              gender: gender,
+              birthday: birthday,
+              job: job,
+              sleepTime: sleepTime,
+              wakeTime: wakeTime,
+              sedentaryTime: sedentaryTime,
+            };
+
+            const editUserJSON = JSON.stringify(surveyData);
+            console.log("전송 데이터:", surveyDataJSON);
+
+            window.flutter_inappwebview.callHandler('editUser',editUserJSON).catch(function(error) {
+              console.error("Error sending data to Flutter: ", error);
+            });
         });
     } else {
     }

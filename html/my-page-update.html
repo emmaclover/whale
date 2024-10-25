@@ -11,6 +11,8 @@
   <!-- Custom CSS & JS -->
   <script src="../js/custom.js"></script>
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/my_page.js"></script>
+  <script src="../js/home.js"></script>
 </head>
 <body>
   <div class="container my-page">
@@ -42,14 +44,18 @@
               <p>레오나르도디카프리오</p>
             </div>
             <div class="user-profile-have">
-              <p>보 유</p>
-              <p>진주 x <span>999,9</span></p>
-              <p>산호 x <span>999,9</span></p>
+              <div class="user-profile-text">
+                <p>보 유</p>
+              </div>
+              <div class="user-profile-all">
+                <p>진주 x <span class="pearl-total">0</span></p>
+                <p>산호 x <span class="coral-total">0</span></p>
+              </div>
             </div>
-            <div class="user-profile-point">
-              <p>포인트</p>
-              <p><span>300,000</span> P</p>
-            </div>
+<!--            <div class="user-profile-point">-->
+<!--              <p>포인트</p>-->
+<!--              <p><span>300,000</span> P</p>-->
+<!--            </div>-->
           </div>
         </div>
 
@@ -57,31 +63,31 @@
         <div class="user-info-field">
           <div class="user-detail-update user-update-name">
             <p>닉네임</p>
-            <p>레오나르도 디카프리오</p>
+            <p class="uNickname">-</p>
           </div>
           <div class="user-detail-update user-update-job">
             <p>직업</p>
             <select name="" id="">
               <option value="">선택</option>
-              <option value="">관리직</option>
-              <option value="">전문직</option>
-              <option value="">IT/소프트웨어</option>
-              <option value="">교육</option>
-              <option value="">마케팅/광고</option>
-              <option value="">영업</option>
-              <option value="">금융</option>
-              <option value="">의료/보건</option>
-              <option value="">예술/디자인</option>
-              <option value="">서비스업</option>
-              <option value="">건설/제조</option>
-              <option value="">자영업</option>
-              <option value="">학생</option>
-              <option value="">가정주부</option>
-              <option value="">공무원</option>
-              <option value="">연구/개발</option>
-              <option value="">프리랜서</option>
-              <option value="">기타</option>
-              <option value="">무직</option>
+              <option value="관리직">관리직</option>
+              <option value="전문직">전문직</option>
+              <option value="IT/소프트웨어">IT/소프트웨어</option>
+              <option value="교육">교육</option>
+              <option value="마케팅/광고">마케팅/광고</option>
+              <option value="영업">영업</option>
+              <option value="금융">금융</option>
+              <option value="의료/보건">의료/보건</option>
+              <option value="예술/디자인">예술/디자인</option>
+              <option value="서비스업">서비스업</option>
+              <option value="건설/제조">건설/제조</option>
+              <option value="자영업">자영업</option>
+              <option value="학생">학생</option>
+              <option value="가정주부">가정주부</option>
+              <option value="공무원">공무원</option>
+              <option value="연구/개발">연구/개발</option>
+              <option value="프리랜서">프리랜서</option>
+              <option value="기타">기타</option>
+              <option value="무직">무직</option>
             </select>
           </div>
           <div class="user-detail-update user-update-sleep">
@@ -98,18 +104,31 @@
           </div>
           <div class="user-detail-update user-update-hight">
             <p>키</p>
-            <input type="text" placeholder="000 cm">
+            <input type="text" placeholder="000" type="number"><p> cm</p>
           </div>
           <div class="user-detail-update user-update-weight">
             <p>몸무게</p>
-            <input type="text" placeholder="000 kg">
+            <input type="text" placeholder="000" type="number"><p> kg</p>
           </div>
           <div class="user-detail-update user-update-area">
             <p>거주지역</p>
-            <select name="" i>
+            <select name="" >
               <option value="">선택</option>
-              <option value="">서울시</option>
-              <option value="">대구시</option>
+              <option value="서울특별시">서울특별시</option>
+              <option value="부산광역시">부산광역시</option>
+              <option value="인천광역시">인천광역시</option>
+              <option value="대구광역시">대구광역시</option>
+              <option value="대전광역시">대전광역시</option>
+              <option value="광주광역시">광주광역시</option>
+              <option value="울산광역시">울산광역시</option>
+              <option value="세종특별자치시">세종특별자치시</option>
+              <option value="경기도">경기도</option>
+              <option value="충청북도">충청북도</option>
+              <option value="전라남도">전라남도</option>
+              <option value="경상북도">경상북도</option>
+              <option value="강원특별자치도">강원특별자치도</option>
+              <option value="전북특별자치도">전북특별자치도</option>
+              <option value="제주특별자치도">제주특별자치도</option>
             </select>
           </div>
         </div>
