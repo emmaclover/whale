@@ -356,7 +356,7 @@ $(function () {
 
 
   // ## 마이페이지
-  
+
 
   $('.user-logout').click(function () {
     $('.user-logout-pop').show();
@@ -370,7 +370,11 @@ $(function () {
     })
 
     $('.btn-logout-basic').click(function () {
-      alert('...로그아웃 기능 구현중....');
+      window.flutter_inappwebview.callHandler('logout').then(function () {
+
+      }).catch(function (error) {
+        console.error('Failed to fetch notifications:', error);
+      });
     })
   })
 
