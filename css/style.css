@@ -2366,10 +2366,11 @@ signup-email::placeholder {
   background-color: var(--mint-color);
   padding: 6px 15px;
   border-radius: 5px;
-
+  margin-bottom: 12px;
+  height: 28px;
   font-size: 12px;
   color: var(--var-text);
-
+  font-family: var(--primary-kr);
 }
 
 .item-shop-have-all p:nth-child(1){
@@ -2442,7 +2443,7 @@ signup-email::placeholder {
 
 .deam{
   background-color: rgb(0, 13, 66, 0.7);
-  width: 100%;
+  width: 600px;
   height: 100%;
   position: fixed;
   /* z-index: 900; */
@@ -2496,6 +2497,7 @@ signup-email::placeholder {
 }
 
 .detail-pop-character{
+
   padding-top: 12px;
   padding-bottom: 24px;
   display: flex;
@@ -2505,7 +2507,6 @@ signup-email::placeholder {
 
 .detail-pop-mid{
   padding: 0 30px 0 30px;
-
 }
 
 .item-title{
@@ -2517,7 +2518,6 @@ signup-email::placeholder {
 }
 
 .item-details{
-
   font-family: var(--var-text);
   font-size: 14px;
 }
@@ -2532,11 +2532,10 @@ signup-email::placeholder {
 }
 
 .detail-pop-btn{
-  padding: 18px 30px 34px 30px;
+  padding: 18px 32px 34px 32px;
   display: flex;
-  gap: 28px;
+  gap: 34px;
 }
-
 
 
 /* ####### 구매 완료 팝업 ######### */
@@ -2882,10 +2881,10 @@ signup-email::placeholder {
 
 .user-logout, .user-quit{
   padding: 0px 6px;
-  font-size: 14px;
+  font-size: 11px;
   color: var(--light-gray);
   font-family: var(--primary-kr);
-
+  font-weight: lighter;
 }
 
 
@@ -3126,28 +3125,32 @@ signup-email::placeholder {
 
 .board-basic-title a:nth-child(1),
 .board-basic-title a:nth-child(3) {
-  padding: 6px;
+  padding: 4px;
 }
 
 .board-basic-title a:nth-child(1){
+  color: #000;
+  font-weight: bold;
+}
+.board-basic-title a:nth-child(3){
   color: var(--light-gray);
 }
-
 .board-basic-title-line{
   width: 2px;
   height: 14px;
   border-left: 1px solid var(--light-gray);
 }
 
-.board-basic-write .board-basic-title a:nth-child(1){
-  color: #000;
-  font-weight: bold;
 
+/* ########### */
+.board-basic-write .board-basic-title a:nth-child(1){
+  /* color: #000; */
+  /* font-weight: bold; */
 }
 
 .board-basic-write .board-basic-title a:nth-child(3){
-  color: var(--light-gray);
-  font-weight: lighter;
+  color: #000;
+  font-weight: bold;
 }
 
 .board-basic-title a:nth-child(3) {
@@ -3247,14 +3250,14 @@ signup-email::placeholder {
   color: var(--light-gray);
 }
 
-.board-basic-title a:nth-child(3){
+/* .board-basic-title a:nth-child(3){
   color: var(--var-text);
   font-weight: bold;
-}
+} */
 
 .board-list-coment{
   font-size: 12px;
-  padding-left: 5px;
+  padding-left: 4px;
   color: rgb(0, 0, 0,0.7);
   border-bottom: 1px solid rgb(0, 0, 0, 0.12);
   padding-bottom: 24px;
@@ -3477,6 +3480,7 @@ signup-email::placeholder {
 
 .friends-point{
   display: flex;
+  padding-top: 4px;
 }
 
 
