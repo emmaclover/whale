@@ -2429,12 +2429,12 @@ signup-email::placeholder {
   border: 2px solid #c1c1c1;
 }
 
-/*.itemImg {
+.itemImg {
     width: 75px;
     height: 75px;
     object-fit: cover;
     border-radius: 20px;
-  }*/
+  }
 
 .shop-item-name{
   color: white;
@@ -2524,11 +2524,11 @@ signup-email::placeholder {
   justify-content: center;
 }
 
-/*.detailImg {
+.detailImg {
     width: 100px;
     height: 100px;
     object-fit: cover;
-  }*/
+  }
 
 .detail-pop-mid{
   padding: 0 30px 0 30px;
@@ -2757,7 +2757,7 @@ signup-email::placeholder {
   align-items: center;
 }
 
-/*.myItemImg {
+.myItemImg {
     width: 75px;
     height: 75px;
     object-fit: cover;
@@ -2768,7 +2768,7 @@ signup-email::placeholder {
     width: 160px;
     height: 216px;
     object-fit: contain;
-}*/
+}
 
 .mine-item-name{
   color: white;

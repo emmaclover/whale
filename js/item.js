@@ -15,7 +15,7 @@ $(document).ready(function() {
                 $newItem.removeAttr('id');
                 $newItem.show();
 
-                $newItem.find('.itemImg').attr('src', 'http://192.168.1.122:3000/uploads/' + item.itemImage);
+                $newItem.find('.itemImg').attr('src', 'https://admin.zamvoki.com/uploads/' + item.itemImage);
                 $newItem.find('.itemName').text(item.itemName);
                 $newItem.attr('data-item-id', item.itemId);
 
@@ -30,7 +30,7 @@ $(document).ready(function() {
 
                     if (clickedItem) {
                     console.log("Clicked Item ID1: ", clickedItemId);
-                        $('.detailImg').attr('src', 'http://192.168.1.122:3000/uploads/' + clickedItem.itemImage);
+                        $('.detailImg').attr('src', 'https://admin.zamvoki.com/uploads/' + clickedItem.itemImage);
                         $('.detailName').text(clickedItem.itemName);
                         $('.detailCurrency').text(clickedItem.currency);
                         $('.detailPrice').text(clickedItem.itemPrice);
