@@ -49,9 +49,9 @@ $(document).ready(function() {
               var existingImg = $('.character-section img[data-category="' + category + '"]');
 
               if (existingImg.length > 0) {
-                  existingImg.attr('src', 'http://192.168.1.122:3000/uploads/' + item.itemImage);
+                  existingImg.attr('src', 'https://admin.zamvoki.com/uploads/' + item.itemImage);
               } else {
-                  var newImg = '<img src="http://192.168.1.122:3000/uploads/' + item.itemImage + '" alt="" data-category="' + category + '" class="homeItem-img">';
+                  var newImg = '<img src="https://admin.zamvoki.com/uploads/' + item.itemImage + '" alt="" data-category="' + category + '" class="homeItem-img">';
                   $('.character-section').append(newImg);
               }
           });

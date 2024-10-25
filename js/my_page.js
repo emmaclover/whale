@@ -19,23 +19,23 @@ $(document).ready(function() {
            document.querySelector('.uSleepTime').innerText = user.sleepTime;
            document.querySelector('.uWakeTime').innerText = user.wakeTime;
            document.querySelector('.uSendetaryTime').innerText = user.sedentaryTime;
-           document.querySelector('.uHeight').innerText = user.height !== null ? user.height : "-";
-           document.querySelector('.uWeight').innerText = user.weight !== null ? user.weight : "-";
-           document.querySelector('.uResidence').innerText = user.region !== null ? user.region : "-";
+           document.querySelector('.uHeight').innerText = user.height ?? "-";
+           document.querySelector('.uWeight').innerText = user.weight ?? "-";
+           document.querySelector('.uRegion').innerText = user.region ?? "-";
          });
 
         $('.btn-logout-basic').on('click', function(result) {
             window.flutter_inappwebview.callHandler('logoutPop','로그아웃')
         });
 
-        $('.btn-logout-basic').on('click', function(result) {
-            const job = document.getElementById('userJob').value;
-            const sleepTime = document.getElementById('sleepTime').value;
-            const wakeTime = document.getElementById('wakeTime').value;
-            const sedentaryTime = document.getElementById('sitTime').value;
-            const height = document.getElementById('uHeight').value;
-            const weight = document.getElementById('uWeight').value;
-            const region = document.getElementById('uResidence').value;
+        $('.submit').on('click', function(result) {
+            const job = document.getElementById('userJob').value || user.job;
+            const sleepTime = document.getElementById('sleepTime').value || user.job;
+            const wakeTime = document.getElementById('wakeTime').value || user.job;
+            const sedentaryTime = document.getElementById('sitTime').value || user.job;
+            const height = document.getElementById('height').value || user.job || "";
+            const weight = document.getElementById('weight').value || user.job || "";
+            const region = document.getElementById('region').value || user.job || "";
 
             const surveyData = {
               job: job,
