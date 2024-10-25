@@ -36,6 +36,10 @@ $(document).ready(function() {
           });
       });
 
+      window.flutter_inappwebview.callHandler('nickname').then(function(result) {
+          document.querySelector('.nickname').innerText = result;
+      });
+
       window.flutter_inappwebview.callHandler('homecharacter').then(function(result) {
           const applyMap = new Map();
 

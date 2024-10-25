@@ -563,7 +563,7 @@
 }
 .character-section .homeItem-img{
     position: absolute;
-    bottom:0;
+    bottom:26px;
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -2421,6 +2421,7 @@ signup-email::placeholder {
   align-items: center;
   padding-top: 24px;
 }
+
 .shop-item-img{
   background-color: white;
   width: 78px;
@@ -2801,7 +2802,6 @@ signup-email::placeholder {
 }
 
 .user-profile-field{
-  border: 1px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
