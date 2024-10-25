@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+  let isPhoneVerified = false;  // 본인인증 여부 상태 변수 추가
 
   // 이벤트 : 회원 가입하기 버튼
   $('.signup-btn').on('click', function () {
@@ -21,7 +22,8 @@ $(document).ready(function () {
       passwordChk: passwordChk,
       isAgreeTerms: isAgreeTerms,
       isAgreePrivacy: isAgreePrivacy,
-      isAgreeMarketing: isAgreeMarketing
+      isAgreeMarketing: isAgreeMarketing,
+      isPhoneVerified: isPhoneVerified 
     });
 
     if (window.flutter_inappwebview) {
@@ -69,15 +71,16 @@ $(document).ready(function () {
       $('.signup-self').show();
     }
   });
-  let isPhoneVerified = false;  // 본인인증 여부 상태 변수 추가
-  
+
   // 이벤트 : 휴대폰 본인인증
   $('.signup-phone-btn').on('click', function () {
     if (window.flutter_inappwebview) {
       window.flutter_inappwebview.callHandler('kcp_page').then(function (result) {
         if (result != null) {
           console.log('kcp result chk from page:', result);
+          isPhoneVerified = true;
         }
+        isPhoneVerified = true;
       })
         .catch(function (error) {
           console.error("Error sending data to Flutter: ", error);
