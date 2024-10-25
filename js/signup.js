@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
   let isPhoneVerified = false;  // 본인인증 여부 상태 변수 추가
-
+  let kcpDecodeData;
   // 이벤트 : 회원 가입하기 버튼
   $('.signup-btn').on('click', function () {
     const password = document.getElementById('password').value;
@@ -23,7 +23,8 @@ $(document).ready(function () {
       isAgreeTerms: isAgreeTerms,
       isAgreePrivacy: isAgreePrivacy,
       isAgreeMarketing: isAgreeMarketing,
-      isPhoneVerified: isPhoneVerified 
+      isPhoneVerified: isPhoneVerified,
+      kcpDecodeData: kcpDecodeData,
     });
 
     if (window.flutter_inappwebview) {
@@ -72,15 +73,30 @@ $(document).ready(function () {
     }
   });
 
+  function base64ToUtf8(base64Str) {
+    return decodeURIComponent(escape(atob(base64Str)));
+  }
+
   // 이벤트 : 휴대폰 본인인증
   $('.signup-phone-btn').on('click', function () {
     if (window.flutter_inappwebview) {
       window.flutter_inappwebview.callHandler('kcp_page').then(function (result) {
         if (result != null) {
           console.log('kcp result chk from page:', result);
+          // kcpDecodeData = JSON.parse(atob(result));
+          resultDecode = base64ToUtf8(result); // 디코딩 후 할당
+          console.log(resultDecode);   // 수정된 부분
+          const decoded = resultDecode;
+          // const decoded = '{' + Buffer.from(kcpDecodeData, 'binary').toString('utf8') + '}';
+          let user_name = decoded.user_name;
+          let age = decoded.birth_day;
+          console.log(decoded);
+          const json = JSON.parse(decoded)
+          kcpDecodeData = json;
+          console.log(json.phone_no);
+          console.log(json.user_name);
           isPhoneVerified = true;
         }
-        isPhoneVerified = true;
       })
         .catch(function (error) {
           console.error("Error sending data to Flutter: ", error);

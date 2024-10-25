@@ -5,21 +5,15 @@ window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
 $(document).ready(function() {
 
   $('.enter-btn').on('click', function() {
-    const name = document.getElementById('userName').value;
-    const gender = document.querySelector('gender')?.value;
-    const birthday = document.getElementById('birthDate').value;
+    // const name = document.getElementById('userName').value;
+    // const gender = document.querySelector('gender')?.value;
+    // const birthday = document.getElementById('birthDate').value;
     const job = document.getElementById('userJob').value;
     const sleepTime = document.getElementById('sleepTime').value;
     const wakeTime = document.getElementById('wakeTime').value;
     const sedentaryTime = document.getElementById('sitTime').value;
 
-    
-    const date = formatDate(birthday);
-
     const surveyData = {
-      name: name,
-      gender: gender,
-      birthday: date,
       job: job,
       sleepTime: sleepTime,
       wakeTime: wakeTime,
