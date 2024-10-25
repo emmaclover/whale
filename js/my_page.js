@@ -29,22 +29,22 @@ $(document).ready(function() {
         });
 
         $('.btn-logout-basic').on('click', function(result) {
-            const name = document.getElementById('userName').value;
-            const gender = document.querySelector('gender')?.value;
-            const birthday = document.getElementById('birthDate').value;
             const job = document.getElementById('userJob').value;
             const sleepTime = document.getElementById('sleepTime').value;
             const wakeTime = document.getElementById('wakeTime').value;
             const sedentaryTime = document.getElementById('sitTime').value;
+            const height = document.getElementById('uHeight').value;
+            const weight = document.getElementById('uWeight').value;
+            const region = document.getElementById('uResidence').value;
 
             const surveyData = {
-              name: name,
-              gender: gender,
-              birthday: birthday,
               job: job,
               sleepTime: sleepTime,
               wakeTime: wakeTime,
               sedentaryTime: sedentaryTime,
+              height: height,
+              weight: weight,
+              region: region,
             };
 
             const editUserJSON = JSON.stringify(surveyData);
