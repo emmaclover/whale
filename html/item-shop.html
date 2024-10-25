@@ -8,6 +8,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Custom CSS & JS -->
     <script src="../js/custom.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/item.js"></script>
+    <script src="../js/my_item.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -27,22 +30,22 @@
           <div class="item-shop-title">
             <a href="#none">아이템 샵</a>
             <div class="title-line"></div>
-            <a href="../html/item-mine.html">내 아이템</a>
+            <a href="../html/item-mine.html" class="myItemTab">내 아이템</a>
           </div>
           <div class="item-shop-have-box">
             <div class="item-shop-have-all">
               <p>보유</p>
-              <p>진주</p><p>x <span>120,000<x/span></p>
-              <p>산호</p><p>x <span>120,000<x/span></p>
+              <p>진주</p><p class="pearl-total">0</p>
+              <p>산호</p><p class="coral-total">0</p>
             </div>
           </div>
   
           <!-- 아이템 영역 -->
           <div class="item-box">
             <div class="shop-items">
-              <div class="shop-item">
-                <div class="shop-item-img"><img src="../images/item1.svg" alt=""></div>
-                <div class="shop-item-name"><p>팡팡 헤어</p></div>
+              <div class="shop-item" id="item-template" style="display:none;" data-item-id="">
+                <div class="shop-item-img"><img src="" class="itemImg"></div>
+                <div class="shop-item-name"><p class="itemName"></p></div>
               </div>
             </div>
           </div>

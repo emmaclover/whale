@@ -35,6 +35,30 @@ $(document).ready(function() {
             element.innerText = result;
           });
       });
+
+      window.flutter_inappwebview.callHandler('homecharacter').then(function(result) {
+          const applyMap = new Map();
+
+          result.forEach(function(itemPurchase, index) {
+              if(itemPurchase.isApplied == "Y") {
+                  applyMap.set(itemPurchase.item.itemCategory.categoryId, itemPurchase.item);
+              }
+          });
+
+          applyMap.forEach(function(item, category) {
+              var existingImg = $('.character-section img[data-category="' + category + '"]');
+
+              if (existingImg.length > 0) {
+                  existingImg.attr('src', 'http://192.168.1.122:3000/uploads/' + item.itemImage);
+              } else {
+                  var newImg = '<img src="http://192.168.1.122:3000/uploads/' + item.itemImage + '" alt="" data-category="' + category + '" class="homeItem-img">';
+                  $('.character-section').append(newImg);
+              }
+          });
+      }).catch(function(error) {
+          console.error("Error fetching homecharacter: ", error);
+      });
+
     } else {
       console.log("Flutter InAppWebView is not ready.");
     }

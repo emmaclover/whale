@@ -561,6 +561,18 @@
 .character-section img:nth-child(2){
   bottom: 26px;
 }
+.character-section .homeItem-img{
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.homeItem-img {
+    width: 200px;
+    height: 270px;
+    bottom: 26px;
+}
+
 
 .bubble-coment{
   position: absolute;
@@ -1680,7 +1692,7 @@ signup-email::placeholder {
 .conversion{
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
   /* border: 1px solid #000; */
-  height: inherit;
+  /* height: inherit; */
   /* padding-bottom: 80px; */
 }
 
@@ -2417,6 +2429,13 @@ signup-email::placeholder {
   border: 2px solid #c1c1c1;
 }
 
+/*.itemImg {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+  }*/
+
 .shop-item-name{
   color: white;
   font-size: 12px;
@@ -2504,6 +2523,12 @@ signup-email::placeholder {
   align-items: center; 
   justify-content: center;
 }
+
+/*.detailImg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }*/
 
 .detail-pop-mid{
   padding: 0 30px 0 30px;
@@ -2731,6 +2756,19 @@ signup-email::placeholder {
   justify-content: center;
   align-items: center;
 }
+
+/*.myItemImg {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+.myItem-img {
+    width: 160px;
+    height: 216px;
+    object-fit: contain;
+}*/
 
 .mine-item-name{
   color: white;
@@ -3582,6 +3620,62 @@ signup-email::placeholder {
   text-align: right;
 }
 
+/* ############# 리워드 히스토리 ############ */
+.reward-history-part{
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+}
+
+
+.reward-history-inner{
+  padding: 30px;
+  /* border: 1px solid #000; */
+}
+
+
+.reward-history-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: var(--primary-kr);
+  font-weight: bold;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.reward-history-title input{
+  border: 1px solid var(--light-gray);
+  width: 40%;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.reward-history-title input::placeholder{
+  color: var(--light-gray);
+}
+
+.reward-history-list{
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  display: flex;
+  align-items: center;
+  /* border-top: 1px solid var(--light-gray); */
+  border-bottom: 1px solid var(--light-gray);
+  padding: 12px 4px;
+  color: var(--var-text);
+}
+
+.reward-history-list p {
+  flex: 1;
+  text-align: center;
+  /* border: 1px solid #000; */
+}
+
+.reward-history-list p:nth-child(1){
+  flex: 0.5;
+}
+
 
 
 
@@ -3646,7 +3740,7 @@ signup-email::placeholder {
 
   .quit-app{
     height: 100vh;
-  } 
+  }
 }
 
 

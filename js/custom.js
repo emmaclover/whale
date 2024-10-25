@@ -40,7 +40,7 @@ $(function(){
         left:0
       }, 500);
     })
-  
+
 
 
   });
@@ -205,36 +205,36 @@ $(function(){
   })
 
   // ## 아이템 상세 팝업
-  $('.item-detail-include').load('../include/item-detail-pop.html', function(){
-    $('.shop-item-img').click(function(){
-      // $('body').addClass('no-scroll');
-      $('.item-detail-inner').show();
-    })
+//  $('.item-detail-include').load('../include/item-detail-pop.html', function(){
+//    $('.shop-item-img').click(function(){
+//      // $('body').addClass('no-scroll');
+//      $('.item-detail-inner').show();
+//    })
 
-    $('.detail-pop-x').click(function(){
-      $('body').removeClass('no-scroll');
-      $('.item-detail-inner').hide();
-    })
-
-    $('.item-shop-cancel').click(function(){
-      $('body').removeClass('no-scroll');
-      $('.item-detail-inner').hide();
-    })
-
-    $('.item-shop-success').click(function(){
-      $('.shop-cp-inner').show();
-      $('.item-detail-inner').hide();
-    })
-
-    $('.keep-shop-btn').click(function(){
-      $('body').removeClass('no-scroll');
-      $('.shop-cp-inner').hide();
-    })
-
-    $('.my-shop-btn').click(function(){
-      alert('내 아이템 화면 작업중');
-    })
-  });
+//    $('.detail-pop-x').click(function(){
+//      $('body').removeClass('no-scroll');
+//      $('.item-detail-inner').hide();
+//    })
+//
+//    $('.item-shop-cancel').click(function(){
+//      $('body').removeClass('no-scroll');
+//      $('.item-detail-inner').hide();
+//    })
+//
+//    $('.item-shop-success').click(function(){
+//      $('.shop-cp-inner').show();
+//      $('.item-detail-inner').hide();
+//    })
+//
+//    $('.keep-shop-btn').click(function(){
+//      $('body').removeClass('no-scroll');
+//      $('.shop-cp-inner').hide();
+//    })
+//
+//    $('.my-shop-btn').click(function(){
+//      alert('내 아이템 화면 작업중');
+//    })
+//  });
 
  
 
@@ -306,9 +306,9 @@ $(function(){
       $('.user-logout-pop').hide();
     })
 
-    $('.btn-logout-basic').click(function(){
-      alert('...로그아웃 기능 구현중....');
-    })
+//    $('.btn-logout-basic').click(function(){
+//      alert('...로그아웃 기능 구현중....');
+//    })
   })
 
 
@@ -342,20 +342,20 @@ $(function(){
 
 
   // ## Item-shop 아이템 꾸리기
-  var $item = $('.shop-item').first();
-  for(var i = 1; i <= 26; i++){
-    var newItem =$item.clone();
-    $('.shop-items').append(newItem)
-  }
+//  var $item = $('.shop-item').first();
+//  for(var i = 1; i <= 26; i++){
+//    var newItem =$item.clone();
+//    $('.shop-items').append(newItem)
+//  }
 
-  
+
   // ## Mine-item 아이템 꾸리기
-  var $myitem = $('.mine-item').first();
-  for(var i = 1; i < 10; i++){
-    var newMine = $myitem.clone();
-    $('.mine-items').append(newMine)
-  }
-  
+//  var $myitem = $('.mine-item').first();
+//  for(var i = 1; i < 10; i++){
+//    var newMine = $myitem.clone();
+//    $('.mine-items').append(newMine)
+//  }
+
 
   $('.mine-items').on('click', '.mine-item-img', function(){
     $('.mine-item-img').css('border','2px solid var(--light-gray)');
