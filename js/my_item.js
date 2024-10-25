@@ -21,7 +21,7 @@ $(document).ready(function() {
                 $myItems.append($newItem);
 
                 if(itemPurchase.isApplied == "Y"){
-                    applyMap.set(itemPurchase.item.itemCategory.categoryId, itemPurchase.item);
+                    applyMap.set(String(itemPurchase.item.itemCategory.categoryId), itemPurchase.item);
                 }
             });
 
@@ -37,6 +37,7 @@ $(document).ready(function() {
                     var newImg = '<img src="http://192.168.1.122:3000/uploads/' + item.itemImage + '" alt="" data-category="' + category + '" class="myItem-img">';
                     $('.mine-character-img').append(newImg);
                 }
+                console.log("category", category, typeof category);
             });
 
             $('.mine-item').on('click', function() {
@@ -46,32 +47,38 @@ $(document).ready(function() {
                 var clickedItem = itemPurchases.find(item => item.item.itemId == clickedItemId);
 
                 if (clickedItem) {
+                console.log("clickedCategory",clickedCategory);
                     if (applyMap.has(clickedCategory)) {
-                        if (applyMap.get(clickedCategory).itemId === clickedItem.item.itemId) {
+                        console.log("clickedCategory", clickedCategory, typeof clickedCategory);
+                        console.log("applyMap.has(clickedCategory): ", applyMap.has(clickedCategory));
+
+                        if (applyMap.get(clickedCategory).itemId == clickedItem.item.itemId) {
                             applyMap.delete(clickedCategory);
 
-                            // 캐릭터 이미지 영역에서 해당 카테고리의 이미지 제거
                             $('.mine-character-img img[data-category="' + clickedCategory + '"]').remove();
                         } else {
                             applyMap.set(clickedCategory, clickedItem.item);
 
                             // 캐릭터 이미지 영역에서 해당 카테고리의 이미지 업데이트
                             var existingImg = $('.mine-character-img img[data-category="' + clickedCategory + '"]');
-
                             if (existingImg.length > 0) {
-                                // 기존 이미지가 있으면 src 업데이트
                                 existingImg.attr('src', 'http://192.168.1.122:3000/uploads/' + clickedItem.item.itemImage);
+                            } else {
+                                // 이미지가 없을 경우 새로 추가
+                                $('.mine-character-img').append('<img src="http://192.168.1.122:3000/uploads/' + clickedItem.item.itemImage + '" alt="" data-category="' + clickedCategory + '" class="myItem-img">');
                             }
                         }
                     } else {
+                        console.log("noclickedCategory");
                         applyMap.set(clickedCategory, clickedItem.item);
 
                         // 캐릭터 영역에 해당 카테고리 이미지 적용
                         $('.mine-character-img').append('<img src="http://192.168.1.122:3000/uploads/' + clickedItem.item.itemImage + '" alt="" data-category="' + clickedCategory + '" class="myItem-img">');
                     }
-                }
 
+                }
             });
+
 
             $('.mine-rollback').on('click', function() {
                 applyMap.clear();
@@ -86,7 +93,9 @@ $(document).ready(function() {
                 });
 
                 window.flutter_inappwebview.callHandler('applyItem', itemIdList).then(function(response) {
-                    if (result) {
+                console.log('applyComplete',response);
+                console.log('applyComplete',typeof response);
+                    if (response) {
                         alert('아이템을 적용했습니다.');
                     } else {
                         alert('아이템 적용이 실패했습니다.');

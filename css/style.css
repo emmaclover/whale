@@ -556,10 +556,16 @@
 .character-section img:nth-child(1){
   bottom: 26px;
 }
-
+.character-section .homeItem-img{
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
 .homeItem-img {
-    width: 100px;
-    height: auto;
+    width: 200px;
+    height: 270px;
+    bottom: 26px;
 }
 
 
@@ -2728,14 +2734,9 @@ signup-email::placeholder {
   }
 
 .myItem-img {
-    width: 100px;
-    height: 100px;
+    width: 160px;
+    height: 216px;
     object-fit: contain;
-}
-
-.fixed-img {
-    width: auto;
-    height: auto;
 }
 
 .mine-item-name{

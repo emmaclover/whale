@@ -330,9 +330,9 @@ $(function(){
       $('.user-logout-pop').hide();
     })
 
-    $('.btn-logout-basic').click(function(){
-      alert('...로그아웃 기능 구현중....');
-    })
+//    $('.btn-logout-basic').click(function(){
+//      alert('...로그아웃 기능 구현중....');
+//    })
   })
 
 
