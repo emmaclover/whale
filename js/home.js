@@ -27,12 +27,12 @@ $(document).ready(function() {
       });
       window.flutter_inappwebview.callHandler('pearlTotal').then(function(result) {
           document.querySelectorAll('.pearl-total').forEach(function(element) {
-             element.innerText = result;
+             element.innerText = result ?? 0;
           });
       });
       window.flutter_inappwebview.callHandler('coralTotal').then(function(result) {
           document.querySelectorAll('.coral-total').forEach(function(element) {
-            element.innerText = result;
+            element.innerText = result ?? 0;
           });
       });
 

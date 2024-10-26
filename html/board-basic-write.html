@@ -9,6 +9,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- Custom CSS & JS -->
   <script src="../js/custom.js"></script>
+  <script src="../js/customer.js"></script>
+  <script src="../js/router.js"></script>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -34,19 +36,19 @@
         <div class="board-write-section">
           <div class="board-write-title-section">
             <p>제목</p>
-            <input type="text" placeholder="제목을 입력해주세요">
+            <input id="question-title" type="text" placeholder="제목을 입력해주세요">
           </div>
           <div class="board-write-field">
             <p>내용</p>
-            <textarea name="" id="" placeholder="문의하실 내용을 입력해주세요"></textarea>
+            <textarea name="" id="question-content" placeholder="문의하실 내용을 입력해주세요"></textarea>
           </div>
-          <div class="board-write-upimg">
+          <!-- <div class="board-write-upimg">
             <button class="bnt-board-img"><img src="../images/bi-plus-50.svg" alt=""></button>
             <button class="bnt-board-img"><img src="../images/bi-plus-50.svg" alt=""></button>
             <button class="bnt-board-img"><img src="../images/bi-plus-50.svg" alt=""></button>
-          </div>
+          </div> -->
           <div class="board-btn-section">
-            <button class="btn-basic btn-board">문의하기</button>
+            <button id="question-submit" class="btn-basic btn-board">문의하기</button>
           </div>
         </div>
       </div>

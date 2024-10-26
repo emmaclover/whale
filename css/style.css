@@ -3437,6 +3437,13 @@ signup-email::placeholder {
   text-align: center;
 }
 
+.noticeCategory {
+  width: 80px;
+  flex: 1;
+  font-size: 11px;
+  color: rgb(0, 0, 0, 0.7);
+  text-align: center;
+}
 .notice-main-title{
   flex: 5;
   font-size: 14px;
@@ -3450,16 +3457,20 @@ signup-email::placeholder {
 }
 
 
-.notice-detail{
-  background-color: rgb(0, 0, 0, 0.05);
+.notice-detail {
+  height: auto;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
   display: none;
   padding: 24px;
-  width: 100%;
   font-size: 14px;
+  overflow: hidden; /* 부모 요소에서 넘치는 내용을 숨김 */
 }
 
-.notice-img{
-  width: 100%;
+.notice-detail img {
+  max-width: 100%; /* 부모 요소의 너비를 넘지 않도록 설정 */
+  height: auto; /* 비율을 유지하면서 높이를 자동으로 조정 */
+  display: block; /* 이미지 아래 여백을 제거하기 위해 */
 }
 
 .notice-img img{
