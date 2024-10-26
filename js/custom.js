@@ -1,8 +1,8 @@
-$(function(){
+$(function () {
   // Header Include Load
   // $('.header-include').load('../include/header.html')
 
-  $('.header-include').load('../include/header.html', function() {
+  $('.header-include').load('../include/header.html', function () {
     // header.html 로드 완료 후 실행될 코드
     var currentPage = window.location.pathname; // 현재 페이지 경로 가져오기
 
@@ -13,31 +13,31 @@ $(function(){
       $(".header-include .logo").text("포인트 전환");
     } else if (currentPage.endsWith("conversion-cp.html")) {
       $(".header-include .logo").text("포인트 전환");
-    } else if (currentPage.endsWith("exchange.html")){
+    } else if (currentPage.endsWith("exchange.html")) {
       $(".header-include .logo").text("거래소");
-    } else if (currentPage.endsWith("my-page.html")){
+    } else if (currentPage.endsWith("my-page.html")) {
       $(".header-include .logo").text("마이페이지");
-    } else if (currentPage.endsWith("my-page-update.html")){
+    } else if (currentPage.endsWith("my-page-update.html")) {
       $(".header-include .logo").text("마이페이지");
-    } else if (currentPage.endsWith("quit-app.html")){
+    } else if (currentPage.endsWith("quit-app.html")) {
       $(".header-include .logo").text("탈퇴하기");
-    } else if (currentPage.endsWith("board-list.html")){
+    } else if (currentPage.endsWith("board-list.html")) {
       $(".header-include .logo").text("1:1 문의하기");
-    }  else if (currentPage.endsWith("board-basic-write.html")){
+    } else if (currentPage.endsWith("board-basic-write.html")) {
       $(".header-include .logo").text("1:1 문의하기");
-    } else if (currentPage.endsWith("board-notice.html")){
+    } else if (currentPage.endsWith("board-notice.html")) {
       $(".header-include .logo").text("공지 및 이벤트");
-    } else if (currentPage.endsWith("board-faq.html")){
+    } else if (currentPage.endsWith("board-faq.html")) {
       $(".header-include .logo").text("자주 묻는 질문");
-    } else { 
+    } else {
       $(".header-include .logo").text("잠보기의 하루");
     }
 
-    
-    $('.bnt-menu').click(function(){
+
+    $('.bnt-menu').click(function () {
       $('.menu-bar').show();
       $('.menu-bar-inner').animate({
-        left:0
+        left: 0
       }, 500);
     })
 
@@ -52,9 +52,9 @@ $(function(){
 
 
 
-   // Signin Field
-  $('.signup-email').change(function(){
-    if($(this).val() == 'self'){
+  // Signin Field
+  $('.signup-email').change(function () {
+    if ($(this).val() == 'self') {
       $('.signup-email').hide();
       $('.email-dat').hide();
       $('.signup-id').hide();
@@ -63,13 +63,13 @@ $(function(){
   })
 
 
-  $('.all-term').on('change', function() {
+  $('.all-term').on('change', function () {
     // all-term 모두 체크 선택 and 해제
     $('.chk-term').prop('checked', $(this).prop('checked'));
   });
 
   // 개별 체크 시 전체 체크 해제
-  $('.chk-term').on('change', function() {
+  $('.chk-term').on('change', function () {
     if ($('.chk-term:checked').length === $('.chk-term').length) {
       $('.all-term').prop('checked', true);
     } else {
@@ -79,68 +79,68 @@ $(function(){
 
 
   // 약관팝업 창. 띄우는 거 
-  $('.chk-basic').click(function(){
+  $('.chk-basic').click(function () {
     $('.term-part-basic').show();
   })
 
-  $('.chk-personal').click(function(){
+  $('.chk-personal').click(function () {
     $('.term-part-personal').show();
   })
 
-  $('.chk-marketing').click(function(){
+  $('.chk-marketing').click(function () {
     $('.term-part-marketing').show();
   })
 
-  
+
   // 약관동의 display 없애기 
-  $('.term-basic-include').load('../include/term-basic.html', function(){
-    $('.btn-term-basic').click(function(){
-      $('.term-part').css('display','none');
+  $('.term-basic-include').load('../include/term-basic.html', function () {
+    $('.btn-term-basic').click(function () {
+      $('.term-part').css('display', 'none');
       $('.basic').prop('checked', true);
     })
   })
 
-  $('.term-personal-include').load('../include/term-personal.html', function(){
-    $('.btn-term-personal').click(function(){
-      $('.term-part').css('display','none');
+  $('.term-personal-include').load('../include/term-personal.html', function () {
+    $('.btn-term-personal').click(function () {
+      $('.term-part').css('display', 'none');
       $('.chk-term-personal').prop('checked', true);
     })
   })
 
-  $('.term-marketing-include').load('../include/term-marketing.html',function(){
-    $('.btn-term-marketing').click(function(){
-      $('.term-part').css('display','none');
+  $('.term-marketing-include').load('../include/term-marketing.html', function () {
+    $('.btn-term-marketing').click(function () {
+      $('.term-part').css('display', 'none');
       $('.chk-term-marketing').prop('checked', true);
     })
   })
 
 
   // ## home 튜토리얼
-  $('.tutorial-include').load('../include/tutorial.html', function(){
+  $('.tutorial-include').load('../include/tutorial.html', function () {
 
   });
 
-  $('.tutorial-nickname-include').load('../include/tutorial-nick.html', function(){
+  $('.tutorial-nickname-include').load('../include/tutorial-nick.html', function () {
 
   })
 
-  $('.tutorial-end-include').load('../include/tutorial-end.html', function(){
-    
+  $('.tutorial-end-include').load('../include/tutorial-end.html', function () {
+
   })
 
 
   // ## home 화면 보유 팝업
-  $('.hold-pop-include').load('../include/hold-pop.html', function() {
-    
+  $('.hold-pop-include').load('../include/hold-pop.html', function () {
+
 
     // 모달 오픈
-    $('.own-point').click(function(){
-        $('.hold-popup-inner').show();  // .hold-popup-inner 열기
+    $('.own-point').click(function () {
+      $('.hold-popup-inner').show();  // .hold-popup-inner 열기
     });
 
     // 모달 닫기
-    $('.popx').click(function(){
-        $('.hold-popup-inner').hide();  // .hold-popup-inner 닫기
+    $('.popx').click(function () {
+      $('.hold-popup-inner').hide();  // .hold-popup-inner 닫기
     });
 
 
@@ -148,19 +148,19 @@ $(function(){
 
 
   // ## 메뉴 버튼
-  $('.main-menu-include').load('../include/main-menu-bar.html',function(){
-      
-      $('.main-category').click(function(){
-        $(this).toggleClass('menu-cate-active');
-        $(this).next('.sub-category').slideToggle();
-      })
+  $('.main-menu-include').load('../include/main-menu-bar.html', function () {
 
-      $('.menu-back').click(function(){
-        $('.menu-bar').css('display','none');
-        $('.menu-bar-inner').animate({
-          left: -500
-        }, 500);
-      })
+    $('.main-category').click(function () {
+      $(this).toggleClass('menu-cate-active');
+      $(this).next('.sub-category').slideToggle();
+    })
+
+    $('.menu-back').click(function () {
+      $('.menu-bar').css('display', 'none');
+      $('.menu-bar-inner').animate({
+        left: -500
+      }, 500);
+    })
 
 
   })
@@ -207,37 +207,38 @@ $(function(){
 
   // ## Board-List 아이템 꾸리기
   var $myQuest = $('.board-list-items').first();
-  for(var i = 1; i < 3; i++){
+  for (var i = 1; i < 3; i++) {
     var newBoard = $myQuest.clone();
     $('.board-list-items').append(newBoard);
   }
 
 
 
-  
+
   // ## 게시판 리스트
-  $('.board-item-title').click(function(){
+  $('.board-item-title').click(function () {
     $(this).next('.board-item-detail').slideToggle();
   })
 
   // ## 공지&이벤트
-  $('.notice-title').click(function(){
+  $('.notice-title').click(function () {
     $(this).next('.notice-detail').slideToggle();
   })
 
 
   // ## Home 화면 포인트 보유 팝업
-  $('.po').load('../include/pop.html', function(){
+  $('.po').load('../include/pop.html', function () {
 
     // 모달 오픈
-    $('.save-point').click(function(){
+    $('.save-point').click(function () {
       $('.point-popup-inner').show();
     });
 
-     // 모달 닫기
-    $('.point-popx').click(function(){
+    // 모달 닫기
+    $('.point-popx').click(function () {
       $('.point-popup-inner').hide();
     })
+
 
 
   })
@@ -274,18 +275,18 @@ $(function(){
 //    })
 //  });
 
- 
+
 
 
 
 
   // ### 거래소 진주, 산호 얻기
-  $('.btn-get-pearl').click(function(){
+  $('.btn-get-pearl').click(function () {
     $('.exchange-topearl').show();
     $('.exchange-toleaf').hide();
   })
 
-  $('.btn-get-leaf').click(function(){
+  $('.btn-get-leaf').click(function () {
     $('.exchange-toleaf').show();
     $('.exchange-topearl').hide();
   })
@@ -293,38 +294,38 @@ $(function(){
 
 
   // ### 거래소 교환하기 팝업
-  $('.change-popup-include').load('../include/exchange-pop.html', function(){
+  $('.change-popup-include').load('../include/exchange-pop.html', function () {
 
     // 모달 오픈
-    $('.btn-toleaf').click(function(){
+    $('.btn-toleaf').click(function () {
       $('.ch-pop-inner').show();
       // $('body').addClass('no-scroll');
     })
 
-    $('.btn-topearl').click(function(){
+    $('.btn-topearl').click(function () {
       $('.ch-pop-inner').show();
       // $('body').addClass('no-scroll');
     })
 
     // 모달 닫기
-    $('.ch-popx').click(function(){
+    $('.ch-popx').click(function () {
       $('.ch-pop-inner').hide();
       // $('body').removeClass('no-scroll');
     })
 
-    $('.ch-popx').click(function(){
+    $('.ch-popx').click(function () {
       $('.ch-pop-inner').hide();
       $('body').removeClass('no-scroll');
     })
 
-    $('.btn-cancel').click(function(){
+    $('.btn-cancel').click(function () {
       $('.ch-pop-inner').hide();
       $('body').removeClass('no-scroll');
     })
 
-//    $('.btn-chack').click(function(){
-//      alert('교환하기 확인되었습니다. (기능구현중)');
-//    })
+    //    $('.btn-chack').click(function(){
+    //      alert('교환하기 확인되었습니다. (기능구현중)');
+    //    })
   })
 
 
@@ -338,13 +339,16 @@ $(function(){
     $('.user-logout-pop').show();
   })
 
-  
+
   // 로그아웃 팝업
-  $('.logout-pop-include').load("../include/logout-pop.html",function(){
-    $('.btn-logout-cancel').click(function(){
+  $('.logout-pop-include').load("../include/logout-pop.html", function () {
+    $('.btn-logout-cancel').click(function () {
       $('.user-logout-pop').hide();
     })
 
+//    $('.btn-logout-basic').click(function(){
+//      alert('...로그아웃 기능 구현중....');
+//    })
     $('.btn-logout-basic').click(function () {
       window.flutter_inappwebview.callHandler('logout').then(function () {
 
@@ -358,16 +362,16 @@ $(function(){
 
 
   // ### 탈퇴하기
-  $('.btm-quit-app').click(function(){
+  $('.btm-quit-app').click(function () {
     $('.quit-pop').show();
   })
 
-  $('.quit-app-pop-include').load("../include/quit-pop.html", function(){
-    $('.bnt-quit-back').click(function(){
+  $('.quit-app-pop-include').load("../include/quit-pop.html", function () {
+    $('.bnt-quit-back').click(function () {
       $('.quit-pop').hide();
     })
 
-    $('.bnt-quit-too').click(function(){
+    $('.bnt-quit-too').click(function () {
       alert('...탈퇴하기 기능 구현중...')
     })
   })

@@ -1,79 +1,21 @@
 
 $(function () {
-    $('.header-include').load('../include/header.html', function () {
-        // header.html 로드 완료 후 실행될 코드
-        var currentPage = window.location.pathname; // 현재 페이지 경로 가져오기
 
-        // 페이지 경로에 헤더 타이틀 변경
-        if (currentPage.endsWith("home.html")) {
-            $(".header-include .logo").text("잠보기의 하루");
-        } else if (currentPage.endsWith("conversion.html")) {
-            $(".header-include .logo").text("포인트 전환");
-        } else if (currentPage.endsWith("conversion-cp.html")) {
-            $(".header-include .logo").text("포인트 전환");
-        } else if (currentPage.endsWith("exchange.html")) {
-            $(".header-include .logo").text("거래소");
-        } else if (currentPage.endsWith("my-page.html")) {
-            $(".header-include .logo").text("마이페이지");
-        } else if (currentPage.endsWith("my-page-update.html")) {
-            $(".header-include .logo").text("마이페이지");
-        } else if (currentPage.endsWith("quit-app.html")) {
-            $(".header-include .logo").text("탈퇴하기");
-        } else if (currentPage.endsWith("board-list.html")) {
-            $(".header-include .logo").text("1:1 문의하기");
-        } else if (currentPage.endsWith("board-basic-write.html")) {
-            $(".header-include .logo").text("1:1 문의하기");
-        } else if (currentPage.endsWith("board-notice.html")) {
-            $(".header-include .logo").text("공지 및 이벤트");
-        } else if (currentPage.endsWith("board-faq.html")) {
-            $(".header-include .logo").text("자주 묻는 질문");
-        } else {
-            $(".header-include .logo").text("잠보기의 하루");
-        }
-
-
-        $('.bnt-menu').click(function () {
-            $('.menu-bar').show();
-            $('.menu-bar-inner').animate({
-                left: 0
-            }, 500);
-        })
-    });
-
-    // ## 메뉴 버튼
-    $('.main-menu-include').load('../include/main-menu-bar.html', function () {
-
-        $('.main-category').click(function () {
-            $(this).toggleClass('menu-cate-active');
-            $(this).next('.sub-category').slideToggle();
-        })
-
-        $('.menu-back').click(function () {
-            $('.menu-bar').css('display', 'none');
-            $('.menu-bar-inner').animate({
-                left: -500
-            }, 500);
-        })
-
-
-    })
     if (window.flutter_inappwebview) {
         window.flutter_inappwebview.callHandler('board-notice').then(function (noticeList) {
-            var $noticeContainer = $('.board-notice-inner');  // 공지사항 항목을 추가할 컨테이너
-            var $itemTemplate = $('#notice-template');  // 템플릿 요소 가져오기
+            var $noticeContainer = $('.board-notice-inner');
+            var $itemTemplate = $('#notice-template');
 
             noticeList.forEach(function (item, index) {
-                var $newItem = $itemTemplate.clone();  // 템플릿을 복제
-                $newItem.removeAttr('id');  // 템플릿의 id 제거
-                $newItem.show();  // 복제한 템플릿을 표시
+                var $newItem = $itemTemplate.clone();
+                $newItem.removeAttr('id');
+                $newItem.show();
 
-                // 템플릿 요소에 데이터 삽입
-                $newItem.find('.notice-main-title p').text(item.title || '제목 없음');  // 제목 삽입
-                $newItem.find('.notice-partof p').text(item.category.categoryName || '제목 없음');  // 제목 삽입
-                $newItem.find('.notice-date p').text(new Date(item.postTime).toLocaleDateString());  // 날짜 형식 변환 후 삽입
-                $newItem.find('.notice-text p').html(item.content || '내용 없음');  // 내용 삽입
+                $newItem.find('.notice-main-title p').text(item.title || '제목 없음');
+                $newItem.find('.notice-partof p').text(item.category.categoryName || '제목 없음');
+                $newItem.find('.notice-date p').text(new Date(item.postTime).toLocaleDateString());
+                $newItem.find('.notice-text p').html(item.content || '내용 없음');
 
-                // 공지사항 항목 클릭 이벤트
                 $newItem.on('click', function () {
                     // notice-detail이 보이도록 토글
                     var $noticeDetail = $(this).find('.notice-detail');
@@ -84,9 +26,7 @@ $(function () {
                     console.log(item.content.length);
 
                 });
-                // 새로운 아이템을 DOM에 추가
                 $('.board-notice-inner').append($newItem);
-                // 공지사항 컨테이너에 새 항목 추가
                 $noticeContainer.append($newItem);
             });
         }).catch(function (error) {
@@ -116,54 +56,4 @@ $(function () {
     $('.notice-title').click(function () {
         $(this).next('.notice-detail').slideToggle();
     })
-
-
-    // ## Home 화면 포인트 보유 팝업
-    $('.po').load('../include/pop.html', function () {
-
-        // 모달 오픈
-        $('.save-point').click(function () {
-            $('.point-popup-inner').show();
-        });
-
-        // 모달 닫기
-        $('.point-popx').click(function () {
-            $('.point-popup-inner').hide();
-        })
-
-
-
-    })
-
-    // ## 아이템 상세 팝업
-    $('.item-detail-include').load('../include/item-detail-pop.html', function () {
-        $('.shop-item-img').click(function () {
-            // $('body').addClass('no-scroll');
-            $('.item-detail-inner').show();
-        })
-
-        $('.detail-pop-x').click(function () {
-            $('body').removeClass('no-scroll');
-            $('.item-detail-inner').hide();
-        })
-
-        $('.item-shop-cancel').click(function () {
-            $('body').removeClass('no-scroll');
-            $('.item-detail-inner').hide();
-        })
-
-        $('.item-shop-success').click(function () {
-            $('.shop-cp-inner').show();
-            $('.item-detail-inner').hide();
-        })
-
-        $('.keep-shop-btn').click(function () {
-            $('body').removeClass('no-scroll');
-            $('.shop-cp-inner').hide();
-        })
-
-        $('.my-shop-btn').click(function () {
-            alert('내 아이템 화면 작업중');
-        })
-    });
 });

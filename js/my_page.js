@@ -5,10 +5,6 @@ window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
 $(document).ready(function() {
     if (window.flutter_inappwebview) {
         window.flutter_inappwebview.callHandler('userData').then(function(user) {
-            console.log('userjs',  Object.entries(user));
-
-//           document.querySelector('.uName').innerText = user.name;
-//           document.querySelector('.uNickname').innerText = user.nickname;
            document.querySelectorAll('.uName').forEach(function(element) {
                  element.innerText = user.name;
               });
