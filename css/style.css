@@ -108,7 +108,7 @@
   border-bottom: 1px solid rgb(0, 13, 66,0.7);
 }
 
-.board-basic-write .line, .board-list .line{
+.board-basic-write .line, .board-list .line, .board-notice .line, .history .line{
   display: none;
 }
 
@@ -152,7 +152,7 @@
 /* ########## Menu bar ########## */
 .main-menu-inner{
   width: 100%;
-  height: 100h;
+  /* height: 100h; */
   position: relative;
   /* overflow: hidden; */
 }
@@ -166,6 +166,7 @@
   position: fixed;
   font-family: var(--primary-kr);
   overflow: hidden;
+  color: #000;
 }
 
 .menu-back{
@@ -213,8 +214,9 @@
   display: none;
 }
 
-.sub-category p{
+.sub-category a{
   padding: 8px 0px 0px 8px;
+  display: block;
 }
 
 
@@ -223,8 +225,20 @@
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  color: var(--light-gray);
+  color: rgb(0, 0, 0, 0.7);
+  font-size: 12px;
   bottom: 0;
+}
+
+.comapny-part{
+  font-family: var(--primary-kr);
+  padding: 24px;
+}
+
+.company-info-title {
+  font-weight: bold;
+  padding-bottom: 12px;
+  font-size: 18px;
 }
 
 
@@ -334,6 +348,74 @@
 
 
 
+/* ############## Splash ############## */
+.splash{
+  background-image: linear-gradient(to bottom, #1633A2, #000E48);
+  height: 100vh;
+  width: 100vw; 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-inner {
+
+}
+
+.splash-content {
+  text-align: center;
+}
+
+.splash-content img {
+  max-width: 100%; 
+  max-height: 90vh; 
+  height: auto; 
+}
+
+.splash-content p {
+  font-size: 14px;
+  color: white;
+  margin-top: 1em;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .splash-content img {
+    max-height: 90vh; 
+  }
+
+  .splash-content p {
+    font-size: 14px; 
+  }
+}
+
+/* 
+.splash-inner{
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-content {
+  color: white;
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-content img{
+  width: 100%;
+  height: auto;
+}
+ */
 
 
 
@@ -347,8 +429,10 @@
   position: relative;
 }
 
+
 .home-part{
   width: 100%;
+
 }
 
 .home-inner {
@@ -387,7 +471,7 @@
 }
 
 .mypoint .own-point {
-  width: 128px;
+  width: 132px;
 }
 
 .own-title {
@@ -403,25 +487,31 @@
 }
 
 
+.own-content{
+  background-color: rgb(255, 255, 255, 0.85);
+  padding: 4px 10px;
+}
 
+.own-content:last-child{
+  border-radius: 0 0 5px 5px;
+  padding-bottom: 6px;
+}
 .own-pearl,
 .own-leaf{
-  width: 100%;
-  padding: 4px;
+  /* width: 100%; */
+  /* padding: 4px; */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  background-color: rgb(255, 255, 255, 0.85);
-  gap: 12px;
+  gap: 6px;
+  padding-left: 2px;
 }
 
 .own-pearl img,
 .own-leaf img{
-  width: 20%;
 }
 
 .own-leaf {
-  border-radius: 0 0 5px 5px;
 }
 
 .own-pearl p,
@@ -468,9 +558,21 @@
   transform: translate(-50%, 0);
 }
 
-.character-section img:nth-child(1){
+.character-section img:nth-child(2){
   bottom: 26px;
 }
+.character-section .homeItem-img{
+    position: absolute;
+    bottom:26px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.homeItem-img {
+    width: 200px;
+    height: 270px;
+    bottom: 26px;
+}
+
 
 .bubble-coment{
   position: absolute;
@@ -478,7 +580,7 @@
   top: 0;
   padding: 14px 8px;
   border: 1px solid white;
-  border-radius: 12px;
+  border-radius: 10px;
   color: white;
   max-width: 180px;
   font-size: 14px;
@@ -541,13 +643,16 @@
 
 /* 내 포인트 영역 */
 .main-point {
+  font-family: var(--primary-kr);
+  font-size: 14px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 12px;
 }
 
 
 .able-point{
-  width: 90px;
+  width: 100px;
   /* background-color: #000; */
   color: white;
 }
@@ -783,8 +888,7 @@
   top: 0px;
 }
 
-.point-popup-mid{
-  display: flex;
+.point-popup-mid{  display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 0 65px 0;
@@ -799,6 +903,147 @@
 .point-pop-comen p:nth-child(1){
   font-weight: bold;
 }
+
+
+
+.zamvoki-info{
+  color: var(--light-gray);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0px;
+}
+
+.zamvoki-info p{
+  text-align: center;
+}
+
+
+
+/* ########## 회사 정보 ########## */
+/* .comapny-part{
+  padding: 30px;
+  color: #000;
+  font-family: var(--primary-kr);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.company-info-com{
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: lighter;
+} */
+
+
+
+/* ####### 튜토리얼 (기본 이미지) ####### */
+.tutorial-basic{
+  display: none;
+}
+.tutorial-part{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: #000; */
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  font-family: var(--primary-kr);
+  font-size: 14px;
+}
+
+.tutorial-part > img{
+  width: 100%;
+}
+.tutorial-inner{
+  position: absolute;
+  top: 3%;
+  right: 10%;
+}
+
+.tutorial .tutorial-inner  button{
+  color: var(--var-text);
+  width: 40px;
+  height: 20px;
+  background: rgb(225, 225, 225, 0.4);
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+/* ####### 튜토리얼 (닉네임) ####### */
+.tutorial-nick-part{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.nick-input-section{
+  padding: 12px;
+  width: 34%;
+  border: 1px solid white;
+  border-radius: 14px;
+  color: white;
+  position: absolute;
+  top: 16%;
+  right: 10%;
+  /* text-align: center; */
+}
+
+.nick-input-section p{
+  padding-bottom: 12px;
+}
+
+.nick-input-section input{
+  width: 70%;
+  height: 24px;
+  border-radius: 4px;
+  border: none;
+}
+
+.nick-input-section .bubble-try{
+  position: absolute;
+  bottom: -23%;
+  right: 20%;
+}
+
+.nick-input-section button{
+  background-color: white;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+
+/* ########## 튜토리얼 엔드 ########### */
+.tutorial-end-part{
+  display: none;
+  /* background-color: #000; */
+}
+
+.tutorial-end-section{
+
+  width: 45%;
+}
+
+.tutorial-end-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorial-end-btn button{
+  width: 80%;
+  position: absolute;
+  bottom: 10%;
+}
+
+
 
 
 
@@ -825,21 +1070,21 @@
 }
 
 .login-header{
-  margin-top: 50%;
+  margin-top: 40%;
   position: relative;
   border: 1px solid transparent;
 }
 
 .point-img{
   position: absolute;
-  top: 0;
+  top: -40px;
   right: 0;
   padding: 1px;
 }
 
 .point-coment{
   position: absolute;
-  top: 50px;
+  top: 10px;
   right: 0;
   font-size: 24px;
   font-family: var(--primary-kr);
@@ -847,10 +1092,11 @@
   font-weight: bold;
   line-height: 1.6em;
   text-align: center;
+
 }
 
 .login-section{
-  margin-top: 215px;
+  margin-top: 200px;
 }
 
 .login-field input{
@@ -1177,6 +1423,24 @@ signup-email::placeholder {
 }
 
 
+/* ############## 이용약관 페이지 ############# */
+.term-survice-part{
+  padding: 36px;
+  height: 100vh;
+}
+
+.term-survice-inner {
+  font-family: var(--primary-kr);
+  padding-bottom: 120px;
+
+}
+
+.term-survice-inner p:nth-child(1){
+  padding-bottom: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 
 /* ########### 이용약관 ########### */
 .term-part{
@@ -1428,7 +1692,7 @@ signup-email::placeholder {
 .conversion{
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
   /* border: 1px solid #000; */
-  height: inherit;
+  /* height: inherit; */
   /* padding-bottom: 80px; */
 }
 
@@ -1527,15 +1791,29 @@ signup-email::placeholder {
 .bubble-conversion{
   background: transparent;
   border: 1px solid #CAD5E0;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 4px;
   position: relative;
   /* min-width: 280px; */
   text-align: center;
 }
 
+.bubble-conversion img{
+  position: absolute;
+  top: 100%;
+  right: 26%;
+}
 
-.bubble-conversion::after{
+.bubble-exchange img{
+  position: absolute;
+  top: 100%;
+  left: 20%;
+}
+
+
+
+
+/* .bubble-conversion::after{
   content: '';
   display: block;
   position: absolute;
@@ -1548,7 +1826,7 @@ signup-email::placeholder {
   border-bottom:1px solid #CAD5E0;
   -moz-transform:rotate(45deg);
   -webkit-transform:rotate(45deg);
-}
+} */
 
 .bubble-conversion p{
   /* border: 1px solid white; */
@@ -1760,7 +2038,7 @@ signup-email::placeholder {
 
 .exchange-title{
   font-size: 16px;
-  color: var(--var-text);
+  color: var(--icon-color);
 }
 
 .exchange-get{
@@ -1790,8 +2068,12 @@ signup-email::placeholder {
   flex: 1;
 }
 
+.my-pearl img, .my-leaf img{
+  padding-right: 4px;
+}
+
 .btn-get-pearl, .btn-get-leaf {
-  padding: 9px 0;
+  padding: 10px 0;
   border-radius: 5px;
   font-family: var(--primary-kr);
   font-size: 14px;
@@ -1799,12 +2081,17 @@ signup-email::placeholder {
   cursor: pointer;
 }
 
+#exchangePearlInput::placeholder,
+#exchangeCoralInput::placeholder{
+  font-family: var(--primary-kr);
+  color: #c1c1c1;
+}
 .exchange-get-btn{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 42px;
 }
 
 .btn-get-pearl{
@@ -2091,10 +2378,11 @@ signup-email::placeholder {
   background-color: var(--mint-color);
   padding: 6px 15px;
   border-radius: 5px;
-
+  margin-bottom: 12px;
+  height: 28px;
   font-size: 12px;
   color: var(--var-text);
-
+  font-family: var(--primary-kr);
 }
 
 .item-shop-have-all p:nth-child(1){
@@ -2133,6 +2421,7 @@ signup-email::placeholder {
   align-items: center;
   padding-top: 24px;
 }
+
 .shop-item-img{
   background-color: white;
   width: 78px;
@@ -2140,6 +2429,13 @@ signup-email::placeholder {
   border-radius: 20px;
   border: 2px solid #c1c1c1;
 }
+
+.itemImg {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 
 .shop-item-name{
   color: white;
@@ -2167,7 +2463,7 @@ signup-email::placeholder {
 
 .deam{
   background-color: rgb(0, 13, 66, 0.7);
-  width: 100%;
+  width: 600px;
   height: 100%;
   position: fixed;
   /* z-index: 900; */
@@ -2221,6 +2517,7 @@ signup-email::placeholder {
 }
 
 .detail-pop-character{
+
   padding-top: 12px;
   padding-bottom: 24px;
   display: flex;
@@ -2228,9 +2525,14 @@ signup-email::placeholder {
   justify-content: center;
 }
 
+.detailImg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
 .detail-pop-mid{
   padding: 0 30px 0 30px;
-
 }
 
 .item-title{
@@ -2242,7 +2544,6 @@ signup-email::placeholder {
 }
 
 .item-details{
-
   font-family: var(--var-text);
   font-size: 14px;
 }
@@ -2257,11 +2558,10 @@ signup-email::placeholder {
 }
 
 .detail-pop-btn{
-  padding: 18px 30px 34px 30px;
+  padding: 18px 32px 34px 32px;
   display: flex;
-  gap: 28px;
+  gap: 34px;
 }
-
 
 
 /* ####### 구매 완료 팝업 ######### */
@@ -2458,6 +2758,19 @@ signup-email::placeholder {
   align-items: center;
 }
 
+.myItemImg {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+.myItem-img {
+    width: 160px;
+    height: 216px;
+    object-fit: contain;
+}
+
 .mine-item-name{
   color: white;
   font-size: 12px;
@@ -2489,7 +2802,6 @@ signup-email::placeholder {
 }
 
 .user-profile-field{
-  /* border: 1px solid #000; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2512,20 +2824,34 @@ signup-email::placeholder {
   font-weight: bold;
   color: var(--mint-color);
   padding-bottom: 4px;
+
 }
 
 .user-profile-have{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   gap: 3px;
 }
 
-.user-profile-have p:nth-child(1){
+
+.user-profile-text{
+  display: flex;
+  height: 24px;
   border-left: 1px solid rgb(225, 225, 225, 0.15);
   border-right: 1px solid rgb(225, 225, 225, 0.15);
   width: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.user-profile-have p:nth-child(1){
   text-align: center;
+}
+
+.user-profile-all p{
+  padding-bottom: 4px;
 }
 
 .user-profile-point{
@@ -2593,10 +2919,10 @@ signup-email::placeholder {
 
 .user-logout, .user-quit{
   padding: 0px 6px;
-  font-size: 14px;
+  font-size: 11px;
   color: var(--light-gray);
   font-family: var(--primary-kr);
-
+  font-weight: lighter;
 }
 
 
@@ -2827,6 +3153,7 @@ signup-email::placeholder {
 .board-basic-title{
   display: flex;
   align-items: center;
+  font-size: 14px;
 }
 
 .board-write-section{
@@ -2836,13 +3163,32 @@ signup-email::placeholder {
 
 .board-basic-title a:nth-child(1),
 .board-basic-title a:nth-child(3) {
-  padding: 6px;
+  padding: 4px;
 }
 
+.board-basic-title a:nth-child(1){
+  color: #000;
+  font-weight: bold;
+}
+.board-basic-title a:nth-child(3){
+  color: var(--light-gray);
+}
 .board-basic-title-line{
   width: 2px;
   height: 14px;
   border-left: 1px solid var(--light-gray);
+}
+
+
+/* ########### */
+.board-basic-write .board-basic-title a:nth-child(1){
+  /* color: #000; */
+  /* font-weight: bold; */
+}
+
+.board-basic-write .board-basic-title a:nth-child(3){
+  color: #000;
+  font-weight: bold;
 }
 
 .board-basic-title a:nth-child(3) {
@@ -2933,21 +3279,23 @@ signup-email::placeholder {
 }
 
 .board-list-title{
+  font-size: 14px;
 }
+
 
 .board-list-title a:nth-child(1){
   font-weight: normal;
   color: var(--light-gray);
 }
 
-.board-basic-title a:nth-child(3){
+/* .board-basic-title a:nth-child(3){
   color: var(--var-text);
   font-weight: bold;
-}
+} */
 
 .board-list-coment{
   font-size: 12px;
-  padding-left: 5px;
+  padding-left: 4px;
   color: rgb(0, 0, 0,0.7);
   border-bottom: 1px solid rgb(0, 0, 0, 0.12);
   padding-bottom: 24px;
@@ -3042,12 +3390,14 @@ signup-email::placeholder {
 }
 
 
-.board-notice{
-
+.board-header .line{
+  border: 1px solid transparent;
 }
 
+
+
 .board-notice-part{
-  padding: 86px 28px ;
+  padding: 110px 28px ;
   font-family: var(--primary-kr);
 }
 
@@ -3087,6 +3437,13 @@ signup-email::placeholder {
   text-align: center;
 }
 
+.noticeCategory {
+  width: 80px;
+  flex: 1;
+  font-size: 11px;
+  color: rgb(0, 0, 0, 0.7);
+  text-align: center;
+}
 .notice-main-title{
   flex: 5;
   font-size: 14px;
@@ -3100,16 +3457,20 @@ signup-email::placeholder {
 }
 
 
-.notice-detail{
-  background-color: rgb(0, 0, 0, 0.05);
+.notice-detail {
+  height: auto;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
   display: none;
   padding: 24px;
-  width: 100%;
   font-size: 14px;
+  overflow: hidden; /* 부모 요소에서 넘치는 내용을 숨김 */
 }
 
-.notice-img{
-  width: 100%;
+.notice-detail img {
+  max-width: 100%; /* 부모 요소의 너비를 넘지 않도록 설정 */
+  height: auto; /* 비율을 유지하면서 높이를 자동으로 조정 */
+  display: block; /* 이미지 아래 여백을 제거하기 위해 */
 }
 
 .notice-img img{
@@ -3168,6 +3529,7 @@ signup-email::placeholder {
 
 .friends-point{
   display: flex;
+  padding-top: 4px;
 }
 
 
@@ -3185,6 +3547,145 @@ signup-email::placeholder {
 
 
 
+/* ############# 히스토리 ############ */
+.history-part{
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+}
+
+
+.history-inner{
+  padding: 30px;
+  /* border: 1px solid #000; */
+}
+
+
+.history-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: var(--primary-kr);
+  font-weight: bold;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--light-gray);
+  color: #000D42;
+}
+
+.history-title input{
+  border: 1px solid var(--light-gray);
+  width: 40%;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.history-title input::placeholder{
+  color: var(--light-gray);
+}
+
+.history-list{
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-top: 1px solid var(--light-gray); */
+  border-bottom: 1px solid var(--light-gray);
+  padding: 6px 4px;
+  color: #000;
+}
+
+.history-first-line{
+  color: #000;
+  display: flex;
+  width: 100%;
+  padding: 2px;
+}
+
+.history-first-line p{
+  text-align: left;
+  color: var(--light-gray);
+}
+.history-sec-line {
+  width: 100%;
+  display: flex;
+
+  /* flex: 1; */
+}
+
+.history-sec-line p{
+  color: #000;
+}
+
+.history-sec-line p:first-child{
+  flex: 4.8;
+  /* color: var(--light-gray); */
+}
+.history-sec-line p{
+  flex: 1.2;
+}
+
+.history-sec-line p:last-child{
+  flex: 1.8;
+  color: var(--mint-color);
+  text-align: right;
+}
+
+/* ############# 리워드 히스토리 ############ */
+.reward-history-part{
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+}
+
+
+.reward-history-inner{
+  padding: 30px;
+  /* border: 1px solid #000; */
+}
+
+
+.reward-history-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: var(--primary-kr);
+  font-weight: bold;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.reward-history-title input{
+  border: 1px solid var(--light-gray);
+  width: 40%;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.reward-history-title input::placeholder{
+  color: var(--light-gray);
+}
+
+.reward-history-list{
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  display: flex;
+  align-items: center;
+  /* border-top: 1px solid var(--light-gray); */
+  border-bottom: 1px solid var(--light-gray);
+  padding: 12px 4px;
+  color: var(--var-text);
+}
+
+.reward-history-list p {
+  flex: 1;
+  text-align: center;
+  /* border: 1px solid #000; */
+}
+
+.reward-history-list p:nth-child(1){
+  flex: 0.5;
+}
 
 
 
@@ -3218,38 +3719,62 @@ signup-email::placeholder {
   }
 
   .container{
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
     position: relative;
   }
 
   .main-header{
     position: fixed;
-    width: 500px;
+    width: 600px;
     
   }
 
   .gnb{
-    width: 500px;
+    width: 600px;
     position: fixed;
   }
   
   .menu-bar{
-    position: absolute;
+    width: 600px;
+    position: fixed;
   }
+
 }
 
 @media(min-height: 750px){
-  /* .container{
-    height: 100vh;
-  } */
+
 
   .home{
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .quit-app{
     height: 100vh;
   }
-  
 }
+
+
+@media(min-height:750px){
+  .conversion{
+    height: 100vh;
+  }
+
+
+}
+
+
+
+@media(min-height:820px){
+  .login-inner > p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    font-family: var(--primary-kr);
+  }
+}
+
