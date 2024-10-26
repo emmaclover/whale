@@ -84,7 +84,7 @@ $(document).ready(function () {
         if (result != null) {
           console.log('kcp result chk from page:', result);
           resultDecode = base64ToUtf8(result);
-          const decoded = resultDecode;이상모
+          const decoded = resultDecode;
           const json = JSON.parse(decoded);
 
           $('#name-text').text(json["user_name"]);
