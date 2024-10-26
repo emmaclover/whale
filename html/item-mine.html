@@ -32,32 +32,29 @@
           <div class="item-mine-title-line"></div>
           <a href="#none">내 아이템</a>
         </div> -->
-
+        
         <!-- 내 캐릭터 부분 -->
         <div class="item-mine-chracter">
           <div class="item-mine-chracter-field">
             <div class="mine-character-img">
-              <img src="../images/zamvoki-body.svg" alt="">
-              <img src="../images/zamvoki-hair.svg" alt="">
-              <img src="../images/zamvoki-outer.svg" alt="">
-              <img src="../images/zamvoki-acc.svg" alt="">
+              <img src="../images/zamvoki-body.svg" alt="" class="fixed-img">
             </div>
             <div class="mine-shadow"></div>
             <a href="#none" class="mine-rollback">
               <img src="../images/bi-rollback.svg" alt="">
-            </a>
+            </a> 
             <a href="#none" class="mine-commit">
               <img src="../images/bi-check.svg" alt="">
             </a>
           </div>
         </div>
-
+        <!-- .. -->
         <!-- 아이템 리스트 영역 -->
         <div class="mine-item-box">
           <div class="mine-items">
-            <div class="mine-item">
-              <div class="mine-item-img"><img src="../images/shop-acc-sunglass.svg" alt=""></div>
-              <div class="mine-item-name"><p>보잉 선글라스</p></div>
+            <div class="mine-item" id="mine-item-template" style="display:none;" data-mine-item-id="">
+              <div class="mine-item-img"><img src="" class="myItemImg"></div>
+              <div class="mine-item-name"><p class="myItemName"></p></div>
             </div>
           </div>
         </div>
@@ -70,3 +67,6 @@
   </div>
 </body>
 </html>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="../js/my_item.js"></script>

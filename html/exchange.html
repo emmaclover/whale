@@ -40,8 +40,8 @@
         <div class="exchange-content">
           <div class="exchange-have-all">
             <p>보유</p>
-            <p>진주</p><p class="pearl-total">0</p>
-            <p>산호</p><p class="coral-total">0</p>
+            <p>진주</p><p class="pearl-total">x <span>120,000</span></p>
+            <p>산호</p><p class="coral-total">x <span>120,000</span></p>
           </div>
           <div class="exchange-today">
             <div class="exchange-today-title">
@@ -52,7 +52,7 @@
               <p>x <span>1</span></p>
               <img src="../images/bi-exchange.svg" alt="">
               <img src="../images/bi-leaf.svg" alt="">
-              <p>x <span class="exchangeRatio">1</span></p>
+              <p>x <span class="exchangeRatio">2.5</span></p>
             </div>
           </div>
         </div>
@@ -61,8 +61,9 @@
         <div class="conversion-point">
           <!-- 이미지  -->
           <div class="conversion-coment">
-            <div class="bubble-conversion">
+            <div class="bubble-conversion bubble-exchange">
               <p>오늘의 교환 비율에 따라 거래 가능한 진주와 산호를 거래할 수 있어요!</p>
+              <img src="../images/bi-bubble-3.svg" alt="">
             </div>
             <div class="coment-character">
               <img src="../images/character-conversion.svg" alt="">
@@ -76,11 +77,11 @@
               <div class="exchange-my-items">
                 <div class="my-pearl"> 
                   <img src="../images/bi-pearl.svg" alt="">
-                  <p> x </p><p class="pearl-tradable">0</p>
+                  <p class="pearl-tradable">x <span> 28</span></p>
                 </div>
                 <div class="my-leaf">
                   <img src="../images/bi-leaf.svg" alt="">
-                  <p> x </p><p class="coral-tradable">0</p>
+                  <p class="coral-tradable">x <span> 28</span></p>
                 </div>
               </div>
               <div class="exchange-get-btn">
@@ -93,9 +94,9 @@
             <!-- 진주얻기 클릭시 -->
             <div class="exchange-topearl">
               <div class="topearl-input">
-                <input type="text" id="exchangePearlInput" oninput="getPearl()">
+                <input type="text" id="exchangePearlInput" oninput="getPearl()" placeholder="입력">
                 <img src="../images/bi-exchange.svg" alt="">
-                <input type="text" placeholder="0" readonly id="exchangedCoralInput">
+                <input type="text" placeholder="0" readonly id="exchangedCoralInput" >
               </div>
               <button class="btn-basic btn-topearl">교환하기</button>
             </div>
@@ -105,7 +106,8 @@
               <div class="toleaf-input">
                 <input type="text" placeholder="0" readonly id="exchangedPearlInput">
                 <img src="../images/bi-exchange.svg" alt="">
-                <input type="text" id="exchangeCoralInput" oninput="getCoral()">
+                <input type="text" id="exchangeCoralInput" oninput="getCoral()"
+                placeholder="입력">
               </div>
               <button class="btn-basic btn-toleaf">교환하기</button>
             </div>

@@ -35,6 +35,34 @@ $(document).ready(function() {
             element.innerText = result;
           });
       });
+
+      window.flutter_inappwebview.callHandler('nickname').then(function(result) {
+          document.querySelector('.nickname').innerText = result;
+      });
+
+      window.flutter_inappwebview.callHandler('homecharacter').then(function(result) {
+          const applyMap = new Map();
+
+          result.forEach(function(itemPurchase, index) {
+              if(itemPurchase.isApplied == "Y") {
+                  applyMap.set(itemPurchase.item.itemCategory.categoryId, itemPurchase.item);
+              }
+          });
+
+          applyMap.forEach(function(item, category) {
+              var existingImg = $('.character-section img[data-category="' + category + '"]');
+
+              if (existingImg.length > 0) {
+                  existingImg.attr('src', 'https://admin.zamvoki.com/uploads/' + item.itemImage);
+              } else {
+                  var newImg = '<img src="https://admin.zamvoki.com/uploads/' + item.itemImage + '" alt="" data-category="' + category + '" class="homeItem-img">';
+                  $('.character-section').append(newImg);
+              }
+          });
+      }).catch(function(error) {
+          console.error("Error fetching homecharacter: ", error);
+      });
+
     } else {
       console.log("Flutter InAppWebView is not ready.");
     }
