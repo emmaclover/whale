@@ -83,18 +83,13 @@ $(document).ready(function () {
       window.flutter_inappwebview.callHandler('kcp_page').then(function (result) {
         if (result != null) {
           console.log('kcp result chk from page:', result);
-          // kcpDecodeData = JSON.parse(atob(result));
-          resultDecode = base64ToUtf8(result); // 디코딩 후 할당
-          console.log(resultDecode);   // 수정된 부분
+          resultDecode = base64ToUtf8(result);
           const decoded = resultDecode;
-          // const decoded = '{' + Buffer.from(kcpDecodeData, 'binary').toString('utf8') + '}';
-          let user_name = decoded.user_name;
-          let age = decoded.birth_day;
-          console.log(decoded);
-          const json = JSON.parse(decoded)
+          const json = JSON.parse(decoded);
+
+          $('#name-text').text(json["user_name"]);
+          $('#birth-text').text(json["birth_day"]);
           kcpDecodeData = json;
-          console.log(json.phone_no);
-          console.log(json.user_name);
           isPhoneVerified = true;
         }
       })
