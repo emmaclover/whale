@@ -6,7 +6,7 @@ $(document).ready(function() {
     if (window.flutter_inappwebview) {
         window.flutter_inappwebview.callHandler('userData').then(function(user) {
            document.querySelectorAll('.uName').forEach(function(element) {
-                 element.innerText = user.name;
+                 element.innerText = user.nickname;
               });
               document.querySelectorAll('.uNickname').forEach(function(element) {
                  element.innerText = user.nickname;

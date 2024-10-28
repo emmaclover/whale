@@ -1692,7 +1692,7 @@ signup-email::placeholder {
 .conversion{
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
   /* border: 1px solid #000; */
-  /* height: inherit; */
+  height: inherit;
   /* padding-bottom: 80px; */
 }
 
@@ -3677,14 +3677,32 @@ signup-email::placeholder {
   color: var(--var-text);
 }
 
-.reward-history-list p {
-  flex: 1;
-  text-align: center;
-  /* border: 1px solid #000; */
+
+.reward-history-sec-line {
+  width: 100%;
+  display: flex;
+
+  /* flex: 1; */
 }
 
-.reward-history-list p:nth-child(1){
-  flex: 0.5;
+.reward-history-sec-line p{
+  color: #000;
+}
+
+.reward-history-sec-line p:first-child{
+  flex: 2;
+  text-align: left;
+  /* color: var(--light-gray); */
+}
+.reward-history-sec-line p{
+  flex: 1.5;
+  text-align: center;
+}
+
+.reward-history-sec-line p:last-child{
+  flex: 0.7;
+  color: var(--mint-color);
+  text-align: right;
 }
 
 

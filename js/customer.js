@@ -46,7 +46,7 @@ $(function () {
 
                     // 세부 내용을 업데이트 (필요시 추가 데이터를 여기에 삽입)
                     $questionDetail.find('#question-content').text(item.customerQuestion);
-                    $questionDetail.find('#question-answer').text(item.questionAnswer != null ? item.questionAnswer : "")
+                    $questionDetail.find('#question-answer').text(item.customerAnswer != null ? item.customerAnswer : "")
                 });
                 // 새로운 아이템을 DOM에 추가
                 $('.board-notice-inner').append($newItem);

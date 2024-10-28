@@ -39,10 +39,11 @@ $(document).ready(function() {
 
 
             historyElement.innerHTML = `
-              <p>${index + 1}</p>
+            <div class="history-sec-line">
+              <p>${new Date(history.recordDate).toLocaleDateString()}</p>
               <p>${healthTypeToString(history.healthType)}</p>
               <p>${formatTime(history.amount, history.healthType)}</p>
-              <p>${new Date(history.recordDate).toLocaleDateString()}</p>
+            </div>
             `;
 
             container.appendChild(historyElement);
@@ -90,10 +91,12 @@ $(document).ready(function() {
               const rewardElement = document.createElement('div');
               rewardElement.classList.add('reward-history-list');
               rewardElement.innerHTML = `
-                <p>${index + 1}</p>
-                <p>${saveByToString(reward.saveBy)}</p>
-                <p>${reward.amount} ${rewardTypeToString(reward.rewardType)}</p>
+              <div class="reward-history-sec-line">
                 <p>${formattedDate}</p>
+                <p>${saveByToString(reward.saveBy)}</p>
+                <p>${rewardTypeToString(reward.rewardType)}</p>
+                <p>${reward.amount}</p>
+                </div>
               `;
 
               container.appendChild(rewardElement);
