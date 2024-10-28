@@ -5,7 +5,7 @@ window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
 $(document).ready(function() {
     if (window.flutter_inappwebview) {
       window.flutter_inappwebview.callHandler('stepdata').then(function(result) {
-        document.querySelector('.step-data').innerText = result;
+        document.querySelector('.step-data').innerText = result ?? '0';
       });
       window.flutter_inappwebview.callHandler('sleptdata').then(function(result) {
         let hour = Math.floor(Number(result) / 60);

@@ -49,14 +49,14 @@ $(document).ready(function() {
                 $('.item-shop-success').on('click', function() {
                     var clickedItem = items.find(item => item.itemId == clickedItemId);
 
-                    var clickedItem = items.find(item => item.itemId == clickedItemId);
-
                     if (clickedItem) {
-                        window.flutter_inappwebview.callHandler('buyItem', clickedItemId).then(function(result) {
+                        window.flutter_inappwebview.callHandler('buyItem', clickedItem).then(function(result) {
                             if (result) {
                                 $('.shop-cp-title p:first').text(clickedItem.itemName);
                                 $('.shop-cp-inner').show();
                                 $('.item-detail-inner').hide();
+                            } else if (!result){
+                                alert('보유하신 진주/산호 수량이 부족합니다.');
                             } else {
                                 alert('아이템 재고가 부족합니다.');
                             }
