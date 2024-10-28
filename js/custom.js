@@ -412,4 +412,13 @@ $(function () {
 
 
 
+
+
+
+  // 딜레이
+  // setTimeout(function(){
+  //   $('.main-content').html('<div class="mypoint"></div>');
+  // },2000);
+
+
 })

@@ -82,6 +82,12 @@
 
 
 /* ########## header CSS ########## */
+.header-include{
+  height: 70px;
+}
+.gnb-main{
+  height: 70px;
+}
 .header-inner{
   display: flex;
   flex-direction: column;
@@ -436,7 +442,7 @@
 }
 
 .home-inner {
-  padding: 0 0 70px 0;
+  padding: 0 0 0px 0;
   position: relative;
 }
 
@@ -912,7 +918,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 70px 0px;
+  padding: 70px 0px 0px 0px;
 }
 
 .zamvoki-info p{
@@ -1084,7 +1090,7 @@
 
 .point-coment{
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 0;
   font-size: 24px;
   font-family: var(--primary-kr);
@@ -2388,6 +2394,8 @@ signup-email::placeholder {
 .item-shop-have-all p:nth-child(1){
   font-weight: bold;
   padding: 0px 3px;
+  height: 11px;
+
   border-left: 1px solid rgb(0, 0, 0, 0.3);
   border-right: 1px solid rgb(0, 0, 0, 0.3);
 }
@@ -3267,7 +3275,7 @@ signup-email::placeholder {
 
 /* ########## 게시판 리스트 ############ */
 .board-list-part{
-  padding: 94px 24px;
+  padding: 40px 24px;
   font-family: var(--primary-kr);
   height: 100vh;
 }
@@ -3397,7 +3405,7 @@ signup-email::placeholder {
 
 
 .board-notice-part{
-  padding: 110px 28px ;
+  padding: 40px 28px ;
   font-family: var(--primary-kr);
 }
 
