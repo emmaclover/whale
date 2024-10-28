@@ -567,6 +567,18 @@
 .character-section img:nth-child(2){
   bottom: 26px;
 }
+.character-section .homeItem-img{
+    position: absolute;
+    bottom:26px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.homeItem-img {
+    width: 200px;
+    height: 270px;
+    bottom: 26px;
+}
+
 
 .bubble-coment{
   position: absolute;
@@ -1686,7 +1698,7 @@ signup-email::placeholder {
 .conversion{
   background-image: linear-gradient(to bottom, #1633A2, #000E48);
   /* border: 1px solid #000; */
-  height: inherit;
+  /* height: inherit; */
   /* padding-bottom: 80px; */
 }
 
@@ -2417,6 +2429,7 @@ signup-email::placeholder {
   align-items: center;
   padding-top: 24px;
 }
+
 .shop-item-img{
   background-color: white;
   width: 78px;
@@ -2424,6 +2437,13 @@ signup-email::placeholder {
   border-radius: 20px;
   border: 2px solid #c1c1c1;
 }
+
+.itemImg {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 
 .shop-item-name{
   color: white;
@@ -2512,6 +2532,12 @@ signup-email::placeholder {
   align-items: center; 
   justify-content: center;
 }
+
+.detailImg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
 
 .detail-pop-mid{
   padding: 0 30px 0 30px;
@@ -2740,6 +2766,19 @@ signup-email::placeholder {
   align-items: center;
 }
 
+.myItemImg {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+.myItem-img {
+    width: 160px;
+    height: 216px;
+    object-fit: contain;
+}
+
 .mine-item-name{
   color: white;
   font-size: 12px;
@@ -2771,7 +2810,6 @@ signup-email::placeholder {
 }
 
 .user-profile-field{
-  /* border: 1px solid #000; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3407,6 +3445,13 @@ signup-email::placeholder {
   text-align: center;
 }
 
+.noticeCategory {
+  width: 80px;
+  flex: 1;
+  font-size: 11px;
+  color: rgb(0, 0, 0, 0.7);
+  text-align: center;
+}
 .notice-main-title{
   flex: 5;
   font-size: 14px;
@@ -3420,16 +3465,20 @@ signup-email::placeholder {
 }
 
 
-.notice-detail{
-  background-color: rgb(0, 0, 0, 0.05);
+.notice-detail {
+  height: auto;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
   display: none;
   padding: 24px;
-  width: 100%;
   font-size: 14px;
+  overflow: hidden; /* 부모 요소에서 넘치는 내용을 숨김 */
 }
 
-.notice-img{
-  width: 100%;
+.notice-detail img {
+  max-width: 100%; /* 부모 요소의 너비를 넘지 않도록 설정 */
+  height: auto; /* 비율을 유지하면서 높이를 자동으로 조정 */
+  display: block; /* 이미지 아래 여백을 제거하기 위해 */
 }
 
 .notice-img img{
@@ -3590,6 +3639,62 @@ signup-email::placeholder {
   text-align: right;
 }
 
+/* ############# 리워드 히스토리 ############ */
+.reward-history-part{
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+}
+
+
+.reward-history-inner{
+  padding: 30px;
+  /* border: 1px solid #000; */
+}
+
+
+.reward-history-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: var(--primary-kr);
+  font-weight: bold;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.reward-history-title input{
+  border: 1px solid var(--light-gray);
+  width: 40%;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.reward-history-title input::placeholder{
+  color: var(--light-gray);
+}
+
+.reward-history-list{
+  font-size: 14px;
+  font-family: var(--primary-kr);
+  display: flex;
+  align-items: center;
+  /* border-top: 1px solid var(--light-gray); */
+  border-bottom: 1px solid var(--light-gray);
+  padding: 12px 4px;
+  color: var(--var-text);
+}
+
+.reward-history-list p {
+  flex: 1;
+  text-align: center;
+  /* border: 1px solid #000; */
+}
+
+.reward-history-list p:nth-child(1){
+  flex: 0.5;
+}
+
 
 
 
@@ -3654,7 +3759,7 @@ signup-email::placeholder {
 
   .quit-app{
     height: 100vh;
-  } 
+  }
 }
 
 

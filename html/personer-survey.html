@@ -18,7 +18,7 @@
       <div class="personal-survey-inner">
 
         <!-- Name Survey Field -->
-        <div class="name-survey">
+        <!-- <div class="name-survey">
           <div class="survey">
             <img src="../images/character-face-40.svg" alt="">
             <p>안녕하세요! 제 이름은 잠보기예요. 잠보기의 하루에 오신걸 환영합니다. 우선 <span class="boldi">통성명</span>부터 할까요?</p>
@@ -26,13 +26,13 @@
           <div class="answer">
             <input type="text" id="userName" placeholder="정고래">
           </div>
-        </div>
+        </div> -->
 
         <!--  Gender Survey Field  -->
-        <div class="gender-survey">
+        <div id="genderSurvey" class="gender-survey" style="display: none;">
           <div class="survey">
             <img src="../images/character-face-40.svg" alt="">
-            <p>앞으로 걷고자고 일상을 함께하기 위해 <span class="name-underline">정고래</span>님에 대해 더 알고 싶어요. <span class="name-underline">정고래</span>님의 <span class="boldi">성별</span>은 무엇인가요?</p>
+            <p>앞으로 걷고자고 일상을 함께하기 위해 정고래님에 대해 더 알고 싶어요. 정고래님의 <span class="boldi">성별</span>은 무엇인가요?</p>
           </div>
           <div class="gender-radio">
             <label>
@@ -45,10 +45,10 @@
         </div>
 
         <!-- Birth Day Survey Field -->
-        <div class="birth-survey">
+        <div id="birthSurvey" class="birth-survey" style="display: none;">
           <div class="survey">
             <img src="../images/character-face-40.svg" alt="">
-            <p>좋아요! 태어난 <span class="boldi">생년월일</span>이 궁금해요! 잠보기는 2024년 10월 15일 생이랍니다.</p>
+            <p>좋아요! 태어난 <span class="boldi">생년월일</span>이 궁금해요! 잠보기는 2022년 6월 11일 생이랍니다.</p>
           </div>
           <div class="answer">
             <input type="text" id="birthDate" placeholder="YYYY MM DD">
@@ -59,7 +59,7 @@
         <div class="job-survey">
           <div class="survey">
             <img src="../images/character-face-40.svg" alt="">
-            <p>잠보기는 진주와 산호를 찾아 헤매는 수집가예요. <span class="name-underline">정고래</span>님의 <span class="boldi">직업</span>은 무엇인가요?</p>
+            <p>잠보기는 진주와 산호를 찾아 헤매는 탐험가예요. <span class="name-underline">정고래</span>님의 <span class="boldi">직업</span>은 무엇인가요?</p>
           </div>
           <div class="job-down">
             <select name="" id="userJob">
@@ -91,7 +91,7 @@
         <div class="sleep-survey">
           <div class="survey">
             <img src="../images/character-face-40.svg" alt="">
-            <p>잠보기는 불면증이 있어요. <span class="name-underline">정고래</span>님은 평소<span class="boldi"> 몇 시에 주무시나요?</span></p>
+            <p>잠보기는 잠꾸러기에요! <span class="name-underline">정고래</span>님은 평소<span class="boldi"> 몇시에 주무시나요?</span></p>
           </div>
           <div class="answer-time sleep-down">
             <input type="time" id="sleepTime" placeholder="선택">
@@ -103,7 +103,7 @@
         <div class="wakeup-survey">
           <div class="survey">
             <img src="../images/character-face-40.svg" alt="">
-            <p>잠보기는 낮 12시에 일어나요! <span class="name-underline">정고래</span>님은 보통 <span class="boldi">몇시에 일어나세요?</span></p>
+            <p>잠보기는 아침수영을 좋아해요! <span class="name-underline">정고래</span>님은 평소 <span class="boldi">몇시에 일어나세요?</span></p>
           </div>
           <div class="answer-time sleep-down">
             <input type="time" id="wakeTime" placeholder="선택">
@@ -122,18 +122,6 @@
             <span class="time-icon"></span>
           </div>
         </div>
-
-        <!-- <div class="sit-survey">
-          <div class="survey">
-            <img src="../images/character-face-40.svg" alt="">
-            <p><span class="name-underline">정고래</span>님은 하루에 앉아서 보내는 시간이 얼마나 되나요?</p>
-          </div>
-          <div class="answer-time sleep-down">
-            <select name="" id="time-select" class="time-select">
-                <option value="">시간선택</option>
-            </select>
-          </div>
-        </div> -->
 
 
         <!-- Submit Button -->
