@@ -11,7 +11,20 @@
 
 body{
   /* overflow: hidden; */
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  overflow-y: scroll;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+.fade-out{
+  opacity: 0;
+}
+
 a{
   text-decoration: none;
   color: inherit;

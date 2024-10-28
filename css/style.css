@@ -82,6 +82,12 @@
 
 
 /* ########## header CSS ########## */
+.header-include{
+  height: 70px;
+}
+.gnb-main{
+  height: 70px;
+}
 .header-inner{
   display: flex;
   flex-direction: column;
@@ -1072,7 +1078,7 @@
 
 .point-coment{
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 0;
   font-size: 24px;
   font-family: var(--primary-kr);
@@ -2376,6 +2382,8 @@ signup-email::placeholder {
 .item-shop-have-all p:nth-child(1){
   font-weight: bold;
   padding: 0px 3px;
+  height: 11px;
+
   border-left: 1px solid rgb(0, 0, 0, 0.3);
   border-right: 1px solid rgb(0, 0, 0, 0.3);
 }
@@ -2763,7 +2771,7 @@ signup-email::placeholder {
 }
 
 .user-profile-field{
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   display: flex;
   justify-content: center;
   align-items: center;
