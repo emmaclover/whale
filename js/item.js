@@ -32,7 +32,7 @@ $(document).ready(function() {
                     console.log("Clicked Item ID1: ", clickedItemId);
                         $('.detailImg').attr('src', 'https://admin.zamvoki.com/uploads/' + clickedItem.itemImage);
                         $('.detailName').text(clickedItem.itemName);
-                        $('.detailCurrency').text(clickedItem.currency);
+                        $('.detailCurrency').text(clickedItem.currency === "pearl" ? "진주" : "산호");
                         $('.detailPrice').text(clickedItem.itemPrice);
                         $('.detailColor').text(clickedItem.itemColor);
                         $('.detailEffect').text(clickedItem.itemEffect);

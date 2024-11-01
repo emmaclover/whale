@@ -35,12 +35,18 @@ $(document).ready(function() {
           historyList.forEach((history, index) => {
             const historyElement = document.createElement('div');
             historyElement.classList.add('history-list');
-            const formattedDate = new Date(history.recordDate).toLocaleDateString().replace(/\.$/, '');
+            const formattedDate = new Date(history.recordDate).toLocaleString('ko-KR', {
+                                                                                  year: 'numeric',
+                                                                                  month: '2-digit',
+                                                                                  day: '2-digit',
+                                                                                  hour: '2-digit',
+                                                                                  minute: '2-digit', hour12: false
+                                                                              }).replace(/\.$/, '');
 
 
             historyElement.innerHTML = `
             <div class="history-sec-line">
-              <p>${new Date(history.recordDate).toLocaleDateString()}</p>
+              <p>${formattedDate}</p>
               <p>${healthTypeToString(history.healthType)}</p>
               <p>${formatTime(history.amount, history.healthType)}</p>
             </div>
@@ -86,7 +92,13 @@ $(document).ready(function() {
             rewardList.reverse();
 
             rewardList.forEach((reward, index) => {
-              const formattedDate = new Date(reward.recordDate).toLocaleDateString().replace(/\.$/, '');
+              const formattedDate = new Date(reward.recordDate).toLocaleString('ko-KR', {
+                                                                                   year: 'numeric',
+                                                                                   month: '2-digit',
+                                                                                   day: '2-digit',
+                                                                                   hour: '2-digit',
+                                                                                   minute: '2-digit',hour12: false
+                                                                               }).replace(/\.$/, '');
 
               const rewardElement = document.createElement('div');
               rewardElement.classList.add('reward-history-list');

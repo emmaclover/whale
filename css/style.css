@@ -3244,13 +3244,13 @@ signup-email::placeholder {
 }
 
 .board-write-upimg{
-  padding: 10px 14px;
+  padding: 10px 10px;
 
 }
 
 .board-write-upimg button{
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
 }
@@ -3374,11 +3374,12 @@ signup-email::placeholder {
 .board-img{
   text-align: center;
   padding: 14px 0;
+  display: none;
 }
 
 .board-img img{
-  width: 92px;
-  height: 92px;
+  width: 250px;
+  height: auto;
   background-color: #d9d9d9;
 }
 
@@ -3557,7 +3558,7 @@ signup-email::placeholder {
 
 /* ############# 히스토리 ############ */
 .history-part{
-  padding-top: 80px;
+  /*padding-top: 80px;*/
   padding-bottom: 100px;
 
 }
@@ -3698,17 +3699,17 @@ signup-email::placeholder {
 }
 
 .reward-history-sec-line p:first-child{
-  flex: 2;
+  flex: 2.2;
   text-align: left;
   /* color: var(--light-gray); */
 }
 .reward-history-sec-line p{
-  flex: 1.5;
+  flex: 1.2;
   text-align: center;
 }
 
 .reward-history-sec-line p:last-child{
-  flex: 0.7;
+  flex: 0.6;
   color: var(--mint-color);
   text-align: right;
 }
@@ -3781,7 +3782,7 @@ signup-email::placeholder {
 }
 
 
-@media(min-height:750px){
+@media(min-height:850px){
   .conversion{
     height: 100vh;
   }

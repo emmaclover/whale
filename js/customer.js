@@ -1,6 +1,14 @@
 $(function () {
     // GNB Include Load
-    $('.gnb-main').load('../include/gnb.html')
+//    $('.gnb-main').load('../include/gnb.html')
+
+    $('.bnt-board-img').on('click', function() {
+        window.flutter_inappwebview.callHandler('imagePicker').then(function(imgPath) {
+            if (imgPath) {
+                $('#button-image').attr('src', imgPath);
+            }
+        });
+    });
 
     // ## Board-List 아이템 꾸리기
     var $myQuest = $('.board-list-items').first();
@@ -46,7 +54,13 @@ $(function () {
 
                     // 세부 내용을 업데이트 (필요시 추가 데이터를 여기에 삽입)
                     $questionDetail.find('#question-content').text(item.customerQuestion);
-                    $questionDetail.find('#question-answer').text(item.customerAnswer != null ? item.customerAnswer : "")
+                    $questionDetail.find('#question-answer').text(item.customerAnswer != null ? item.customerAnswer : "");
+                    if (item.customerImage) {
+                        $newItem.find('#board-image').attr('src', 'https://api.zamvoki.com/' + item.customerImage);
+                        $newItem.find('.board-img').css('display', 'block');
+                    } else {
+                        $newItem.find('#board-image').remove(); // 이미지 태그를 삭제 또는 숨김 처리
+                    }
                 });
                 // 새로운 아이템을 DOM에 추가
                 $('.board-notice-inner').append($newItem);

@@ -1,6 +1,43 @@
+
+function confirmExitApp() {
+  const confirmExit = confirm("정말 종료하시겠습니까?");
+  if (confirmExit) {
+    window.close();
+  } else {
+    history.pushState(null, null, location.href + "#initial");
+  }
+}
+
 $(function () {
   // Header Include Load
   // $('.header-include').load('../include/header.html')
+
+//  history.pushState(null, null, location.href);
+//  window.onpopstate = function(event) {
+//    console.log('location.hash', location.hash);
+//    console.log('event', event);
+//    history.go(1);
+//  };
+
+//  if (!location.hash || location.hash === "#none") {
+//      history.replaceState(null, null, location.href + "#initial");
+//    }
+//
+//    // 뒤로가기 시 이벤트 처리
+//    $(window).on("popstate", (event) => {
+//      console.log('location.hash1', location.hash);
+//      if (location.hash == "#initial") {
+//      console.log('location.hash2', location.hash);
+//        confirmExitApp();
+//      } else {
+//        history.back();
+//      }
+//    });
+
+//    window.addEventListener("popstate", function(event) {
+//        alert("뒤로가기 버튼이 클릭되었습니다!");
+//        history.back();
+//    });
 
   $('.header-include').load('../include/header.html', function () {
     // header.html 로드 완료 후 실행될 코드
@@ -422,3 +459,4 @@ $(function () {
 
 
 })
+

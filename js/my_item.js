@@ -31,10 +31,10 @@ $(document).ready(function() {
 
                 if (existingImg.length > 0) {
                     // 기존 이미지가 있으면 src 업데이트
-                    existingImg.attr('src', 'https://admin.zamvoki.com/uploads/' + item.itemImage);
+                    existingImg.attr('src', 'https://admin.zamvoki.com/uploads/' + item.itemImage2);
                 } else {
                     // 새 이미지 추가
-                    var newImg = '<img src="https://admin.zamvoki.com/uploads/' + item.itemImage + '" alt="" data-category="' + category + '" class="myItem-img">';
+                    var newImg = '<img src="https://admin.zamvoki.com/uploads/' + item.itemImage2 + '" alt="" data-category="' + category + '" class="myItem-img">';
                     $('.mine-character-img').append(newImg);
                 }
                 console.log("category", category, typeof category);
@@ -62,10 +62,10 @@ $(document).ready(function() {
                             // 캐릭터 이미지 영역에서 해당 카테고리의 이미지 업데이트
                             var existingImg = $('.mine-character-img img[data-category="' + clickedCategory + '"]');
                             if (existingImg.length > 0) {
-                                existingImg.attr('src', 'https://admin.zamvoki.com/uploads/' + clickedItem.item.itemImage);
+                                existingImg.attr('src', 'https://admin.zamvoki.com/uploads/' + clickedItem.item.itemImage2);
                             } else {
                                 // 이미지가 없을 경우 새로 추가
-                                $('.mine-character-img').append('<img src="https://admin.zamvoki.com/uploads/' + clickedItem.item.itemImage + '" alt="" data-category="' + clickedCategory + '" class="myItem-img">');
+                                $('.mine-character-img').append('<img src="https://admin.zamvoki.com/uploads/' + clickedItem.item.itemImage2 + '" alt="" data-category="' + clickedCategory + '" class="myItem-img">');
                             }
                         }
                     } else {
@@ -73,7 +73,7 @@ $(document).ready(function() {
                         applyMap.set(clickedCategory, clickedItem.item);
 
                         // 캐릭터 영역에 해당 카테고리 이미지 적용
-                        $('.mine-character-img').append('<img src="https://admin.zamvoki.com/uploads/' + clickedItem.item.itemImage + '" alt="" data-category="' + clickedCategory + '" class="myItem-img">');
+                        $('.mine-character-img').append('<img src="https://admin.zamvoki.com/uploads/' + clickedItem.item.itemImage2 + '" alt="" data-category="' + clickedCategory + '" class="myItem-img">');
                     }
 
                 }
