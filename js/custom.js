@@ -409,10 +409,15 @@ $(function () {
     })
 
     $('.bnt-quit-too').click(function () {
-      alert('...탈퇴하기 기능 구현중...')
+      window.flutter_inappwebview.callHandler('quite').then(function () {
+
+      }).catch(function (error) {
+        console.error('Failed to fetch notifications:', error);
+      });
     })
   })
 
+  $('#input-name')
 
 
 
@@ -446,12 +451,7 @@ $(function () {
 
     $(this).css('border', '2px solid var(--mint-color)');
   })
-
-
-
-
-
-
+  
   // 딜레이
   // setTimeout(function(){
   //   $('.main-content').html('<div class="mypoint"></div>');
@@ -459,4 +459,3 @@ $(function () {
 
 
 })
-

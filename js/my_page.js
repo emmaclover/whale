@@ -39,6 +39,10 @@ $(document).ready(function() {
         $('.btn-logout-basic').on('click', function(result) {
             window.flutter_inappwebview.callHandler('logoutPop','로그아웃')
         });
+
+        $('.user-quit').on('click', function() {
+         window.flutter_inappwebview.callHandler('userQuit', '탈퇴하기 클릭')
+        })
     } else {
     }
 });
