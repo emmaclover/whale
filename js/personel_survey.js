@@ -8,9 +8,9 @@ $(document).ready(function() {
         console.log('userType', userType);
         if (userType === 'apple') {
                 document.getElementById('genderSurvey').style.display = 'block';
-                document.getElementById('genderSurvey').style.display = 'block';
+                document.getElementById('birthSurvey').style.display = 'block';
             } else {
-                document.getElementById('birthSurvey').style.display = 'none';
+                document.getElementById('genderSurvey').style.display = 'none';
                 document.getElementById('birthSurvey').style.display = 'none';
             }
          });
