@@ -92,13 +92,15 @@ $(document).ready(function() {
             rewardList.reverse();
 
             rewardList.forEach((reward, index) => {
-              const formattedDate = new Date(reward.recordDate).toLocaleString('ko-KR', {
-                                                                                   year: 'numeric',
-                                                                                   month: '2-digit',
-                                                                                   day: '2-digit',
-                                                                                   hour: '2-digit',
-                                                                                   minute: '2-digit',hour12: false
-                                                                               }).replace(/\.$/, '');
+              const dateToFormat = reward.saveBy === 'earn' || reward.saveBy === 'exchange' ? reward.recordDate : reward.additionalDate;
+                    const formattedDate = new Date(dateToFormat).toLocaleString('ko-KR', {
+                      year: 'numeric',
+                      month: '2-digit',
+                      day: '2-digit',
+                      hour: '2-digit',
+                      minute: '2-digit',
+                      hour12: false
+                    }).replace(/\.$/, '');
 
               const rewardElement = document.createElement('div');
               rewardElement.classList.add('reward-history-list');
