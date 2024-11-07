@@ -56,7 +56,7 @@ $(function () {
                     $questionDetail.find('#question-content').text(item.customerQuestion);
                     $questionDetail.find('#question-answer').text(item.customerAnswer != null ? item.customerAnswer : "");
                     if (item.customerImage) {
-                        $newItem.find('#board-image').attr('src', 'https://api.zamvoki.com/' + item.customerImage);
+                        $newItem.find('#board-image').attr('src', 'https://api.zamvoki.com/uploads/' + item.customerImage);
                         $newItem.find('.board-img').css('display', 'block');
                     } else {
                         $newItem.find('#board-image').remove(); // 이미지 태그를 삭제 또는 숨김 처리

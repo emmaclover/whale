@@ -23,6 +23,7 @@
 
         /* Basic Button */
 .btn-basic{
+  color: black;
   width: 100%;
   height: 44px;
   background-color: var(--mint-color);
@@ -34,6 +35,7 @@
 }
 
 .btn-cancel{
+  color: black;
   width: 100%;
   height: 44px;
   background-color: var(--light-gray);
@@ -1670,6 +1672,7 @@ signup-email::placeholder {
 
 /* select 인풋 */
 .time-select{
+  color: black;
   width: 100%;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
@@ -1687,7 +1690,6 @@ signup-email::placeholder {
 
   padding: 12px;
 }
-
 
 
 
@@ -2079,6 +2081,7 @@ signup-email::placeholder {
 }
 
 .btn-get-pearl, .btn-get-leaf {
+  color: black;
   padding: 10px 0;
   border-radius: 5px;
   font-family: var(--primary-kr);

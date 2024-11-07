@@ -386,13 +386,13 @@ $(function () {
 //    $('.btn-logout-basic').click(function(){
 //      alert('...로그아웃 기능 구현중....');
 //    })
-    $('.btn-logout-basic').click(function () {
-      window.flutter_inappwebview.callHandler('logout').then(function () {
-
-      }).catch(function (error) {
-        console.error('Failed to fetch notifications:', error);
-      });
-    })
+//    $('.btn-logout-basic').click(function () {
+//      window.flutter_inappwebview.callHandler('logout').then(function () {
+//
+//      }).catch(function (error) {
+//        console.error('Failed to fetch notifications:', error);
+//      });
+//    })
   })
 
 
