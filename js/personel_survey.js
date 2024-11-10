@@ -5,7 +5,6 @@ window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
 $(document).ready(function() {
     if (window.flutter_inappwebview) {
         window.flutter_inappwebview.callHandler('signInType').then(function(userType) {
-        console.log('userType', userType);
         if (userType === 'apple') {
                 document.getElementById('genderSurvey').style.display = 'block';
                 document.getElementById('birthSurvey').style.display = 'block';
@@ -14,6 +13,24 @@ $(document).ready(function() {
                 document.getElementById('birthSurvey').style.display = 'none';
             }
          });
+
+        window.flutter_inappwebview.callHandler('surveyName').then(function(surveyName) {
+            document.querySelectorAll('.name-underline').forEach(function(element) {
+                 element.innerText = surveyName;
+              });
+         });
+
+    $('.time-select').on('click', function () {
+      const targetId = this.id;
+      window.flutter_inappwebview
+        .callHandler('timeSelector')
+        .then(function (result) {
+          document.getElementById(targetId).value = result;
+        })
+        .catch(function (error) {
+          console.error('Error receiving data from Flutter:', error);
+        });
+    });
 
   $('.enter-btn').on('click', function() {
      const gender = document.querySelector('input[name="gender"]:checked')?.value;
@@ -35,14 +52,14 @@ $(document).ready(function() {
     const surveyDataJSON = JSON.stringify(surveyData);
 
       console.log("전송 데이터:", surveyDataJSON);
-    if (window.flutter_inappwebview) {
+//    if (window.flutter_inappwebview) {
       window.flutter_inappwebview.callHandler('personel-survey', surveyDataJSON)
         .catch(function(error) {
           console.error("Error sending data to Flutter: ", error);
         });
-    } else {
-      console.error("Flutter InAppWebView is not ready.");
-    }
+//    } else {
+//      console.error("Flutter InAppWebView is not ready.");
+//    }
   });
   }else {
   }
