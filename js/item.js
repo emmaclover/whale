@@ -5,8 +5,6 @@ window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
 $(document).ready(function() {
     if (window.flutter_inappwebview) {
         window.flutter_inappwebview.callHandler('shopItem').then(function(items) {
-
-
             var $shopItems = $('.shop-items');
             var $itemTemplate = $('#item-template');
 
@@ -30,13 +28,25 @@ $(document).ready(function() {
 
                     if (clickedItem) {
                     console.log("Clicked Item ID1: ", clickedItemId);
-                        $('.detailImg').attr('src', 'https://admin.zamvoki.com/uploads/' + clickedItem.itemImage);
+                        $('.detailImg').attr('src', 'https://admin.zamvoki.com/uploads/' + clickedItem.itemImage2);
                         $('.detailName').text(clickedItem.itemName);
                         $('.detailCurrency').text(clickedItem.currency === "pearl" ? "진주" : "산호");
                         $('.detailPrice').text(clickedItem.itemPrice);
                         $('.detailColor').text(clickedItem.itemColor);
                         $('.detailEffect').text(clickedItem.itemEffect);
                         $('.detailDiscription').text(clickedItem.itemDescription);
+                        if (clickedItem.itemAdditional && Object.keys(clickedItem.itemAdditional).length > 0) {
+                            $('.item-details .additional-info').remove();
+
+                            $.each(clickedItem.itemAdditional, function(key, value) {
+                                var cleanKey = key.replace(/"/g, '');
+                                var cleanValue = value.replace(/"/g, '');
+                                var additionalInfo = `
+                                    <p class="additional-info">${cleanKey} : <span>${cleanValue}</span></p>
+                                `;
+                                $('.item-details').append(additionalInfo);
+                            });
+                        }
                         $('.item-detail-inner').show();
                     }
                 });
