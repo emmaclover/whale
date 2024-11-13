@@ -5,6 +5,21 @@ window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
 $(document).ready(function() {
     if (window.flutter_inappwebview) {
         window.flutter_inappwebview.callHandler('userData').then(function(user) {
+            const applyMap = new Map();
+
+            user.items.forEach(function(itemPurchase, index) {
+              if(itemPurchase.isApplied == "Y") {
+                  applyMap.set(itemPurchase.item.itemCategory.categoryId, itemPurchase.item);
+              }
+            });
+
+            let zIndex = 1; // 초기 z-index 설정
+              applyMap.forEach(function(item) {
+                var newImg = '<img src="https://admin.zamvoki.com/uploads/' + item.itemImage2 + '">';
+                $('.user-profile-img').append(newImg);
+                zIndex++; // z-index를 점차 증가시킴
+              });
+
            document.querySelectorAll('.uName').forEach(function(element) {
                  element.innerText = user.nickname;
               });

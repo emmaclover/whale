@@ -22,9 +22,11 @@ $(document).ready(function() {
 
     $('.time-select').on('click', function () {
       const targetId = this.id;
-      window.flutter_inappwebview
-        .callHandler('timeSelector')
+      window.flutter_inappwebview.callHandler('timeSelector')
         .then(function (result) {
+        console.log("timeSelector");
+        console.log(targetId);
+        console.log(result);
           document.getElementById(targetId).value = result;
         })
         .catch(function (error) {

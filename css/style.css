@@ -1220,6 +1220,14 @@
   margin-top: 42px;
 }
 
+.certify-email-btn{
+  margin-top: 42px;
+}
+
+.set-pwd-btn{
+  margin-top: 42px;
+}
+
 
 
 
@@ -2532,7 +2540,7 @@ signup-email::placeholder {
 }
 
 .detail-pop-character{
-position: relative;
+  position: relative;
   padding-top: 12px;
   padding-bottom: 24px;
   display: flex;
@@ -2542,8 +2550,8 @@ position: relative;
 
 
 .detailImg {
-position: absolute;
-  z-index: 1;
+    position: absolute;
+    z-index: 1;
     width: 160px;
     height: 216px;
     object-fit: cover;
@@ -2829,13 +2837,23 @@ position: absolute;
   padding: 0px 0px 24px 0px;
 }
 
+.user-profile-img {
+  position: relative; /* 기준 컨테이너 */
+  width: 80px;
+  height: 80px;
+}
 
 .user-profile-img img{
+  position: absolute;
   width: 80px;
   height: 80px;
   border: 1px solid var(--mint-color);
   border-radius: 50px;
-  background-color: white;
+
+}
+
+.user-profile-img img:nth-child(n) {
+  z-index: auto;
 }
 
 .user-profile-name{
