@@ -3176,7 +3176,7 @@ signup-email::placeholder {
 
 /* ########## 게시판 기본 ############# */
 .board-basic-write-part{
-  padding: 94px 24px;
+  padding: 40px 24px;
   font-family: var(--primary-kr);
   font-size: 14px;
   height: 100vh;
@@ -3272,15 +3272,15 @@ signup-email::placeholder {
 }
 
 .board-write-upimg{
-  padding: 10px 10px;
-
+  padding: 10px 14px;
 }
 
 .board-write-upimg button{
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
+
 }
 
 
@@ -3482,12 +3482,12 @@ signup-email::placeholder {
   text-align: center;
 }
 .notice-main-title{
-  flex: 5;
+  flex: 4.5;
   font-size: 14px;
 }
 
 .notice-date{
-  flex: 1;
+  flex: 1.5;
   font-size: 11px;
   color: rgb(0, 0, 0, 0.7);
   text-align: center;
