@@ -35,6 +35,11 @@ $(document).ready(function() {
             element.innerText = result ?? 0;
           });
       });
+      window.flutter_inappwebview.callHandler('pointTotal').then(function(result) {
+          document.querySelectorAll('.pointTotal').forEach(function(element) {
+            element.innerText = result ?? 0;
+          });
+      });
 
       window.flutter_inappwebview.callHandler('nickname').then(function(result) {
           document.querySelector('.nickname').innerText = result;
