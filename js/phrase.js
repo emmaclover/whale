@@ -5,17 +5,10 @@ window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
 $(document).ready(function() {
     if (window.flutter_inappwebview) {
         window.flutter_inappwebview.callHandler('phrase').then(function(phraseList) {
-        console.log("phrase");
-        console.log(phraseList);
         let index = 0;
         const phraseElement = document.getElementById("phrase");
         const imageElement = document.querySelector(".bubble-coment img");
 
-        if (phraseList.length === 0) {
-            phraseElement.textContent = "";
-            imageElement.style.display = "none";
-          } else {
-            imageElement.style.display = "block";
             setInterval(() => {
                 const phrase = phraseList[index];
                 index = (index + 1) % phraseList.length;
@@ -34,8 +27,6 @@ $(document).ready(function() {
                   phraseElement.textContent = phrase;
                 }
               }, 10000);
-          }
-            document.querySelector('.step-data').innerText = result ?? '0';
           });
     } else {
     }
